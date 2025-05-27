@@ -22,6 +22,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+  # CRITICAL: Include pages directory for processing
+include:
+  - pages
+
+
 # Navigation
 navigation:
   - title: About
@@ -32,6 +37,8 @@ navigation:
     url: /devops-roadmap/
   - title: Articles
     url: /articles/
+  - title: Test Pages
+    url: /test/  
 
 # Collections
 collections:
@@ -49,6 +56,11 @@ defaults:
       author: "Lionel Kanyowa"
   - scope:
       path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "pages"
       type: "pages"
     values:
       layout: "page"
