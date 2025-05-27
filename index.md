@@ -12,9 +12,6 @@ title: Home
     </p>
     <div style="margin-top: 2rem;">
       <a href="/devops-roadmap/" class="btn btn-outline">View Full Roadmap</a>
-    </div>
-  </div>
-</section>="margin-top: 2rem;">
       <a href="/projects/" class="btn">View My Work</a>
       <a href="/about/" class="btn btn-outline" style="margin-left: 1rem;">About Me</a>
     </div>
@@ -104,4 +101,8 @@ title: Home
       </div>
     </div>
     
-    <div style
+    <div style="margin-top: 2rem;">
+      <a href="/devops-roadmap/" class="btn">Explore My Roadmap</a>
+    </div>
+  </div>
+</section>
