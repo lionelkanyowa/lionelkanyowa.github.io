@@ -1,0 +1,69 @@
+# Site Configuration
+title: Lionel Kanyowa
+description: DevOps Engineer & Infrastructure Specialist - Building scalable, secure, and automated solutions
+baseurl: "" # Leave empty for GitHub Pages
+url: "https://lionelkanyowa.com"
+
+# Personal Information
+author:
+  name: Lionel Kanyowa
+  email: lionelkanyowa@gmail.com
+  linkedin: https://www.linkedin.com/in/lionel-kanyowa/
+  github: lionelkanyowa
+  location: "Michigan"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+navigation:
+  - title: About
+    url: /about/
+  - title: Projects
+    url: /projects/
+  - title: DevOps Roadmap
+    url: /devops-roadmap/
+  - title: Articles
+    url: /articles/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Lionel Kanyowa"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Sass Configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
