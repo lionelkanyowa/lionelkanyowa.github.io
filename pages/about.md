@@ -128,10 +128,3 @@ permalink: /about/
   </div>
 </section>
 
-<style>
-@media (max-width: 768px) {
-  .wrapper > div[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-}</style>

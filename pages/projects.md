@@ -292,15 +292,3 @@ permalink: /projects/
   </div>
 </section>
 
-<style>
-.tech-tag {
-  background: var(--accent-color);
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-</style>
