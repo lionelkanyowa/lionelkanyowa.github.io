@@ -4,16 +4,16 @@ title: About Me
 permalink: /about/
 ---
 
-<div class="hero" style="padding: 2rem 0;">
+<div class="hero section-small">
   <div class="wrapper">
     <h1>About Lionel Kanyowa</h1>
     <p class="hero-subtitle">DevOps Engineer passionate about building scalable, reliable infrastructure and fostering collaboration between development and operations teams.</p>
   </div>
 </div>
 
-<section style="padding: 2rem 0;">
+<section class="section-small">
   <div class="wrapper">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+     <div class="grid-2-col">
       <div>
         <h2>My Story</h2>
         <p>
@@ -41,9 +41,9 @@ permalink: /about/
   </div>
 </section>
 
-<section style="padding: 4rem 0;">
+<section class="section-standard">
   <div class="wrapper">
-    <h2 style="text-align: center; margin-bottom: 3rem;">Technical Expertise</h2>
+    <h2 class="text-center mb-3">Technical Expertise</h2>
     
     <div class="card-grid">
       <div class="card">
@@ -77,44 +77,44 @@ permalink: /about/
   </div>
 </section>
 
-<section style="background: var(--card-bg); padding: 4rem 0; margin: 4rem 0; border-radius: 20px;">
+<section class="section-alt">
   <div class="wrapper">
-    <h2 style="text-align: center; margin-bottom: 3rem;">Certifications & Learning</h2>
+    <h2 class="text-center mb-3">Certifications & Learning</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-      <div style="text-align: center; padding: 1.5rem;">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">🏆</div>
+    <div class="grid-3-col">
+      <div class="text-center">
+        <div class="text-4xl">🏆</div>
         <h4>AWS Certified</h4>
         <p class="text-muted">Solutions Architect - Associate</p>
       </div>
       
-      <div style="text-align: center; padding: 1.5rem;">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+      <div class="text-center">
+        <div class="text-4xl">⚙️</div>
         <h4>Kubernetes</h4>
         <p class="text-muted">Certified Kubernetes Administrator (CKA)</p>
       </div>
       
-      <div style="text-align: center; padding: 1.5rem;">
-        <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+      <div class="text-center">
+        <div class="text-4xl">🔒</div>
         <h4>Security+</h4>
         <p class="text-muted">CompTIA Security+ Certified</p>
       </div>
     </div>
     
-    <div style="text-align: center; margin-top: 2rem;">
+    <div class="text-center mt-2">
       <p class="text-muted">Always learning and staying current with the latest in DevOps and cloud technologies</p>
     </div>
   </div>
 </section>
 
-<section style="padding: 4rem 0;">
+<section class="section-standard">
   <div class="wrapper text-center">
     <h2>Let's Connect</h2>
-    <p class="text-muted" style="margin-bottom: 2rem;">
+    <p class="text-muted mb-2">
       I'm always interested in discussing DevOps challenges, sharing knowledge, and exploring collaboration opportunities.
     </p>
     
-    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+     <div class="flex-center">
       <a href="mailto:{{ site.author.email }}" class="btn">
         📧 Email Me
       </a>

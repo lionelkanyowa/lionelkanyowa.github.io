@@ -852,3 +852,149 @@ section {
     gap: 1rem;
   }
 }
+
+/* ==========================================
+   ADDITIONAL UTILITY CLASSES (ADD TO END OF MAIN.CSS)
+   ========================================== */
+
+/* Grid Layouts */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.grid-roadmap {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.grid-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+/* Section Backgrounds */
+.section-alt {
+    background: var(--card-bg);
+    padding: 4rem 0;
+    margin: 4rem 0;
+    border-radius: 20px;
+}
+
+.section-standard {
+    padding: 4rem 0;
+}
+
+.section-small {
+    padding: 2rem 0;
+}
+
+/* Positioning */
+.sticky-sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+/* Flexbox Utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Spacing */
+.mb-3 { margin-bottom: 3rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+
+/* Typography Sizes */
+.text-3xl {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.text-4xl {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* Lists */
+.list-none {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item {
+    margin-bottom: 1rem;
+}
+
+/* Progress Bars */
+.progress-container {
+    margin: 1rem 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-label span:last-child {
+    font-weight: 600;
+}
+
+.progress-track {
+    background: var(--border-color);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill-75 {
+    background: var(--accent-color);
+    height: 100%;
+    width: 75%;
+    transition: width 0.3s ease;
+}
+
+/* Stats Colors */
+.stat-green { color: #22c55e; font-weight: 600; }
+.stat-blue { color: var(--accent-color); font-weight: 600; }
+.stat-gray { color: var(--text-secondary); font-weight: 600; }
+
+/* Responsive Grid Fixes */
+@media (max-width: 768px) {
+    .grid-2-col,
+    .grid-roadmap {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .section-alt {
+        margin: 2rem 0;
+        padding: 3rem 0;
+    }
+}
