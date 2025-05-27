@@ -1,31 +1,25 @@
 # Site Configuration
 title: Lionel Kanyowa
 description: DevOps Engineer & Infrastructure Specialist - Building scalable, secure, and automated solutions
-baseurl: "" # Leave empty for GitHub Pages
 url: "https://lionelkanyowa.com"
 
 # Personal Information
 author:
   name: Lionel Kanyowa
   email: lionelkanyowa@gmail.com
-  linkedin: lionel-kanyowa  # Fixed: username only, not full URL
+  linkedin: lionel-kanyowa
   github: lionelkanyowa
-  twitter: lionelkanyowa  # Added if you have Twitter
   location: "Michigan"
 
 # Build Settings
 markdown: kramdown
 highlighter: rouge
-# REMOVED theme: minima - conflicts with custom layouts
+
+# Plugins - Only use supported GitHub Pages plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
-  # CRITICAL: Include pages directory for processing
-include:
-  - pages
-
 
 # Navigation
 navigation:
@@ -37,52 +31,3 @@ navigation:
     url: /devops-roadmap/
   - title: Articles
     url: /articles/
-  - title: Test Pages
-    url: /test/  
-
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:name/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "Lionel Kanyowa"
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  - scope:
-      path: "pages"
-      type: "pages"
-    values:
-      layout: "page"
-
-# Sass Configuration
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Footer Configuration
-footer:
-  built_with: true
-  privacy_policy: false
-
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md
-  - "*.scss"
