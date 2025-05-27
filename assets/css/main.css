@@ -1,4 +1,27 @@
----
----
+/* Quick test CSS */
+body {
+    background-color: #f0f8ff !important;
+    font-family: Arial, sans-serif !important;
+    color: #333 !important;
+    margin: 0;
+    padding: 20px;
+}
 
-@import "main";
+.hero-title {
+    color: #2563eb !important;
+    font-size: 3rem !important;
+    text-align: center;
+}
+
+.card {
+    background: white !important;
+    padding: 20px !important;
+    margin: 10px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
