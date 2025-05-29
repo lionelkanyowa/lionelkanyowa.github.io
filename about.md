@@ -82,30 +82,9 @@ permalink: /about/
     <h2 class="text-center mb-3">Certifications & Learning</h2>
     
     <div class="text-center mt-2">
-      <p class="text">Currently in-progress... ⏳</p>
+      <h3 class="text">Currently in-progress... ⏳</h3>
     </div>
-    /*
-    <div class="grid-3-col">
-      <div class="text-center">
-        <div class="text-4xl">🏆</div>
-        <h4>AWS Certified</h4>
-        <p class="text-muted">Solutions Architect - Associate</p>
-      </div>
-      
-      <div class="text-center">
-        <div class="text-4xl">⚙️</div>
-        <h4>Kubernetes</h4>
-        <p class="text-muted">Certified Kubernetes Administrator (CKA)</p>
-      </div>
-      
-      <div class="text-center">
-        <div class="text-4xl">🔒</div>
-        <h4>Security+</h4>
-        <p class="text-muted">CompTIA Security+ Certified</p>
-      </div>
-    </div> 
-    */
-    
+
     <div class="text-center mt-2">
       <p class="text-muted">Always learning and staying current with the latest in DevOps and cloud technologies</p>
     </div>
