@@ -1236,3 +1236,69 @@ section {
     height: 110px;
   }
 }
+
+/* About Section Improvements - Add to main.css */
+
+.story-section {
+  margin-bottom: 3rem;
+}
+
+.story-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.quick-facts-section {
+  display: flex;
+  justify-content: center;
+}
+
+.quick-facts-card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.quick-facts-card h3 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.quick-facts-card .list-item {
+  text-align: left;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.quick-facts-card .list-item:last-child {
+  border-bottom: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .story-content {
+    text-align: left;
+  }
+  
+  .story-content p {
+    font-size: 1rem;
+  }
+  
+  .story-section h2 {
+    text-align: left;
+  }
+}

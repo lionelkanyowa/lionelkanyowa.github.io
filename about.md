@@ -13,9 +13,10 @@ permalink: /about/
 
 <section class="section-small">
   <div class="wrapper">
-    <div class="grid-2-col">
-      <div>
-        <h2>My Story</h2>
+    <!-- Full-width My Story section -->
+    <div class="story-section">
+      <h2>My Story</h2>
+      <div class="story-content">
         <p>
           I'm a DevOps engineer with a passion for transforming how organizations build, deploy, and maintain software systems. My journey began with traditional system administration, but I quickly discovered the power of automation and infrastructure as code.
         </p>
@@ -26,8 +27,11 @@ permalink: /about/
           When I'm not optimizing deployment pipelines or architecting cloud solutions, you'll find me contributing to open-source projects, writing technical articles, or exploring the latest developments in cloud-native technologies.
         </p>
       </div>
-      
-      <div class="card">
+    </div>
+    
+    <!-- Quick Facts card moved below -->
+    <div class="quick-facts-section">
+      <div class="card quick-facts-card">
         <h3>Quick Facts</h3>
         <ul class="list-none">
           <li class="list-item">📍 <strong>Location:</strong> Michigan</li>
