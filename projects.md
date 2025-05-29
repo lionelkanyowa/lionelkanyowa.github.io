@@ -288,7 +288,7 @@ permalink: /projects/
     </p>
     
     <div class="flex-center">
-      <a href="/about/" class="btn">Learn More About Me</a>
+      <a href="/about/" class="btn btn-outline">Learn More About Me</a>
       <a href="mailto:lionelkanyowa@gmail.com" class="btn btn-outline">Get In Touch</a>
     </div>
   </div>

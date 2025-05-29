@@ -66,7 +66,7 @@ permalink: /articles/
       <h3>Stay Updated</h3>
       <p class="text-muted">Want to be notified when new articles are published?</p>
       <div class="flex-center" style="margin-top: 1.5rem;">
-        <a href="mailto:lionelkanyowa@gmail.com?subject=Article%20Notifications" class="btn">Get Notified</a>
+        <a href="mailto:lionelkanyowa@gmail.com?subject=Article%20Notifications" class="btn btn-outline">Get Notified</a>
         <a href="/feed.xml" class="btn btn-outline">RSS Feed</a>
       </div>
     </div>
@@ -84,7 +84,7 @@ permalink: /articles/
     </p>
     
     <div class="flex-center">
-      <a href="mailto:lionelkanyowa@gmail.com?subject=Article%20Suggestion" class="btn">Suggest a Topic</a>
+      <a href="mailto:lionelkanyowa@gmail.com?subject=Article%20Suggestion" class="btn btn-outline">Suggest a Topic</a>
       <a href="https://linkedin.com/in/lionel-kanyowa" class="btn btn-outline" target="_blank">Connect on LinkedIn</a>
     </div>
   </div>

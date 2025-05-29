@@ -81,6 +81,10 @@ permalink: /about/
   <div class="wrapper">
     <h2 class="text-center mb-3">Certifications & Learning</h2>
     
+    <div class="text-center mt-2">
+      <p class="text">Currently in-progress... ⏳</p>
+    </div>
+    /*
     <div class="grid-3-col">
       <div class="text-center">
         <div class="text-4xl">🏆</div>
@@ -99,7 +103,8 @@ permalink: /about/
         <h4>Security+</h4>
         <p class="text-muted">CompTIA Security+ Certified</p>
       </div>
-    </div>
+    </div> 
+    */
     
     <div class="text-center mt-2">
       <p class="text-muted">Always learning and staying current with the latest in DevOps and cloud technologies</p>
@@ -115,7 +120,7 @@ permalink: /about/
     </p>
     
     <div class="flex-center">
-      <a href="mailto:lionelkanyowa@gmail.com" class="btn">
+      <a href="mailto:lionelkanyowa@gmail.com" class="btn btn-outline">
         📧 Email Me
       </a>
       <a href="https://linkedin.com/in/lionel-kanyowa" class="btn btn-outline" target="_blank">
