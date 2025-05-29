@@ -1250,16 +1250,28 @@ section {
 }
 
 .story-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.story-content p {
+.story-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.story-card p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
+  text-align: left;
+}
+
+.story-card p:last-child {
+  margin-bottom: 0;
 }
 
 .quick-facts-section {
@@ -1290,15 +1302,11 @@ section {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .story-content {
-    text-align: left;
+  .story-card {
+    padding: 2rem;
   }
   
-  .story-content p {
+  .story-card p {
     font-size: 1rem;
-  }
-  
-  .story-section h2 {
-    text-align: left;
   }
 }

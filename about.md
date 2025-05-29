@@ -17,17 +17,17 @@ permalink: /about/
     <div class="story-section">
       <h2>My Story</h2>
       <div class="story-content">
-        <p>
-          I'm a Network Administrator with a systems engineering mindset. In my current role, I manage a hybrid environment integrating on-prem Active Directory with Microsoft Entra ID (Azure AD), supporting identity, access, and policy controls across users and devices. I oversee firewall configurations (Fortinet), enterprise antivirus (Sophos Central), group policy management, and virtual server infrastructure — ensuring secure and stable operations for a distributed workforce.
-        </p>
-        <p>
-          Increasingly, my focus has shifted toward DevOps practices: automation, reproducibility, cloud-native infrastructure, and policy-as-code. I'm building foundational skills in scripting, cloud platforms, and infrastructure as code — transitioning from traditional sysadmin tasks to a modern DevOps approach.
-        </p>
-        <p>
-          I work in the terminal daily (PowerShell, bash, Neovim), manage device compliance through Intune, and lead technical onboarding/offboarding through Microsoft 365 Admin. While I’m still early in this journey, I bring a strong understanding of system integration, security posture, and operational discipline.
-        </p>
-        <p>This site is my learning lab — documenting my progress toward becoming a DevOps engineer who builds secure, scalable, human-centered systems.
-        </p>
+        <div class="story-card">
+          <p>
+            I'm a DevOps engineer with a passion for transforming how organizations build, deploy, and maintain software systems. My journey began with traditional system administration, but I quickly discovered the power of automation and infrastructure as code.
+          </p>
+          <p>
+            Today, I specialize in designing and implementing robust CI/CD pipelines, managing cloud infrastructure, and helping teams adopt DevOps practices that accelerate delivery while maintaining high standards for security and reliability.
+          </p>
+          <p>
+            When I'm not optimizing deployment pipelines or architecting cloud solutions, you'll find me contributing to open-source projects, writing technical articles, or exploring the latest developments in cloud-native technologies.
+          </p>
+        </div>
       </div>
     </div>
     
