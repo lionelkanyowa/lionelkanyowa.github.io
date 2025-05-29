@@ -7,7 +7,7 @@ permalink: /about/
 <div class="hero section-small">
   <div class="wrapper">
     <h1>About Lionel Kanyowa</h1>
-    <p class="hero-subtitle">DevOps Engineer passionate about building scalable, reliable infrastructure and fostering collaboration between development and operations teams.</p>
+    <p class="hero-subtitle">Bridging traditional IT with modern DevOps — driven by a passion for building secure, scalable, human-centered systems.</p>
   </div>
 </div>
 
