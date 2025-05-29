@@ -1211,10 +1211,12 @@ section {
 }
 
 .profile-image-centered {
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
+  transform: scale(1.2);
   border: 3px solid var(--border-color);
   box-shadow: var(--shadow);
   transition: all var(--transition-normal);
