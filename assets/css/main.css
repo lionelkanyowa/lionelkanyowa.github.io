@@ -1403,68 +1403,53 @@ section {
   }
 }
 
-.learning-path-list {
+.emoji-path-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.learning-path-list li {
+.emoji-path-list li {
   position: relative;
   padding-left: 2rem;
   margin-bottom: 0.75rem;
   color: var(--text-secondary);
 }
 
-.learning-path-list li::before {
-  content: "➤";
+.emoji-path-list li:nth-child(1)::before {
+  content: "🚀";
+}
+
+.emoji-path-list li:nth-child(2)::before {
+  content: "☁️";
+}
+
+.emoji-path-list li:nth-child(3)::before {
+  content: "📦";
+}
+
+.emoji-path-list li:nth-child(4)::before {
+  content: "🏗️";
+}
+
+.emoji-path-list li:nth-child(5)::before {
+  content: "📊";
+}
+
+.emoji-path-list li:nth-child(6)::before {
+  content: "🔒";
+}
+
+.emoji-path-list li:nth-child(7)::before {
+  content: "⚙️";
+}
+
+.emoji-path-list li:nth-child(8)::before {
+  content: "🛡️";
+}
+
+.emoji-path-list li::before {
   position: absolute;
   left: 0;
   font-size: 1.2rem;
-  font-weight: bold;
-  background: linear-gradient(45deg, #22c55e, #16a34a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Different colors for each phase */
-.learning-path-list li:nth-child(1)::before {
-  background: linear-gradient(45deg, #22c55e, #16a34a);
-  /* Green */
-}
-
-.learning-path-list li:nth-child(2)::before {
-  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
-  /* Blue */
-}
-
-.learning-path-list li:nth-child(3)::before {
-  background: linear-gradient(45deg, #8b5cf6, #7c3aed);
-  /* Purple */
-}
-
-.learning-path-list li:nth-child(4)::before {
-  background: linear-gradient(45deg, #f59e0b, #d97706);
-  /* Orange */
-}
-
-.learning-path-list li:nth-child(5)::before {
-  background: linear-gradient(45deg, #ef4444, #dc2626);
-  /* Red */
-}
-
-.learning-path-list li:nth-child(6)::before {
-  background: linear-gradient(45deg, #06b6d4, #0891b2);
-  /* Cyan */
-}
-
-.learning-path-list li:nth-child(7)::before {
-  background: linear-gradient(45deg, #84cc16, #65a30d);
-  /* Lime */
-}
-
-.learning-path-list li:nth-child(8)::before {
-  background: linear-gradient(45deg, #f97316, #ea580c);
-  /* Amber */
 }
