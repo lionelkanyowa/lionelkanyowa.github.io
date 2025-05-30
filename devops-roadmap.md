@@ -21,8 +21,8 @@ permalink: /devops-roadmap/
         <div class="overall-progress">
           <span class="progress-label">Overall Progress</span>
           <div class="progress-bar-container">
-            <div class="progress-bar" data-progress="65" style="width: 65%;">
-              <span class="progress-text">65%</span>
+            <div class="progress-bar" data-progress="2" style="width: 2%;">
+              <span class="progress-text">2%</span>
             </div>
           </div>
         </div>
@@ -38,14 +38,35 @@ permalink: /devops-roadmap/
         
         <div class="roadmap-phase">
           <div class="phase-header">
-            <h2>Phase 1: Foundation Skills</h2>
-            <span class="phase-status completed">Completed</span>
+            <h2>Phase 1: Linux & Python Scripting</h2>
+            <span class="phase-status in-progress">In Progress</span>
           </div>
           
+          <!-- Single skills-grid container for ALL Phase 1 skills -->
           <div class="skills-grid">
             <div class="skill-item completed">
               <div class="skill-header">
-                <h3>Linux Administration</h3>
+                <h3>Python Fundamentals & Syntax Mastery</h3>
+                <span class="status-badge in-progress">🔄 Learning</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar-container">
+                  <div class="progress-bar in-progress" data-progress="15" style="width: 15%;"></div>
+                </div>
+              </div>
+              <ul class="skill-details">
+                <li>Variables, data types, and type conversion (100% accuracy on exercises)</li>
+                <li>Control structures: if/elif/else, for/while loops (flawless execution)</li>
+                <li>Function definition, parameters, return values, and scope</li>
+                <li>List, dictionary, and tuple manipulation</li>
+                <li>String methods and formatting techniques</li>
+                <li>File I/O operations with proper exception handling</li>
+              </ul>
+            </div>
+
+            <div class="skill-item completed">
+              <div class="skill-header">
+                <h3>Git & Version Control Mastery</h3>
                 <span class="status-badge completed">✓ Mastered</span>
               </div>
               <div class="skill-progress">
@@ -54,15 +75,18 @@ permalink: /devops-roadmap/
                 </div>
               </div>
               <ul class="skill-details">
-                <li>System administration and command line mastery</li>
-                <li>Shell scripting and automation</li>
-                <li>Process management and troubleshooting</li>
+                <li>Repository initialization and configuration</li>
+                <li>Staging, committing, and history management</li>
+                <li>Branching strategies and merge conflict resolution</li>
+                <li>Remote repositories and collaboration workflows</li>
+                <li>Advanced features: rebasing, cherry-picking, stashing</li>
+                <li>Git hooks and automation integration</li>
               </ul>
             </div>
 
             <div class="skill-item completed">
               <div class="skill-header">
-                <h3>Programming Languages</h3>
+                <h3>Advanced Python for System Administration</h3>
                 <span class="status-badge completed">✓ Proficient</span>
               </div>
               <div class="skill-progress">
@@ -71,15 +95,18 @@ permalink: /devops-roadmap/
                 </div>
               </div>
               <ul class="skill-details">
-                <li>Python for automation and scripting</li>
-                <li>Bash scripting for system operations</li>
-                <li>YAML for configuration management</li>
+                <li>Regular expressions for text processing and log analysis</li>
+                <li>Working with CSV, JSON, and XML data formats</li>
+                <li>HTTP requests and API interaction with error handling</li>
+                <li>Command-line argument parsing with argparse</li>
+                <li>Logging configuration and best practices</li>
+                <li>Exception handling and debugging techniques</li>
               </ul>
             </div>
 
             <div class="skill-item completed">
               <div class="skill-header">
-                <h3>Version Control</h3>
+                <h3>Integration & Professional Development</h3>
                 <span class="status-badge completed">✓ Expert</span>
               </div>
               <div class="skill-progress">
@@ -88,12 +115,34 @@ permalink: /devops-roadmap/
                 </div>
               </div>
               <ul class="skill-details">
-                <li>Git workflows and branching strategies</li>
-                <li>GitHub/GitLab collaboration</li>
-                <li>Code review processes</li>
+                <li>Code Style: PEP 8 compliance and automated formatting</li>
+                <li>Documentation: Docstrings, README files, and API documentation</li>
+                <li>Version Control: Advanced Git workflows and collaboration</li>
+                <li>Testing Strategy: Unit tests, integration tests, and mocking</li>
+                <li>Performance: Profiling and optimization techniques</li>
+              </ul>
+            </div>
+
+            <div class="skill-item completed">
+              <div class="skill-header">
+                <h3>Command Line & Python Integration</h3>
+                <span class="status-badge completed">✓ Expert</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar-container">
+                  <div class="progress-bar completed" data-progress="95" style="width: 95%;"></div>
+                </div>
+              </div>
+              <ul class="skill-details">
+                <li>Using Python to enhance command-line workflows</li>
+                <li>Command-line tools written in Python</li>
+                <li>Shell scripting that incorporates Python utilities</li>
+                <li>Automation of Git workflows with Python</li>
+                <li>System administration tasks combining both skill sets</li>
               </ul>
             </div>
           </div>
+          <!-- End of Phase 1 skills-grid -->
         </div>
 
         <div class="roadmap-phase">
