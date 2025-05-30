@@ -44,7 +44,7 @@ permalink: /devops-roadmap/
           
           <!-- Single skills-grid container for ALL Phase 1 skills -->
           <div class="skills-grid">
-            <div class="skill-item completed">
+            <div class="skill-item in-progress">
               <div class="skill-header">
                 <h3>Python Fundamentals & Syntax Mastery</h3>
                 <span class="status-badge in-progress">🔄 Learning</span>
@@ -64,14 +64,14 @@ permalink: /devops-roadmap/
               </ul>
             </div>
 
-            <div class="skill-item completed">
+            <div class="skill-item planning">
               <div class="skill-header">
                 <h3>Git & Version Control Mastery</h3>
-                <span class="status-badge completed">✓ Mastered</span>
+                <span class="status-badge planning">📋 Next</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar completed" data-progress="100" style="width: 100%;"></div>
+                  <div class="progress-bar in-progress" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
@@ -84,14 +84,14 @@ permalink: /devops-roadmap/
               </ul>
             </div>
 
-            <div class="skill-item completed">
+            <div class="skill-item planning">
               <div class="skill-header">
                 <h3>Advanced Python for System Administration</h3>
-                <span class="status-badge completed">✓ Proficient</span>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar completed" data-progress="90" style="width: 90%;"></div>
+                  <div class="progress-bar in-progress" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
@@ -104,14 +104,14 @@ permalink: /devops-roadmap/
               </ul>
             </div>
 
-            <div class="skill-item completed">
+            <div class="skill-item planning">
               <div class="skill-header">
                 <h3>Integration & Professional Development</h3>
-                <span class="status-badge completed">✓ Expert</span>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar completed" data-progress="95" style="width: 95%;"></div>
+                  <div class="progress-bar in-progress" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
@@ -123,14 +123,14 @@ permalink: /devops-roadmap/
               </ul>
             </div>
 
-            <div class="skill-item completed">
+            <div class="skill-item planning">
               <div class="skill-header">
                 <h3>Command Line & Python Integration</h3>
-                <span class="status-badge completed">✓ Expert</span>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar completed" data-progress="95" style="width: 95%;"></div>
+                  <div class="progress-bar in-progress" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
@@ -147,59 +147,69 @@ permalink: /devops-roadmap/
 
         <div class="roadmap-phase">
           <div class="phase-header">
-            <h2>Phase 2: Core DevOps Practices</h2>
-            <span class="phase-status in-progress">In Progress</span>
+            <h2>Phase 2:Systems & Automation</h2>
+            <span class="phase-status planning">Planned</span>
           </div>
           
           <div class="skills-grid">
             <div class="skill-item completed">
               <div class="skill-header">
-                <h3>Containerization</h3>
-                <span class="status-badge completed">✓ Advanced</span>
+                <h3>Core System Administration</h3>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar completed" data-progress="85" style="width: 85%;"></div>
+                  <div class="progress-bar in-progress" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
-                <li>Docker containerization and best practices</li>
-                <li>Multi-stage builds and optimization</li>
+                <li>User & Group Management: Advanced permissions, sudo configuration, PAM</li>
+                <li>File System Management: LVM, RAID, file system types and optimization</li>
                 <li>Container security and scanning</li>
+                <li>Process Management: Systemd, service management, resource control</li>
+                <li>Network Configuration: Static/dynamic IP, routing, firewall rules</li>
+                <li>Package Management: Repository configuration, dependency resolution</li>
+                <li>System Monitoring: Log analysis, performance metrics, alerting</li>
+                <li>Security Hardening: SELinux/AppArmor, access controls, audit logging</li>
+                <li>Performance Tuning: CPU, memory, I/O optimization techniques</li>
+                <li>Troubleshooting: Systematic problem-solving methodologies</li>
+                <li>Backup & Recovery: Automated backup strategies, disaster recovery</li>
               </ul>
             </div>
 
-            <div class="skill-item in-progress">
+            <div class="skill-item planning">
               <div class="skill-header">
-                <h3>Orchestration</h3>
-                <span class="status-badge in-progress">🔄 Learning</span>
+                <h3>Advanced Automation & Configuration Management</h3>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar in-progress" data-progress="70" style="width: 70%;"></div>
+                  <div class="progress-bar planning" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
-                <li>Kubernetes cluster management</li>
-                <li>Service mesh implementation</li>
-                <li>Helm charts and package management</li>
+                <li>Ansible Expertise: Playbooks, roles, variables, and templates</li>
+                <li>Infrastructure Automation: Multi-server deployments and orchestration</li>
+                <li>Security Automation: Compliance scanning and remediation</li>
+                <li>Monitoring Integration: Automated monitoring and alerting setup</li>
               </ul>
             </div>
 
-            <div class="skill-item in-progress">
+            <div class="skill-item planning">
               <div class="skill-header">
-                <h3>CI/CD Pipelines</h3>
-                <span class="status-badge in-progress">🔄 Implementing</span>
+                <h3>DevOps Culture & Integration</h3>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar in-progress" data-progress="75" style="width: 75%;"></div>
+                  <div class="progress-bar in-progress" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
-                <li>GitHub Actions and GitLab CI</li>
-                <li>Automated testing integration</li>
-                <li>Deployment strategies and rollbacks</li>
+                <li>DevOps Principles: Collaboration, automation, measurement, sharing</li>
+                <li>Response procedures, post-mortems, improvement</li>
+                <li>Change Management: Safe deployment practices, rollback strategies</li>
+                <li>Metrics & Monitoring: SLIs, SLOs, error budgets, and dashboards</li>
               </ul>
             </div>
           </div>
@@ -207,14 +217,14 @@ permalink: /devops-roadmap/
 
         <div class="roadmap-phase">
           <div class="phase-header">
-            <h2>Phase 3: Cloud Infrastructure</h2>
-            <span class="phase-status planning">Planning</span>
+            <h2>Phase 3: Networking & Cloud Foundations</h2>
+            <span class="phase-status planning">Planned</span>
           </div>
           
           <div class="skills-grid">
             <div class="skill-item planning">
               <div class="skill-header">
-                <h3>Infrastructure as Code</h3>
+                <h3>Networking Mastery</h3>
                 <span class="status-badge planning">📋 Planned</span>
               </div>
               <div class="skill-progress">
@@ -223,26 +233,56 @@ permalink: /devops-roadmap/
                 </div>
               </div>
               <ul class="skill-details">
-                <li>Terraform for cloud provisioning</li>
-                <li>Ansible for configuration management</li>
-                <li>CloudFormation templates</li>
+                <li>OSI Model: Layer-by-layer understanding with practical applications</li>
+                <li>TCP/IP Stack: Protocol analysis, packet inspection, and troubleshooting</li>
+                <li>Subnetting & VLSM: Complex network design and address planning</li>
+                <li>Routing Protocols: OSPF, BGP, and dynamic routing concepts</li>
+                <li>Switching: VLANs, STP, and Layer 2 technologies</li>
+                <li>Network Security: Firewalls, VPNs, and intrusion detection</li>
+                <li>QoS & Traffic Management: Bandwidth management and prioritization</li>
+                <li>Network Troubleshooting: Systematic problem-solving with tools</li>
+                <li>Wireless Networking: 802.11 standards and enterprise wireless</li>
               </ul>
             </div>
 
             <div class="skill-item planning">
               <div class="skill-header">
-                <h3>Cloud Platforms</h3>
-                <span class="status-badge planning">📋 Next</span>
+                <h3>Azure Cloud Platform Mastery</h3>
+                <span class="status-badge planning">Planned</span>
               </div>
               <div class="skill-progress">
                 <div class="progress-bar-container">
-                  <div class="progress-bar planning" data-progress="20" style="width: 20%;"></div>
+                  <div class="progress-bar planning" data-progress="0" style="width: 0%;"></div>
                 </div>
               </div>
               <ul class="skill-details">
-                <li>AWS services and architecture</li>
-                <li>Azure cloud solutions</li>
-                <li>Multi-cloud strategies</li>
+                <li>Compute Services: VMs, App Services, Functions, Container Instances</li>
+                <li>Storage Solutions: Blob, File, Queue, Table storage with access patterns</li>
+                <li>Networking: Virtual Networks, Subnets, NSGs, Load Balancers, Traffic Manager</li>
+                <li>Identity & Security: Azure AD, RBAC, Key Vault, Security Center</li>
+                <li>High Availability: Multi-region deployments and disaster recovery</li>
+                <li>Monitoring & Management: Azure Monitor, Log Analytics, Application Insights</li>
+                <li>Security: Defense in depth and zero-trust architectures</li>
+                <li>Cost Optimization: Resource management and cost control strategies</li>
+                <li>High Availability: Multi-region deployments and disaster recovery</li>
+              </ul>
+            </div>
+
+            <div class="skill-item planning">
+              <div class="skill-header">
+                <h3>Automation & Infrastructure as Code</h3>
+                <span class="status-badge planning">Planned</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress-bar-container">
+                  <div class="progress-bar planning" data-progress="0" style="width: 0%;"></div>
+                </div>
+              </div>
+              <ul class="skill-details">
+                <li>Infrastructure as Code: Terraform and ARM templates for Azure</li>
+                <li>Network Automation: Python scripts for network configuration and monitoring</li>
+                <li>Cloud Resource Management: Automated provisioning and deprovisioning</li>
+                <li>Monitoring Automation: Custom metrics and alerting setup</li>
               </ul>
             </div>
           </div>
