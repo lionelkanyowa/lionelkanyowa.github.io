@@ -200,45 +200,50 @@ permalink: /devops-roadmap/
         </div>
 
       </main>
+    </div>
+  </div>
+</section>
 
-      <aside class="roadmap-sidebar">
-        <div class="sidebar-content">
-          <div class="card">
-            <h3>Quick Stats</h3>
-            <div class="stats-list">
-              <div class="stat-item">
-                <span class="stat-number">12</span>
-                <span class="stat-label">Skills Mastered</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">5</span>
-                <span class="stat-label">In Progress</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">8</span>
-                <span class="stat-label">Planned</span>
-              </div>
-            </div>
+<!-- Moved sidebar content to bottom section -->
+<section class="section-standard roadmap-bottom-section">
+  <div class="wrapper">
+    <h2 class="text-center mb-3">Roadmap Overview</h2>
+    
+    <div class="bottom-cards-grid">
+      <div class="card">
+        <h3>Quick Stats</h3>
+        <div class="stats-list">
+          <div class="stat-item">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Skills Mastered</span>
           </div>
-
-          <div class="card">
-            <h3>Current Focus</h3>
-            <ul class="focus-list">
-              <li>Kubernetes CKA Certification</li>
-              <li>Advanced CI/CD Patterns</li>
-              <li>Monitoring & Observability</li>
-            </ul>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">In Progress</span>
           </div>
-
-          <div class="card">
-            <h3>Resources</h3>
-            <div class="resource-links">
-              <a href="/articles/" class="btn btn-outline">DevOps Articles</a>
-              <a href="/projects/" class="btn btn-outline">Related Projects</a>
-            </div>
+          <div class="stat-item">
+            <span class="stat-number">8</span>
+            <span class="stat-label">Planned</span>
           </div>
         </div>
-      </aside>
+      </div>
+
+      <div class="card">
+        <h3>Current Focus</h3>
+        <ul class="focus-list">
+          <li>Kubernetes CKA Certification</li>
+          <li>Advanced CI/CD Patterns</li>
+          <li>Monitoring & Observability</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Resources</h3>
+        <div class="resource-links">
+          <a href="/articles/" class="btn btn-outline">DevOps Articles</a>
+          <a href="/projects/" class="btn btn-outline">Related Projects</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
