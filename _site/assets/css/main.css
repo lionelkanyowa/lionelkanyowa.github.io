@@ -2111,3 +2111,531 @@ section {
       gap: 2rem;
     }
   }
+
+/* ==========================================
+   ENHANCED ABOUT PAGE STYLES
+   Add this to the end of your main.css file
+   ========================================== */
+
+/* Journey Timeline - Improved Structure */
+.journey-timeline {
+  margin-bottom: 5rem;
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.journey-timeline h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: all var(--transition-normal);
+}
+
+.timeline-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.timeline-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-hover);
+  border: 4px solid var(--background);
+}
+
+.timeline-content {
+  text-align: center;
+}
+
+.timeline-content h4 {
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Enhanced Story Grid - Vertical Layout */
+.story-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Vertical cards container */
+.horizontal-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.story-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.story-card:hover::before {
+  transform: scaleX(1);
+}
+
+.story-card.main-story {
+  grid-column: span 2;
+}
+
+.story-card.mission-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  border: none;
+}
+
+.story-card.mission-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.story-card.mission-card .story-header h3 {
+  color: white;
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.story-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.story-card.mission-card .story-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.story-header h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+/* Enhanced Quick Facts */
+.enhanced-facts {
+  border: 2px solid var(--primary-color);
+  background: linear-gradient(135deg, var(--card-bg), var(--background));
+}
+
+.facts-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.facts-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Enhanced Expertise Cards */
+.expertise-card {
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.expertise-level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.expertise-level:contains("Advanced") {
+  background: #22c55e;
+  color: white;
+}
+
+.expertise-card:has(.expertise-level:contains("Advanced")) .expertise-level {
+  background: #22c55e;
+  color: white;
+}
+
+.expertise-card:has(.expertise-level:contains("Intermediate")) .expertise-level {
+  background: #3b82f6;
+  color: white;
+}
+
+.expertise-card:has(.expertise-level:contains("Learning")) .expertise-level {
+  background: #f59e0b;
+  color: white;
+}
+
+/* Fallback for browsers that don't support :has() */
+.expertise-level {
+  background: #6b7280;
+  color: white;
+}
+
+/* Certification Status - Cleaner Design */
+.certification-status {
+  display: flex;
+  justify-content: center;
+}
+
+.cert-card {
+  background: var(--background);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 2px solid var(--primary-color);
+  text-align: center;
+  max-width: 500px;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.cert-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.cert-card h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.learning-goals {
+  margin-top: 2rem;
+  text-align: left;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.learning-goals h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.goal-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.goal-list li {
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  background: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.goal-list li:hover {
+  transform: translateX(4px);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Enhanced Connect Section - Horizontal Layout */
+.connect-header {
+  margin-bottom: 3rem;
+}
+
+.connect-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.connect-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.connect-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all var(--transition-normal);
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+}
+
+.connect-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.connect-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.connect-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.connect-card p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .story-card.main-story {
+    grid-column: span 1;
+  }
+  
+  .timeline-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .timeline-container::before {
+    display: none;
+  }
+  
+  .timeline-item {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .connect-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    gap: 1.5rem;
+  }
+  
+  .horizontal-cards {
+    gap: 1.5rem;
+  }
+  
+  .story-card {
+    padding: 1.5rem;
+  }
+  
+  /* Reset to vertical layout on mobile for better readability */
+  .horizontal-cards .story-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .horizontal-cards .story-header {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .horizontal-cards .story-card h3 {
+    writing-mode: horizontal-tb;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+  
+  .horizontal-cards .story-card p {
+    margin: 0;
+  }
+}
+  
+  .timeline-item {
+    max-width: 320px;
+    padding: 1.25rem;
+  }
+  
+  .timeline-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .connect-cards {
+    gap: 1.5rem;
+  }
+  
+  .connect-card {
+    min-width: auto;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .expertise-level {
+    align-self: flex-start;
+  }
+  
+  .journey-timeline {
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-card {
+    padding: 2rem 1rem;
+  }
+  
+  .story-card {
+    padding: 1rem;
+  }
+  
+  .connect-card {
+    padding: 1.5rem;
+  }
+  
+  .timeline-item {
+    padding: 1rem;
+  }
+  
+  .learning-goals {
+    padding: 1rem;
+  }
+  
+  .story-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
