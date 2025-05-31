@@ -192,11 +192,11 @@ img {
 }
 
 /* ==========================================
-   IMPROVED MOBILE NAVIGATION VISIBILITY
-   Replace the existing mobile navigation CSS with this
+   FIXED THEME TOGGLE STYLES
+   Replace the existing theme toggle section in your main.css with this
    ========================================== */
 
-/* Navigation */
+/* Navigation base styles */
 .site-nav {
   position: relative;
 }
@@ -230,7 +230,7 @@ img {
   transform: scale(0.95);
 }
 
-/* Improved menu icon visibility */
+/* Menu icon styling */
 .menu-icon {
   display: block;
   width: 20px;
@@ -247,7 +247,6 @@ img {
   transition: fill var(--transition-fast);
 }
 
-/* Add a subtle animation for better UX */
 .nav-trigger:checked + .nav-toggle {
   background: var(--primary-color);
   border-color: var(--primary-color);
@@ -257,14 +256,112 @@ img {
   fill: white;
 }
 
-/* Menu dropdown styling */
+/* Desktop navigation menu */
 .nav-menu {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-/* Mobile Navigation */
+/* Page links */
+.page-link {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.page-link:hover,
+.page-link.active {
+  color: var(--primary-color);
+}
+
+.page-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+/* ==========================================
+   THEME TOGGLE - SIMPLIFIED AND FIXED
+   ========================================== */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.theme-toggle:hover {
+  background: var(--card-bg);
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Icon container - ensures only one icon shows at a time */
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all var(--transition-fast);
+}
+
+/* Light mode - show sun, hide moon */
+[data-theme="light"] .theme-toggle .sun-icon,
+:root .theme-toggle .sun-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+[data-theme="light"] .theme-toggle .moon-icon,
+:root .theme-toggle .moon-icon {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Dark mode - hide sun, show moon */
+[data-theme="dark"] .theme-toggle .sun-icon {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ==========================================
+   MOBILE NAVIGATION
+   ========================================== */
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -313,18 +410,16 @@ img {
     display: none;
   }
 
-  /* Theme toggle in mobile menu */
+  /* Mobile theme toggle - maintain same functionality */
   .theme-toggle {
     margin-top: 0.5rem;
-    padding: 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
     width: 100%;
+    height: 44px;
     justify-content: center;
   }
 }
 
-/* Add slide-down animation */
+/* Slide-down animation for mobile menu */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -334,6 +429,20 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Menu open indicator arrow */
+.nav-trigger:checked + .nav-toggle::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--background);
+  margin-top: 7px;
 }
 
 /* Dark mode enhancements */
@@ -351,31 +460,6 @@ img {
 [data-theme="dark"] .nav-menu {
   border-color: var(--accent-color);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-/* Add a visual indicator when menu is open */
-.nav-trigger:checked + .nav-toggle::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  right: 20px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid var(--background);
-  margin-top: 7px;
-}
-
-/* Enhanced focus states for accessibility */
-.nav-toggle:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-}
-
-.page-link:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
 }
 
 /* ==========================================
