@@ -6,8 +6,8 @@ permalink: /devops-roadmap/
 
 <div class="hero section-small">
   <div class="wrapper">
-    <h1>DevOps Engineering Roadmap</h1>
-    <p class="hero-subtitle">A comprehensive journey through DevOps mastery - from fundamentals to advanced practices</p>
+    <h1>DevOps Engineering Mastery Curriculum</h1>
+    <p class="hero-subtitle">A self-designed, rigorous learning path emphasizing deep understanding over surface knowledge - from foundational concepts to advanced architectural expertise</p>
   </div>
 </div>
 
