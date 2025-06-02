@@ -1,10 +1,20 @@
+<!-- Updated header.html using actual logo image -->
 <header class="site-header">
     <div class="wrapper">
         <div class="header-content">
             <div class="site-title">
                 <a href="{{ '/' | relative_url }}">
-                    <span class="name">{{ site.author.name }}</span>
-                    <span class="tagline">DevOps Engineer</span>
+                    <div class="logo-container">
+                        <!-- Your actual logo image -->
+                        <img src="/assets/images/logo.png" 
+                             alt="Lionel Kanyowa - DevOps Engineer" 
+                             class="logo-image">
+                        
+                        <!-- Optional: Keep just the name if you want text alongside -->
+                        <div class="logo-text">
+                            <span class="name">{{ site.author.name }}</span>
+                        </div>
+                    </div>
                 </a>
             </div>
 
@@ -13,12 +23,9 @@
                 <label for="nav-trigger" class="nav-toggle">
                     <span class="menu-icon">
                         <svg viewBox="0 0 18 15" width="18px" height="15px">
-                            <path
-                                d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z" />
-                            <path
-                                d="m18,7.516c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z" />
-                            <path
-                                d="m18,13.516c0,0.82-0.665,1.485-1.484,1.485h-15.032c-0.819,0-1.484-0.665-1.484-1.485s0.665-1.485,1.485-1.485h15.031c0.819,0,1.484,0.665,1.484,1.485z" />
+                            <path d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z" />
+                            <path d="m18,7.516c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z" />
+                            <path d="m18,13.516c0,0.82-0.665,1.485-1.484,1.485h-15.032c-0.819,0-1.484-0.665-1.484-1.485s0.665-1.485,1.485-1.485h15.031c0.819,0,1.484,0.665,1.484,1.485z" />
                         </svg>
                     </span>
                 </label>
@@ -33,8 +40,7 @@
                         <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="5" />
-                            <path
-                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                         </svg>
                         <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
