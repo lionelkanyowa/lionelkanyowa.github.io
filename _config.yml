@@ -21,6 +21,7 @@ author:
   location: "Michigan"
 
 # Build Settings
+future: true   # publish study-log entries written/timestamped later the same day
 markdown: kramdown
 highlighter: rouge
 kramdown:
