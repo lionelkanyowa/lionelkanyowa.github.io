@@ -69,6 +69,10 @@ Tokens (define as CSS custom properties; style everything through them, never ha
 - The accent is a deep teal used **sparingly** — links on hover, the current-stage
   marker, one primary button, small labels. It is a deliberate complementary color,
   chosen to be independent of any programming language (not "Ruby red").
+- **Two functional track colors** (`--track-ruby` red, `--track-js` yellow) exist for one
+  purpose only: labeling the Ruby (backend) vs JavaScript (frontend) split in the Journey's
+  Core Curriculum. They are small markers (a tag + a left border), never used elsewhere and
+  never as a general accent. Teal remains the site's only real accent.
 - **Both themes** via tokens: `@media (prefers-color-scheme: dark)` for OS default, plus
   `:root[data-theme="dark"]` / `[data-theme="light"]` overrides for the manual toggle.
 
