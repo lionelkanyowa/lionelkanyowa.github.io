@@ -5,6 +5,38 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-08-09 — Study log: LinkedIn sharing + optional per-post images
+
+**Shipped this session.**
+- **Share on LinkedIn** — each study-log post now has a footer button linking to
+  `linkedin.com/sharing/share-offsite/?url=<post URL>`. No content duplication: LinkedIn
+  scrapes the post's own OpenGraph tags to build the preview card. Restrained outlined
+  mono button (teal on hover), styled via existing tokens in `assets/css/main.css`
+  (`.post-share` / `.share-linkedin`). Markup in `_layouts/post.html`.
+- **Optional per-post image** — set `image:` (and `image_alt:`) in a post's front matter to
+  render a framed lead image AND make it that post's LinkedIn card (seo-tag reads
+  `page.image`). Omit it → text-only post with the site default `og-image.png` card. The
+  layout guards against the inherited default so it never renders as a lead image.
+  New styles: `.post-figure` / `figcaption`.
+- **`future: true`** added to `_config.yml` so same-day entries timestamped ahead of build
+  time still publish (Jekyll skips future-dated posts by default). Preview launch config
+  added at `.claude/launch.json` (uses `--future`).
+- **New entry:** `_posts/2026-08-09-switching-to-ruby.md` — the Python→Ruby switch, Intro to
+  Ruby ch. 1, the simplified Apple Notes / active-recall note system. Lead image at
+  `assets/images/studylog/2026-08-09-switching-to-ruby.jpg` (Ruby-code close-up, 1500×1000).
+- Verified end-to-end via local build: og:image resolves to the post image when set and
+  falls back otherwise; share URL is correctly encoded; visually confirmed lead image +
+  footer button in the browser.
+
+**Notes for next time.**
+- LinkedIn caches cards on first fetch — use the Post Inspector to refresh after image
+  changes. Cards only resolve against the live prod URL, not localhost.
+- To add an image to any future post: drop a ~1200×630+ landscape file in
+  `assets/images/studylog/` and set `image:` + `image_alt:` in the front matter.
+- Deploying this session (Lionel will share to LinkedIn manually once live).
+
+---
+
 ## 2026-08-09 — LIVE. Quick wins + Journey corrections shipped
 
 **The site is live at https://lionelkanyowa.com** — Jekyll 4 built and deployed by
