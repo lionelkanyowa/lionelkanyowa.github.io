@@ -36,6 +36,16 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Keep internal files out of the published site
+exclude:
+  - CLAUDE.md
+  - README.md
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+
 # Navigation
 navigation:
   - title: About

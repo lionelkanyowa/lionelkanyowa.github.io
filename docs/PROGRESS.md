@@ -5,6 +5,57 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-08-09 — LIVE. Quick wins + Journey corrections shipped
+
+**The site is live at https://lionelkanyowa.com** — Jekyll 4 built and deployed by
+`.github/workflows/jekyll.yml` (GitHub Actions → Pages). Pages source is set to
+"GitHub Actions". Every push to `main` auto-deploys (~1 min). Verify runs via the public
+API: `.../actions/runs`.
+
+**Shipped this session (post-launch):**
+- **Accent color** changed ruby-red → deep **teal** (`--accent` `#0E6E66` / `#45C9BC`),
+  decoupled from any language. Docs/tokens updated.
+- **Socials** wired from `_config.yml`: GitHub, LinkedIn, X (`layoiscoding`), Instagram
+  (`layoiscoding`), YouTube (`lionelkanyowa`), Medium (`lionelkanyowa`), email. Footer
+  colophon line removed.
+- **Copy:** home hero → "Building understanding before building software."; About
+  condensed to Lionel's own words (removed the "How I work" cards + subhead); Journey page
+  hero → "Building a Foundation".
+- **Writing** hidden from home and pulled from nav until the first Medium article exists
+  (re-add the nav item in `_config.yml`; the home/section auto-shows once
+  `_data/articles.yml` has entries).
+- **First video** added (`_data/videos.yml`: `O0khMFrNBFc`).
+- **Quick wins:** LK monogram favicon (`favicon.svg` + 16/32/180 PNGs); 1200×630 social
+  card (`assets/images/og-image.png`) wired through seo-tag (config `defaults` +
+  `summary_large_image`); styled `404.html`; removed unused `logo.png`/`profile*.jpg` and
+  old `favicon.ico`.
+- **Journey Core Curriculum split** — Backend·Ruby / Frontend·JavaScript with functional
+  red/yellow markers (`--track-ruby` / `--track-js`, used ONLY here). Corrected to reality:
+  **Prep Work** (LS95, RB100) is the current stage; it's **one Ruby track**, backend-first
+  **then** frontend (sequential, not parallel); full course lists (RB101–RB185 backend,
+  LS202–JS235 frontend); assessments intentionally not listed. Synced on home + `/journey/`.
+- **Housekeeping:** excluded `CLAUDE.md`/`README.md`/`docs` from the published build.
+
+**Toolchain reminder:** local Ruby is 4.0.6, so the project uses modern Jekyll 4 (not the
+`github-pages` gem). Preview with `bundle exec jekyll serve --livereload`.
+
+**Process note:** a mid-session edit collision overwrote a manual `index.html` change once.
+Lesson applied: always **re-read a file immediately before editing** it, and avoid both
+parties live-editing the same file. Git history is now the safety net.
+
+**Open / next — highest-leverage first:**
+- **Substance** (the real gap): a first genuine **Projects** entry (home-lab write-up with
+  a diagram, or a small tool with a README), and building a **study-log** cadence. The
+  intro post is a starter to keep or replace.
+- **Contact + positioning:** consider a contact CTA and resume/LinkedIn prominence
+  (deferred from the audit).
+- **Logo:** still the "LK" initials mark — revisit if a bespoke mark is wanted; favicon
+  will need regenerating if it changes.
+- When the first article publishes: add it to `_data/articles.yml` and re-add "Writing" to
+  `_config.yml` navigation.
+
+---
+
 ## 2026-08-09 — Deploy migrated to GitHub Actions + Jekyll 4 (local == prod)
 
 **Done this session.**
