@@ -1,0 +1,19 @@
+{%- comment -%}
+  Renders a click-to-load YouTube facade card.
+  Pass a video object: {% include video.html video=v %}
+  where v has: id (YouTube ID), title, meta (optional), duration (optional).
+  Without JavaScript the card is a plain link to YouTube.
+{%- endcomment -%}
+<a class="vid" href="https://www.youtube.com/watch?v={{ include.video.id }}"
+   data-yt="{{ include.video.id }}" data-title="{{ include.video.title | escape }}"
+   target="_blank" rel="noopener">
+  <span class="thumb">
+    <img src="https://i.ytimg.com/vi/{{ include.video.id }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+    <span class="play" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </span>
+    {% if include.video.duration %}<span class="dur">{{ include.video.duration }}</span>{% endif %}
+  </span>
+  <h3>{{ include.video.title }}</h3>
+  {% if include.video.meta %}<p>{{ include.video.meta }}</p>{% endif %}
+</a>

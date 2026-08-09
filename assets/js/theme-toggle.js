@@ -1,73 +1,73 @@
-// Theme toggle functionality with system preference detection
+// Site interactions: theme toggle, code tabs, mobile nav, video facades.
 (function () {
     'use strict';
+    var root = document.documentElement;
 
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-
-    // Get system preference
-    function getSystemPreference() {
+    // ---- Theme toggle ---------------------------------------------------
+    // No stored preference means "follow the system" — the CSS media query
+    // handles that, so we only write data-theme + localStorage on an explicit
+    // toggle. The pre-paint script in <head> applies any saved choice.
+    function systemTheme() {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-
-    // Get stored theme or system preference
-    function getStoredTheme() {
-        return localStorage.getItem('theme') || getSystemPreference();
+    function effectiveTheme() {
+        return root.getAttribute('data-theme') || systemTheme();
     }
-
-    // Set theme
-    function setTheme(theme) {
-        html.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', function () {
+            var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
     }
+    // Keep following the system while no explicit choice is stored.
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+        try { if (!localStorage.getItem('theme')) root.removeAttribute('data-theme'); } catch (e) {}
+    });
 
-    // Initialize theme
-    function initTheme() {
-        const theme = getStoredTheme();
-        setTheme(theme);
-    }
-
-    // Toggle theme
-    function toggleTheme() {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-    }
-
-    // Listen for system theme changes
-    function watchSystemTheme() {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        mediaQuery.addEventListener('change', function (e) {
-            // Only update if user hasn't manually set a preference
-            if (!localStorage.getItem('theme')) {
-                setTheme(e.matches ? 'dark' : 'light');
-            }
+    // ---- Mobile nav: close after choosing a link ------------------------
+    var navTrigger = document.getElementById('nav-trigger');
+    if (navTrigger) {
+        document.querySelectorAll('.nav-menu .page-link').forEach(function (link) {
+            link.addEventListener('click', function () { navTrigger.checked = false; });
         });
     }
 
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', function () {
-        initTheme();
-        watchSystemTheme();
-
-        // Add click listener to theme toggle button
-        if (themeToggle) {
-            themeToggle.addEventListener('click', toggleTheme);
-        }
+    // ---- Code tabs (About) ----------------------------------------------
+    document.querySelectorAll('[data-tabs]').forEach(function (group) {
+        var tabs = group.querySelectorAll('.tab');
+        var fileLabel = group.querySelector('.tab-file');
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                tabs.forEach(function (t) {
+                    var on = t === tab;
+                    t.setAttribute('aria-selected', on);
+                    var panel = document.getElementById(t.getAttribute('aria-controls'));
+                    if (panel) panel.hidden = !on;
+                });
+                if (fileLabel && tab.getAttribute('data-file')) {
+                    fileLabel.textContent = tab.getAttribute('data-file');
+                }
+            });
+        });
     });
 
-    // Handle page visibility changes (for better performance)
-    document.addEventListener('visibilitychange', function () {
-        if (document.visibilityState === 'visible') {
-            // Refresh theme in case system preference changed while tab was hidden
-            if (!localStorage.getItem('theme')) {
-                setTheme(getSystemPreference());
-            }
-        }
-    });
-
-    // Smooth transitions after page load
-    window.addEventListener('load', function () {
-        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    // ---- YouTube facades: load the iframe only on click -----------------
+    document.querySelectorAll('.vid[data-yt]').forEach(function (vid) {
+        vid.addEventListener('click', function (e) {
+            e.preventDefault();
+            var id = vid.getAttribute('data-yt');
+            var thumb = vid.querySelector('.thumb');
+            if (!id || !thumb || vid.dataset.loaded) return;
+            var iframe = document.createElement('iframe');
+            iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0');
+            iframe.setAttribute('title', vid.getAttribute('data-title') || 'Video player');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            thumb.innerHTML = '';
+            thumb.appendChild(iframe);
+            vid.dataset.loaded = 'true';
+        });
     });
 })();
