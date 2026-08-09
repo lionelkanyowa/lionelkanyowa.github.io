@@ -1,0 +1,19 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+/vendor/
+.bundle/
+
+# Local worktrees (Claude Code)
+.claude/worktrees/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
