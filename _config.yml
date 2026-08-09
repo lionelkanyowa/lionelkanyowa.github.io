@@ -3,6 +3,11 @@ title: Lionel Kanyowa
 description: "Systems administrator expanding into software engineering. Learning in public through Launch School — a study log, longer writing, and videos."
 url: "https://lionelkanyowa.com"
 
+# Social / SEO (jekyll-seo-tag)
+twitter:
+  username: layoiscoding
+  card: summary_large_image
+
 # Personal Information
 author:
   name: Lionel Kanyowa
@@ -25,7 +30,7 @@ kramdown:
 # Study log posts live under /studylog/
 permalink: /studylog/:title/
 
-# Plugins - Only use supported GitHub Pages plugins
+# Plugins (Jekyll 4 — the build is ours via GitHub Actions, no allowlist)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -43,3 +48,10 @@ navigation:
     url: /studylog/
   - title: Videos
     url: /videos/
+
+# Default Open Graph / Twitter image for every page
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-image.png
