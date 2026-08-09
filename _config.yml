@@ -21,6 +21,7 @@ author:
   location: "Michigan"
 
 # Build Settings
+timezone: America/Detroit   # render dates in Michigan time, not UTC
 future: true   # publish study-log entries written/timestamped later the same day
 markdown: kramdown
 highlighter: rouge
