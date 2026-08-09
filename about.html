@@ -1,0 +1,69 @@
+---
+layout: default
+title: About
+permalink: /about/
+description: Systems administrator, mastery-based learner, home-lab tinkerer — expanding beyond infrastructure into software engineering.
+---
+
+<section class="about-hero">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1 class="about-title">Systems by trade, <em>software</em> by direction.</h1>
+  </div>
+</section>
+
+<section class="about-body">
+  <div class="wrap split">
+    <div class="prose">
+      <p>I'm Lionel Kanyowa, a Network and Systems Administrator at a nonprofit in Michigan. Most days I'm responsible for the technology that keeps our organization running—from hybrid identity and endpoint management to telephony, networking, and the internal tools our distributed staff rely on. I earned a B.S. in Informatics from Andrews University, but a large part of what I use every day has been self-taught through years of building, breaking, and troubleshooting systems.</p>
+
+      <p>Lately I've been expanding into software engineering through Launch School. Its mastery-based approach fits the way I like to learn. I don't mind spending extra time on a topic if it means I truly understand it. For me, learning isn't just about knowing that something works—it's about understanding why it works.</p>
+
+      <p>That same curiosity is what led me to build a home lab. I run a private network behind an OPNsense firewall and host open-source services on Proxmox. I didn't build it for a résumé or certifications; I built it because I wanted to understand how all the pieces fit together. I enjoy seeing how systems interact, and once a technical problem catches my attention, I usually can't leave it alone until I've figured it out.</p>
+    </div>
+
+    <aside class="portrait">
+      <figure>
+        <img src="{{ '/assets/images/lionel-about.jpg' | relative_url }}"
+             alt="Lionel Kanyowa holding a coffee at a cafe counter, a camera resting in front of him"
+             width="733" height="1100" loading="lazy">
+        <figcaption>Lionel Kanyowa</figcaption>
+      </figure>
+    </aside>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How I think in code</h2>
+      <p>I'm enrolled in the Launch School Ruby track, where the backend is written in Ruby and the frontend in JavaScript. Same habit of mind, two languages — here's a simple loop in each.</p>
+    </div>
+
+    <div class="code-card" data-tabs>
+      <div class="tabs" role="tablist" aria-label="Code sample language">
+        <button class="tab" role="tab" id="tab-rb" aria-controls="panel-rb" aria-selected="true" data-file="numbers.rb"><span class="dotm"></span>Ruby</button>
+        <button class="tab" role="tab" id="tab-js" aria-controls="panel-js" aria-selected="false" data-file="numbers.js"><span class="dotm"></span>JavaScript</button>
+        <span class="tab-file">numbers.rb</span>
+      </div>
+
+<pre class="code" id="panel-rb" role="tabpanel" aria-labelledby="tab-rb"><span class="tc"># label each number as even or odd</span>
+(<span class="ts">1</span>..<span class="ts">5</span>).<span class="tm">each</span> <span class="tk">do</span> |n|
+  <span class="tk">if</span> n.even?
+    <span class="tm">puts</span> <span class="ts">"#{n} is even"</span>
+  <span class="tk">else</span>
+    <span class="tm">puts</span> <span class="ts">"#{n} is odd"</span>
+  <span class="tk">end</span>
+<span class="tk">end</span></pre>
+
+<pre class="code" id="panel-js" role="tabpanel" aria-labelledby="tab-js" hidden><span class="tc">// the same idea, in the browser</span>
+<span class="tk">for</span> (<span class="tk">let</span> n = <span class="ts">1</span>; n &lt;= <span class="ts">5</span>; n++) {
+  <span class="tk">if</span> (n % <span class="ts">2</span> === <span class="ts">0</span>) {
+    console.<span class="tm">log</span>(<span class="ts">`${n} is even`</span>);
+  } <span class="tk">else</span> {
+    console.<span class="tm">log</span>(<span class="ts">`${n} is odd`</span>);
+  }
+}</pre>
+    </div>
+  </div>
+</section>

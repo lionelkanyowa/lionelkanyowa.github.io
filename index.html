@@ -1,134 +1,141 @@
 ---
 layout: default
 title: Home
+description: Systems administrator expanding into software engineering through Launch School. A study log, longer writing, and videos from the journey.
 ---
 
 <section class="hero">
-  <div class="wrapper">
-    <div class="profile-photo-container">
-      <img src="/assets/images/profile.jpg" alt="Lionel Kanyowa - DevOps Engineer" class="profile-image-centered">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Launch School · Ruby track</p>
+      <h1 class="hero-title">Building <em>understanding</em> before building software.</h1>
+      <p class="hero-lede">
+        I'm Lionel, a systems administrator expanding into software engineering through
+        mastery-based study. Infrastructure is where I started; software engineering is
+        where I'm growing.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey &rarr;</a>
+        <a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the study log</a>
+      </div>
     </div>
-    <h1 class="hero-title">Building the Future of Infrastructure</h1>
-    <p class="hero-subtitle">
-      Aspiring DevOps Engineer with a focus on cloud infrastructure, automation, and meaningful systems design.
-      Passionate about learning deeply, growing deliberately, and building solutions that serve both people and purpose.
-    </p>
-    <div style="margin-top: 2rem;">
-      <a href="/devops-roadmap/" class="btn btn-outline">Full Roadmap</a>
-      <a href="/projects/" class="btn btn-outline">View My Work</a>
-      <a href="/about/" class="btn btn-outline" style="margin-left: 1rem;">About Me</a>
-    </div>
-  </div>
-</section>
 
-<section style="padding: 4rem 0;">
-  <div class="wrapper">
-    <h2 style="text-align: center; margin-bottom: 3rem;">What I Do</h2>
-
-    <div class="card-grid">
-      <div class="card">
-        <h3>🏗️ Hybrid Infrastructure Management</h3>
-        <p>Managing integrated on-premises and cloud environments, including Active Directory with Microsoft Entra ID
-          synchronization,
-          Fortinet firewalls, and virtualized server infrastructure that supports secure, distributed workforces.</p>
+    <div class="log-card">
+      <div class="log-top">
+        <span class="dot r"></span><span class="dot"></span><span class="dot"></span>
+        <span class="log-file">study log · latest</span>
       </div>
-
-      <div class="card">
-        <h3>🛡️ Identity & Security Operations</h3>
-        <p>Implementing identity and access management policies, device compliance through Intune, and security
-          frameworks using Sophos Central antivirus while maintaining Group Policy standards across hybrid environments.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>⚡ System Administration</h3>
-        <p>Developing PowerShell and Bash automation solutions for technical onboarding, offboarding workflows, and
-          system administration tasks while building foundational skills in infrastructure as code and reproducible
-          deployments.</p>
-      </div>
-
-      <div class="card">
-        <h3>☁️ DevOps Transition & Growth</h3>
-        <p>Actively transitioning into DevOps engineering through hands-on learning of CI/CD principles, cloud-native
-          systems, and secure automation workflows — documenting the journey from systems administration to modern
-          DevOps practices.</p>
-      </div>
+      <ul class="hlog">
+        {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            <span class="hdate">{{ post.date | date: "%Y · %m · %d" }}</span>
+            <p class="hlog-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+          </a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{{ '/studylog/' | relative_url }}">
+            <span class="hdate">soon</span>
+            <p class="hlog-text">First entries are on the way.</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
 
-<section style="background: var(--card-bg); padding: 4rem 0; margin: 4rem 0; border-radius: 20px;">
-  <div class="wrapper text-center">
-    <h2>Recent Projects</h2>
-    <p class="text-muted" style="margin-bottom: 3rem;">Highlights from my latest work in DevOps and infrastructure</p>
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Journey</p>
+      <h2>Depth first, deadlines second</h2>
+      <p>I spent years in infrastructure learning that shortcuts usually cost more later. Launch School rewards the same instinct: rigorous assessments, mastery over memorization, and a curriculum that expects you to understand ideas instead of simply recognizing the answers. The goal isn't just learning a language—it's learning how to think like an engineer.</p>
+    </div>
+    <div class="track">
+      <div class="stage now">
+        <span class="st-label">Now · In Progress</span>
+        <h3>Ruby Foundations</h3>
+        <p>Learning programming from first principles: variables, control flow, collections, problem solving, and writing solutions from a blank page. The friction is intentional. Working through problems without shortcuts is what builds real understanding.</p>
+      </div>
+      <div class="stage">
+        <span class="st-label">Next</span>
+        <h3>Core Curriculum</h3>
+        <p>Deepening those fundamentals through object-oriented programming, networking and HTTP, databases and SQL, backend web development in Ruby, and frontend development with JavaScript. Each stage builds on the last, with mastery assessed before moving forward.</p>
+      </div>
+      <div class="stage">
+        <span class="st-label">Then</span>
+        <h3>Capstone</h3>
+        <p>An opportunity to work alongside a small engineering team on a production-quality project, applying software engineering principles, system design, and everything learned throughout Core. It's where my background in infrastructure and my growth as a software engineer come together.</p>
+      </div>
+    </div>
+    <div class="sec-foot"><a class="btn ghost" href="{{ '/journey/' | relative_url }}">The full journey &rarr;</a></div>
+  </div>
+</section>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Coming Soon...</h3>
-        <p>Projects will start populating soon.</p>
-        <div style="margin-top: 1.5rem;">
-          <span
-            style="background: var(--accent-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">Kubernetes</span>
-          <span
-            style="background: var(--accent-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">Terraform</span>
-          <span
-            style="background: var(--accent-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem;">AWS</span>
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Study log</p>
+      <h2>Thinking out loud, one session at a time</h2>
+      <p>Short reflections written after each study session — what clicked, what didn't, what I'm carrying into the next one. Kept here on the site.</p>
+    </div>
+    <div class="entries">
+      {% for post in site.posts limit:3 %}
+      <a class="entry" href="{{ post.url | relative_url }}">
+        <span class="edate">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
         </div>
-      </div>
-
-      <div class="card">
-        <h3>Coming Soon...</h3>
-        <p>Projects will start populating soon.</p>
-        <div style="margin-top: 1.5rem;">
-          <span
-            style="background: var(--accent-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">Python</span>
-          <span
-            style="background: var(--accent-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">Ansible</span>
-          <span
-            style="background: var(--accent-color); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem;">Docker</span>
-        </div>
-      </div>
+      </a>
+      {% else %}
+      <p class="text-muted">First entries are on the way.</p>
+      {% endfor %}
     </div>
-
-    <div style="margin-top: 2rem;">
-      <a href="/projects/" class="btn btn-outline">View All Projects</a>
-    </div>
+    <div class="sec-foot"><a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the full study log &rarr;</a></div>
   </div>
 </section>
 
-<section style="padding: 4rem 0;">
-  <div class="wrapper text-center">
-    <h2>My DevOps Journey</h2>
-    <p class="text-muted" style="margin-bottom: 2rem;">Following a structured roadmap to master DevOps engineering</p>
-
-    <div style="max-width: 600px; margin: 0 auto; text-align: left;">
-      <div style="border-left: 3px solid var(--accent-color); padding-left: 2rem; margin-bottom: 2rem;">
-        <h3 style="margin-bottom: 0.5rem;">🎯 Current Focus</h3>
-        <p>PHASE 1: Command Line & Python Scripting Mastery (May-August 2025)</p>
-      </div>
-
-      <div style="border-left: 3px solid var(--border-color); padding-left: 2rem; margin-bottom: 2rem;">
-        <h3 style="margin-bottom: 0.5rem;">📚 Learning Path</h3>
-        <ul class="emoji-path-list">
-          <li>Phase 1-2: Systems Mastery Foundation</li>
-          <li>Phase 3: Cloud & Networking Fundamentals</li>
-          <li>Phase 4: Infrastructure as
-            Code & Containers</li>
-          <li>Phase 5: Advanced Systems & Cloud Architecture</li>
-          <li>Phase 6: Advanced DevOps & Observability</li>
-          <li>Phase 7: Kubernetes & Cloud-Native Security</li>
-          <li>Phase 8: Platform Engineering & Advanced Security</li>
-        </ul>
-      </div>
-
-      <div style="border-left: 3px solid var(--border-color); padding-left: 2rem;">
-        <h3 style="margin-bottom: 0.5rem;">🎓 Upcoming Goals</h3>
-        <p>Cloud architecture certifications and advanced DevOps leadership skills</p>
-      </div>
+{% if site.data.articles and site.data.articles.size > 0 %}
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Writing</p>
+      <h2>Longer pieces, thought through</h2>
+      <p>Essays on learning deeply, the systems-to-software path, and lessons from the home lab. Published on Medium.</p>
     </div>
-
-    <div style="margin-top: 2rem;">
-      <a href="/devops-roadmap/" class="btn btn-outline">Explore My Roadmap</a>
+    <div class="writing">
+      {% for a in site.data.articles limit:4 %}
+      <a class="post-link" href="{{ a.url }}" target="_blank" rel="noopener">
+        <span class="date">{{ a.date | date: "%Y · %m" }}</span>
+        <h3>{{ a.title }}</h3>
+        <span class="src">Medium &#8599;</span>
+      </a>
+      {% endfor %}
     </div>
+    <div class="sec-foot"><a class="btn ghost" href="{{ '/writing/' | relative_url }}">All articles &rarr;</a></div>
+  </div>
+</section>
+{% endif %}
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Videos</p>
+      <h2>The journey on camera</h2>
+      <p>Short videos documenting Launch School and the software-engineering path. Click a thumbnail to play — the player loads only then.</p>
+    </div>
+    {% if site.data.videos and site.data.videos.size > 0 %}
+    <div class="vids">
+      {% for v in site.data.videos limit:3 %}
+      {% include video.html video=v %}
+      {% endfor %}
+    </div>
+    <div class="sec-foot"><a class="btn ghost" href="{{ '/videos/' | relative_url }}">All videos &rarr;</a></div>
+    {% else %}
+    <p class="text-muted">First videos are coming soon.</p>
+    {% endif %}
   </div>
 </section>

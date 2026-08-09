@@ -1,0 +1,13 @@
+# YouTube videos, newest first. These render on /videos/ and on the home page
+# as click-to-load facades (the iframe loads only when a thumbnail is clicked).
+# Add one entry per video:
+#
+# - id: dQw4w9WgXcQ            # the YouTube video ID (the v= part of the URL)
+#   title: What mastery-based learning actually feels like
+#   meta: Launch School · month 1
+#   duration: "11:42"          # optional, shown on the thumbnail
+#
+# Leave the list empty ([]) until the first video is up.
+- id: O0khMFrNBFc
+  title: I Turned My Programming Struggles into a Youtube Journey
+  meta: January 2025 · where the journey started

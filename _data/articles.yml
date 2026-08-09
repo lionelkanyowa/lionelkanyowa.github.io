@@ -1,0 +1,10 @@
+# Medium articles, newest first. These render on /writing/ and on the home page.
+# Add one entry per article:
+#
+# - title: Why I left the Python track for Ruby
+#   url: https://medium.com/@lionelkanyowa/some-slug
+#   date: 2026-08-01
+#
+# Leave the list empty ([]) until the first article is published — the pages
+# show a graceful "coming soon" state when there are none.
+[]
