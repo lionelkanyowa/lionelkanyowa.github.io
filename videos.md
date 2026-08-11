@@ -8,8 +8,8 @@ description: Short videos documenting Launch School and the software-engineering
 <section class="about-hero">
   <div class="wrap">
     <p class="eyebrow">Videos</p>
-    <h1 class="about-title">The journey <em>on camera</em>.</h1>
-    <p class="about-stand">Short videos documenting Launch School, the home lab, and the road from systems administration into software engineering. Thumbnails load the player only when you click — the page stays fast.</p>
+    <h1 class="about-title">Documenting the journey <em>on YouTube</em>.</h1>
+    <p class="about-stand">Short videos documenting Launch School, the home lab, and the road from network and systems administration into software engineering. Thumbnails load the player only when you click — the page stays fast.</p>
   </div>
 </section>
 

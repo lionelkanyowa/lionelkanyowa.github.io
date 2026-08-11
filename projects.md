@@ -8,7 +8,7 @@ description: Things I build — a home lab, Launch School work, and small tools 
 <section class="about-hero">
   <div class="wrap">
     <p class="eyebrow">Projects</p>
-    <h1 class="about-title">Things I build to <em>understand</em> them.</h1>
+    <h1 class="about-title">What I'm <em>building</em>.</h1>
     <p class="about-stand">I learn by building. Some of it is infrastructure I run for real; some is coursework; some is small tools that scratch an itch. This page will grow as the software side does.</p>
   </div>
 </section>

@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Home
-description: Systems administrator expanding into software engineering through Launch School. A study log, longer writing, and videos from the journey.
+description: Network and systems administrator expanding into software engineering through Launch School. A study log, longer writing, and videos from the journey.
 ---
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Launch School · Ruby track</p>
-      <h1 class="hero-title">Building <em>understanding</em> before building software.</h1>
+      <h1 class="hero-title">I'm learning to build software, <em>in the open</em>.</h1>
       <p class="hero-lede">
-        I'm Lionel, a systems administrator expanding into software engineering through
+        I'm Lionel, a network and systems administrator expanding into software engineering through
         mastery-based study. Infrastructure is where I started; software engineering is
         where I'm growing.
       </p>
@@ -20,29 +20,32 @@ description: Systems administrator expanding into software engineering through L
       </div>
     </div>
 
-    <div class="log-card">
-      <div class="log-top">
-        <span class="dot r"></span><span class="dot"></span><span class="dot"></span>
-        <span class="log-file">study log · latest</span>
+    <aside class="hero-aside">
+      <img class="hero-avatar" src="{{ '/assets/images/lionel-avatar.jpg' | relative_url }}"
+           alt="Portrait of Lionel Kanyowa smiling in a cafe"
+           width="640" height="640" loading="eager">
+      <div class="mini-log">
+        <p class="mini-log-label">Study log · latest</p>
+        <ul>
+          {% for post in site.posts limit:2 %}
+          <li>
+            <a href="{{ post.url | relative_url }}">
+              <span class="d">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <span class="t">{{ post.title }}</span>
+            </a>
+          </li>
+          {% else %}
+          <li>
+            <a href="{{ '/studylog/' | relative_url }}">
+              <span class="d">soon</span>
+              <span class="t">First entries are on the way.</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <a class="mini-log-more" href="{{ '/studylog/' | relative_url }}">Read the study log &rarr;</a>
       </div>
-      <ul class="hlog">
-        {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">
-            <span class="hdate">{{ post.date | date: "%Y · %m · %d" }}</span>
-            <p class="hlog-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-          </a>
-        </li>
-        {% else %}
-        <li>
-          <a href="{{ '/studylog/' | relative_url }}">
-            <span class="hdate">soon</span>
-            <p class="hlog-text">First entries are on the way.</p>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+    </aside>
   </div>
 </section>
 
@@ -50,7 +53,7 @@ description: Systems administrator expanding into software engineering through L
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Journey</p>
-      <h2>Depth first, deadlines second</h2>
+      <h2>Why I'm choosing mastery over speed</h2>
       <p>I spent years in infrastructure learning that shortcuts usually cost more later. Launch School rewards the same instinct: rigorous assessments, mastery over memorization, and a curriculum that expects you to understand ideas instead of simply recognizing the answers. The goal isn't just learning a language—it's learning how to think like an engineer.</p>
     </div>
     <div class="track">
@@ -104,30 +107,6 @@ description: Systems administrator expanding into software engineering through L
   </div>
 </section>
 
-<section class="block">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Study log</p>
-      <h2>Thinking out loud, one session at a time</h2>
-      <p>Short reflections written after each study session — what clicked, what didn't, what I'm carrying into the next one. Kept here on the site.</p>
-    </div>
-    <div class="entries">
-      {% for post in site.posts limit:3 %}
-      <a class="entry" href="{{ post.url | relative_url }}">
-        <span class="edate">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <div>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
-        </div>
-      </a>
-      {% else %}
-      <p class="text-muted">First entries are on the way.</p>
-      {% endfor %}
-    </div>
-    <div class="sec-foot"><a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the full study log &rarr;</a></div>
-  </div>
-</section>
-
 {% if site.data.articles and site.data.articles.size > 0 %}
 <section class="block">
   <div class="wrap">
@@ -154,7 +133,7 @@ description: Systems administrator expanding into software engineering through L
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Videos</p>
-      <h2>The journey on camera</h2>
+      <h2>Documenting the journey on YouTube</h2>
       <p>Short videos documenting Launch School and the software-engineering path. Click a thumbnail to play — the player loads only then.</p>
     </div>
     {% if site.data.videos and site.data.videos.size > 0 %}

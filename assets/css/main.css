@@ -180,22 +180,24 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
 /* study-log card (hero visual) */
-.log-card {
-  background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden;
-  box-shadow: 0 1px 0 var(--hairline), 0 24px 50px -30px rgba(20,15,12,.35);
+.hero-aside { display: flex; flex-direction: column; gap: 1.1rem; max-width: 320px; margin: 0 auto; width: 100%; }
+.hero-avatar {
+  display: block; width: 210px; height: 210px; margin: 0 auto;
+  border-radius: 50%; object-fit: cover; background: var(--surface-2);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 20px 44px -26px rgba(20,15,12,.45);
 }
-.log-top { display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1rem; border-bottom: 1px solid var(--hairline); background: var(--surface-2); }
-.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--hairline); }
-.dot.r { background: var(--accent); opacity: .85; }
-.log-file { margin-left: auto; font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
-.hlog { list-style: none; margin: 0; padding: 0.35rem 0; }
-.hlog li { border-bottom: 1px solid var(--hairline); }
-.hlog li:last-child { border-bottom: 0; }
-.hlog a { text-decoration: none; color: inherit; display: block; padding: 0.8rem 1.25rem; transition: background .15s; }
-.hlog a:hover { background: var(--surface-2); }
-.hlog a:hover .hlog-text { color: var(--ink); }
-.hdate { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; color: var(--accent); }
-.hlog-text { margin: 0.3rem 0 0; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; }
+.mini-log { border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.mini-log-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0; padding: 0.65rem 0.95rem; border-bottom: 1px solid var(--hairline); background: var(--surface-2); }
+.mini-log ul { list-style: none; margin: 0; padding: 0; }
+.mini-log li { border-bottom: 1px solid var(--hairline); }
+.mini-log li a { display: block; padding: 0.7rem 0.95rem; text-decoration: none; color: inherit; transition: background .15s; }
+.mini-log li a:hover { background: var(--surface-2); }
+.mini-log .d { display: block; font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.15rem; }
+.mini-log .t { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.4; }
+.mini-log li a:hover .t { color: var(--ink); }
+.mini-log-more { display: block; padding: 0.65rem 0.95rem; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.02em; color: var(--muted); text-decoration: none; }
+.mini-log-more:hover { color: var(--accent); }
 
 /* ---- generic section blocks -------------------------------------------- */
 .block { padding-block: clamp(3rem, 6vw, 5rem); border-top: 1px solid var(--hairline); }

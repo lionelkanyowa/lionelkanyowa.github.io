@@ -8,7 +8,7 @@ description: Short reflections written after each Launch School study session â€
 <section class="about-hero">
   <div class="wrap">
     <p class="eyebrow">Study log</p>
-    <h1 class="about-title">Thinking out loud, one session at a time.</h1>
+    <h1 class="about-title">Thoughts from each <em>study session</em>.</h1>
     <p class="about-stand">Short reflections written right after each study session â€” what clicked, what didn't, and what I'm carrying into the next one. Kept here on the site, not on a platform.</p>
   </div>
 </section>
