@@ -5,6 +5,31 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-08-11 — Authentic headlines, hero portrait, accurate job title
+
+**Shipped this session.**
+- **Headlines rewritten** to a plainer, first-person voice (moving away from polished/
+  agency-tagline phrasing, and away from generic template labels): home hero
+  ("I'm learning to build software, in the open."), Projects ("What I'm building."),
+  Study log ("Thoughts from each study session."), Videos ("Documenting the journey on
+  YouTube."), and the mastery section ("Why I'm choosing mastery over speed") on both home
+  and Journey. Matching home section headings updated too.
+- **Hero portrait added.** Replaced the home hero's terminal-style study-log card with a
+  circular portrait (`assets/images/lionel-avatar.jpg` — a face-centered 640×640 crop of
+  `lionel-about.jpg`, made with ImageMagick) plus a compact latest-2 study-log card. Gives
+  social visitors a familiar face above the fold. `.hero-aside` / `.hero-avatar` /
+  `.mini-log` styles added; dead `.log-card`/`.hlog` CSS removed.
+- **Removed the duplicate** full study-log section from the home page (the hero card now
+  carries the latest-log teaser; the full archive lives on `/studylog/`).
+- **Job title corrected** site-wide to **Network and Systems Administrator** (hero lede,
+  home + About meta descriptions, `_config.yml`, Videos copy). Saved as a standing rule in
+  memory so it isn't shortened again.
+- Verified in dark, light, and mobile; deployed to `main`.
+
+**Next.** Substance still the priority — a first real Projects entry, and study-log cadence.
+
+---
+
 ## 2026-08-09 — Study log: LinkedIn sharing + optional per-post images
 
 **Shipped this session.**
