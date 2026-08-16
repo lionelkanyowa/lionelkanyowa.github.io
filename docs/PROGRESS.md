@@ -5,6 +5,51 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-08-15 — Per-course progress tracking on the Journey roadmap
+
+**Done this session.**
+- Added `_data/curriculum.yml` as the single source of truth for the roadmap courses: a
+  `prep` list (LS95, RB100) and a `core` list of two branches (backend/Ruby, 8 courses;
+  frontend/JavaScript, 6 courses). Each course has a `status` of `done` / `current` /
+  `upcoming`. Header comments in the file document how to update it.
+- `journey.html` now loops over `site.data.curriculum` for both the Prep Work stage and
+  the Core Curriculum split, replacing the hardcoded course `<li>`s.
+- Per-course visual markers added to `assets/css/main.css`: `.course.done` = filled accent
+  (teal) disc with a CSS checkmark; `.course.current` = accent ring with a box-shadow halo
+  plus an "in progress" `.c-tag` pill and brighter/bolder text; `.course.upcoming` = hollow
+  hairline dot with muted text — teal fills in as courses are cleared.
+- Added derived branch sub-status: for each Core branch, Liquid counts done/current/total
+  and renders a `.branch-status` chip — "Complete" (filled accent pill), "In progress ·
+  N/M" (teal text), or "Not started" (muted) — computed from course statuses so it can't
+  drift out of sync. Added a `.branch-head` flex wrapper to place the chip opposite the
+  branch tag.
+- Kept the existing Ruby-red / JS-yellow track colors as branch identity; teal/grey is a
+  separate progress axis. Added a reusable `.sr-only` utility and screen-reader status text
+  so progress is announced to assistive tech.
+- Seeded real current status in the data: LS95 = done, RB100 = current; all Core courses =
+  upcoming (both branches show "Not started").
+- Verified via the running Jekyll dev server: Prep renders LS95 done + RB100
+  current-with-tag; both Core branches derive "Not started" with 8 and 6 courses; a
+  temporary demo state (3 backend done + 1 current) correctly produced "In progress ·
+  3/8" with teal checks, the current ring+tag, and hollow upcoming markers — then reverted
+  to the truthful all-upcoming state before committing.
+- Committed as `feat: add per-course progress status to the Journey roadmap` (`0e28b62`;
+  `_data/curriculum.yml` + `journey.html` + `main.css`) on branch
+  `claude/homepage-preview-cards-3ba03c`, fast-forwarded onto `origin/main` to trigger the
+  GitHub Actions Pages deploy. `gh` CLI was unavailable, so no PR was opened.
+
+**Next.**
+- Confirm the deploy succeeded (repo Actions tab) and the live Journey page reflects the
+  new per-course markers and branch chips.
+- As courses are actually completed, update `_data/curriculum.yml` status fields (one-word
+  edits) — no template changes needed.
+
+**Open decisions.**
+- Design decision confirmed with Lionel: ship the data-driven per-course + derived-branch
+  approach, and extend the same treatment to Prep Work (not just Core).
+
+---
+
 ## 2026-08-15 — Journey page focused on the roadmap
 
 **Done this session.**
