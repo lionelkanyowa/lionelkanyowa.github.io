@@ -5,6 +5,45 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-08-15 — Journey page focused on the roadmap
+
+**Done this session.**
+- Reworked `journey.html` to make the roadmap the main event. Removed the duplicate
+  philosophy intro: the page previously had two competing framing sections (hero "Building
+  a Foundation" + paragraph, then a second "Why I'm choosing mastery over speed" sec-head +
+  paragraph) that repeated the same point and buried the roadmap below the fold. Deleted
+  the second section entirely.
+- Hero is now one tight block: eyebrow "The journey", h1 "Mastery over speed" (with "over
+  speed" as the italic accent em), and a single 3-sentence lede fused from Lionel's own
+  phrasing, ending by handing the reader into the roadmap ("the road from my first Ruby
+  program, through Core, to Capstone").
+- Made the roadmap the visual main event: added a "The roadmap" eyebrow label and wrapped
+  the `.track` timeline in a new `.roadmap` surface panel (`var(--surface)` background,
+  1px hairline border, 16px radius, `clamp()` padding, soft shadow) so it reads as a
+  distinct board rather than loose text under prose.
+- Emphasized the current stage: `.stage.now .st-label` is now a filled accent pill (accent
+  bg, accent-ink text, 999px radius); the "now" timeline marker (`::before`) gets a soft
+  accent ring via `box-shadow` + `color-mix`. Bumped `.stage h3` size and stage spacing.
+- CSS added to `assets/css/main.css` in the journey-track section (`.roadmap-label`,
+  `.roadmap`, `.roadmap .stage` overrides).
+- Verified via the running Jekyll dev server: h1 renders "Mastery over speed" with the em
+  on "over speed"; the old second sec-head is confirmed gone; roadmap panel has the
+  surface bg / 16px radius / hairline border; the "Now" label renders as an accent pill.
+  Core Curriculum Ruby/JS branches still lay out side by side at desktop (399px each
+  within the 952px panel) and collapse to a single column at mobile (375px) with no
+  horizontal overflow; panel padding clamps to 24px on mobile.
+- Committed as two commits on `claude/homepage-preview-cards-3ba03c`: "feat: focus the
+  Journey page on the roadmap" (`3381c14`, `journey.html` + `main.css`) and "chore: log
+  homepage doorway-hub session" (`5a7f862`, `docs/PROGRESS.md`). Fast-forwarded
+  `origin/main` (`73e2d41` → `5a7f862`) to trigger the GitHub Actions Pages deploy. `gh`
+  CLI was unavailable, so no PR was opened; the fast-forward rewrote nothing.
+
+**Next.**
+- Confirm the deploy succeeded (repo Actions tab) and the live Journey page at
+  lionelkanyowa.com/journey/ reflects the merged hero and roadmap panel.
+
+---
+
 ## 2026-08-15 — Homepage reworked into a doorway hub
 
 **Done this session.**
