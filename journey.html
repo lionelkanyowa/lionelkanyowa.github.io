@@ -23,8 +23,14 @@ description: The Launch School path — mastery-based software engineering, from
         <h3>Prep Work</h3>
         <p>Getting oriented and setting the groundwork before the graded curriculum begins.</p>
         <ul class="course-list prep">
-          <li><span class="code">LS95</span>Orientation</li>
-          <li><span class="code">RB100</span>Programming &amp; Back-end Prep</li>
+          {% for c in site.data.curriculum.prep %}
+          <li class="course {{ c.status }}">
+            <span class="c-mark" aria-hidden="true"></span>
+            <span class="code">{{ c.code }}</span>{{ c.title }}
+            {% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}
+            {% if c.status == 'current' %}<span class="c-tag">in progress</span>{% endif %}
+          </li>
+          {% endfor %}
         </ul>
       </div>
       <div class="stage">
@@ -32,30 +38,33 @@ description: The Launch School path — mastery-based software engineering, from
         <h3>Core Curriculum</h3>
         <p>One track, in order — the backend built in Ruby first, then the frontend in JavaScript. You can't move on to the frontend until the backend is complete, and each course is gated by an assessment.</p>
         <div class="core-split">
-          <div class="core-branch ruby">
-            <span class="branch-tag">1 · Backend · Ruby</span>
+          {% for branch in site.data.curriculum.core %}
+          {% assign total = branch.courses | size %}
+          {% assign done = branch.courses | where: "status", "done" | size %}
+          {% assign current = branch.courses | where: "status", "current" | size %}
+          <div class="core-branch {% if branch.id == 'backend' %}ruby{% else %}js{% endif %}">
+            <div class="branch-head">
+              <span class="branch-tag">{{ branch.step }} · {{ branch.label }}</span>
+              {% if done == total %}
+              <span class="branch-status complete">Complete</span>
+              {% elsif done > 0 or current > 0 %}
+              <span class="branch-status active">In progress · {{ done }}/{{ total }}</span>
+              {% else %}
+              <span class="branch-status">Not started</span>
+              {% endif %}
+            </div>
             <ul class="course-list">
-              <li><span class="code">RB101</span>Programming Foundations with Ruby: Basics</li>
-              <li><span class="code">RB110</span>Programming Foundations with Ruby: Intermediate</li>
-              <li><span class="code">RB120</span>Object Oriented Programming</li>
-              <li><span class="code">RB130</span>Ruby Foundations: More Topics</li>
-              <li><span class="code">LS170</span>Networking Foundations</li>
-              <li><span class="code">RB175</span>Networked Applications</li>
-              <li><span class="code">LS180</span>Database Foundations</li>
-              <li><span class="code">RB185</span>Database Applications</li>
+              {% for c in branch.courses %}
+              <li class="course {{ c.status }}">
+                <span class="c-mark" aria-hidden="true"></span>
+                <span class="code">{{ c.code }}</span>{{ c.title }}
+                {% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}
+                {% if c.status == 'current' %}<span class="c-tag">in progress</span>{% endif %}
+              </li>
+              {% endfor %}
             </ul>
           </div>
-          <div class="core-branch js">
-            <span class="branch-tag">2 · Frontend · JavaScript</span>
-            <ul class="course-list">
-              <li><span class="code">LS202</span>HTML and CSS</li>
-              <li><span class="code">JS210</span>Fundamentals of JavaScript for Programmers</li>
-              <li><span class="code">LS215</span>Computational Thinking and Problem Solving</li>
-              <li><span class="code">JS225</span>Object Oriented JavaScript</li>
-              <li><span class="code">JS230</span>DOM Manipulation &amp; Browser Events</li>
-              <li><span class="code">JS235</span>Asynchronous JavaScript &amp; APIs</li>
-            </ul>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="stage">

@@ -1,0 +1,71 @@
+# Core Curriculum — the two branches of Launch School's Core, in order.
+#
+# Update a course's `status` as you progress; the branch sub-status
+# ("Complete" / "In progress · N/M" / "Not started") is derived automatically
+# from the course statuses, so this file is the only thing to edit.
+#
+# status: one of
+#   done      — assessment passed
+#   current   — actively working through it now
+#   upcoming  — not started yet
+
+prep:
+  - code: LS95
+    title: "Orientation"
+    status: done
+  - code: RB100
+    title: "Programming & Back-end Prep"
+    status: current
+
+core:
+  - id: backend
+    step: 1
+    label: "Backend · Ruby"
+    courses:
+      - code: RB101
+        title: "Programming Foundations with Ruby: Basics"
+        status: upcoming
+      - code: RB110
+        title: "Programming Foundations with Ruby: Intermediate"
+        status: upcoming
+      - code: RB120
+        title: "Object Oriented Programming"
+        status: upcoming
+      - code: RB130
+        title: "Ruby Foundations: More Topics"
+        status: upcoming
+      - code: LS170
+        title: "Networking Foundations"
+        status: upcoming
+      - code: RB175
+        title: "Networked Applications"
+        status: upcoming
+      - code: LS180
+        title: "Database Foundations"
+        status: upcoming
+      - code: RB185
+        title: "Database Applications"
+        status: upcoming
+
+  - id: frontend
+    step: 2
+    label: "Frontend · JavaScript"
+    courses:
+      - code: LS202
+        title: "HTML and CSS"
+        status: upcoming
+      - code: JS210
+        title: "Fundamentals of JavaScript for Programmers"
+        status: upcoming
+      - code: LS215
+        title: "Computational Thinking and Problem Solving"
+        status: upcoming
+      - code: JS225
+        title: "Object Oriented JavaScript"
+        status: upcoming
+      - code: JS230
+        title: "DOM Manipulation & Browser Events"
+        status: upcoming
+      - code: JS235
+        title: "Asynchronous JavaScript & APIs"
+        status: upcoming
