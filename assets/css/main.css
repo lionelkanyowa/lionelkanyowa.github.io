@@ -262,6 +262,23 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .course-list .code { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-right: 0.45rem; }
 .course-list.prep { margin-top: 0.9rem; }
 
+/* roadmap: lift the timeline onto a surface panel so it reads as the main event */
+.roadmap-label { margin-bottom: 1.25rem; }
+.roadmap {
+  background: var(--surface); border: 1px solid var(--hairline); border-radius: 16px;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  box-shadow: 0 30px 60px -42px rgba(20, 15, 12, .4);
+}
+.roadmap .stage h3 { font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.45rem); }
+.roadmap .stage { padding-bottom: 2.2rem; }
+.roadmap .stage:last-child { padding-bottom: 0; }
+/* current stage: a filled label pill and a soft ring on the marker draw the eye to "you are here" */
+.roadmap .stage.now .st-label {
+  display: inline-block; background: var(--accent); color: var(--accent-ink);
+  padding: 0.2rem 0.55rem; border-radius: 999px;
+}
+.roadmap .stage.now::before { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent); }
+
 /* ---- study log entries -------------------------------------------------- */
 .entries { display: grid; gap: 0; }
 .entry {
