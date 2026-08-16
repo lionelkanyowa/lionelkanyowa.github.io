@@ -5,6 +5,43 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-08-15 — Homepage reworked into a doorway hub
+
+**Done this session.**
+- Reworked the homepage (`index.html`) away from reproducing the Journey, Writing, and
+  Videos pages inline (visitors had effectively seen the whole site on first scroll) into
+  a hub of doorway cards.
+- New structure: (1) Hero — thesis, portrait, single primary "Follow the journey →" CTA;
+  the mini-log was removed from the hero aside. (2) Featured Study Log section ("The
+  running log") showing the latest 2 entries as richer cards with date/title/excerpt —
+  kept deliberately as the one piece of live, return-worthy content (Lionel asked to keep
+  the study log on home). (3) "Explore" grid of doorway cards — Journey, Projects, Videos,
+  About — each just a mono index, title, one-line teaser, and arrow routing to the full
+  page.
+- Added a conditional Writing door that renders only when `_data/articles.yml` has
+  entries (currently `[]`, so hidden). Keeps `/writing/` from being orphaned once the
+  first Medium article is published, with no code change needed then.
+- Removed the full inline Journey course list, Writing list, and inline video players
+  from the homepage.
+- CSS (`assets/css/main.css`): added `.log-feature`/`.log-card` and `.doors`/`.door` card
+  styles using existing design tokens; doorway grid is 4-across on desktop, collapsing to
+  2×2 (≤900px) then 1-col (≤520px).
+- Verified via the running Jekyll dev server: 2 study-log cards and 4 doorway cards render
+  with correct titles; Writing door correctly hidden while `articles.yml` is empty; no
+  Liquid/build errors; doorway grid confirmed as a clean 4-across strip at 1280px.
+- Committed on branch `claude/homepage-preview-cards-3ba03c` (commit `73e2d41`) and
+  fast-forwarded `origin/main` (`0a32e12` → `73e2d41`) to trigger the GitHub Actions Pages
+  deploy. `gh` CLI was unavailable, so no PR was opened; the fast-forward rewrote nothing.
+
+**Next.**
+- Confirm the deploy succeeded (repo Actions tab) and the live site at
+  lionelkanyowa.com reflects the new homepage.
+- When the first Medium article is added to `_data/articles.yml`, the Writing door will
+  appear automatically — sanity-check the 5-card grid layout at that point (5 cards in the
+  4-col grid will leave one on a second row).
+
+---
+
 ## 2026-08-11 — Authentic headlines, hero portrait, accurate job title
 
 **Shipped this session.**
