@@ -16,7 +16,6 @@ description: Network and systems administrator expanding into software engineeri
       </p>
       <div class="cta-row">
         <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey &rarr;</a>
-        <a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the study log</a>
       </div>
     </div>
 
@@ -24,27 +23,6 @@ description: Network and systems administrator expanding into software engineeri
       <img class="hero-avatar" src="{{ '/assets/images/lionel-avatar.jpg' | relative_url }}"
            alt="Portrait of Lionel Kanyowa smiling in a cafe"
            width="640" height="640" loading="eager">
-      <div class="mini-log">
-        <p class="mini-log-label">Study log · latest</p>
-        <ul>
-          {% for post in site.posts limit:2 %}
-          <li>
-            <a href="{{ post.url | relative_url }}">
-              <span class="d">{{ post.date | date: "%b %-d, %Y" }}</span>
-              <span class="t">{{ post.title }}</span>
-            </a>
-          </li>
-          {% else %}
-          <li>
-            <a href="{{ '/studylog/' | relative_url }}">
-              <span class="d">soon</span>
-              <span class="t">First entries are on the way.</span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        <a class="mini-log-more" href="{{ '/studylog/' | relative_url }}">Read the study log &rarr;</a>
-      </div>
     </aside>
   </div>
 </section>
@@ -52,99 +30,71 @@ description: Network and systems administrator expanding into software engineeri
 <section class="block">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Journey</p>
-      <h2>Why I'm choosing mastery over speed</h2>
-      <p>I spent years in infrastructure learning that shortcuts usually cost more later. Launch School rewards the same instinct: rigorous assessments, mastery over memorization, and a curriculum that expects you to understand ideas instead of simply recognizing the answers. The goal isn't just learning a language—it's learning how to think like an engineer.</p>
+      <p class="eyebrow">Study log</p>
+      <h2>The running log</h2>
+      <p>Short reflections written after study sessions — the most current view of where I am and what I'm working through.</p>
     </div>
-    <div class="track">
-      <div class="stage now">
-        <span class="st-label">Now · In Progress</span>
-        <h3>Prep Work</h3>
-        <p>Getting oriented and setting the groundwork before the graded curriculum begins.</p>
-        <ul class="course-list prep">
-          <li><span class="code">LS95</span>Orientation</li>
-          <li><span class="code">RB100</span>Programming &amp; Back-end Prep</li>
-        </ul>
-      </div>
-      <div class="stage">
-        <span class="st-label">Next</span>
-        <h3>Core Curriculum</h3>
-        <p>One track, in order — the backend built in Ruby first, then the frontend in JavaScript. You can't move on to the frontend until the backend is complete, and each course is gated by an assessment.</p>
-        <div class="core-split">
-          <div class="core-branch ruby">
-            <span class="branch-tag">1 · Backend · Ruby</span>
-            <ul class="course-list">
-              <li><span class="code">RB101</span>Programming Foundations with Ruby: Basics</li>
-              <li><span class="code">RB110</span>Programming Foundations with Ruby: Intermediate</li>
-              <li><span class="code">RB120</span>Object Oriented Programming</li>
-              <li><span class="code">RB130</span>Ruby Foundations: More Topics</li>
-              <li><span class="code">LS170</span>Networking Foundations</li>
-              <li><span class="code">RB175</span>Networked Applications</li>
-              <li><span class="code">LS180</span>Database Foundations</li>
-              <li><span class="code">RB185</span>Database Applications</li>
-            </ul>
-          </div>
-          <div class="core-branch js">
-            <span class="branch-tag">2 · Frontend · JavaScript</span>
-            <ul class="course-list">
-              <li><span class="code">LS202</span>HTML and CSS</li>
-              <li><span class="code">JS210</span>Fundamentals of JavaScript for Programmers</li>
-              <li><span class="code">LS215</span>Computational Thinking and Problem Solving</li>
-              <li><span class="code">JS225</span>Object Oriented JavaScript</li>
-              <li><span class="code">JS230</span>DOM Manipulation &amp; Browser Events</li>
-              <li><span class="code">JS235</span>Asynchronous JavaScript &amp; APIs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="stage">
-        <span class="st-label">Then</span>
-        <h3>Capstone</h3>
-        <p>An opportunity to work alongside a small engineering team on a production-quality project, applying software engineering principles, system design, and everything learned throughout Core. It's where my background in infrastructure and my growth as a software engineer come together.</p>
-      </div>
-    </div>
-    <div class="sec-foot"><a class="btn ghost" href="{{ '/journey/' | relative_url }}">The full journey &rarr;</a></div>
-  </div>
-</section>
-
-{% if site.data.articles and site.data.articles.size > 0 %}
-<section class="block">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Writing</p>
-      <h2>Longer pieces, thought through</h2>
-      <p>Essays on learning deeply, the systems-to-software path, and lessons from the home lab. Published on Medium.</p>
-    </div>
-    <div class="writing">
-      {% for a in site.data.articles limit:4 %}
-      <a class="post-link" href="{{ a.url }}" target="_blank" rel="noopener">
-        <span class="date">{{ a.date | date: "%Y · %m" }}</span>
-        <h3>{{ a.title }}</h3>
-        <span class="src">Medium &#8599;</span>
+    <div class="log-feature">
+      {% for post in site.posts limit:2 %}
+      <a class="log-card" href="{{ post.url | relative_url }}">
+        <span class="d">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+        <span class="go">Read entry <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      {% else %}
+      <a class="log-card" href="{{ '/studylog/' | relative_url }}">
+        <span class="d">soon</span>
+        <h3>First entries are on the way.</h3>
+        <p>The log starts as the Ruby track gets underway.</p>
+        <span class="go">Open the log <span aria-hidden="true">&rarr;</span></span>
       </a>
       {% endfor %}
     </div>
-    <div class="sec-foot"><a class="btn ghost" href="{{ '/writing/' | relative_url }}">All articles &rarr;</a></div>
+    <div class="sec-foot"><a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the full log &rarr;</a></div>
   </div>
 </section>
-{% endif %}
 
 <section class="block">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Videos</p>
-      <h2>Documenting the journey on YouTube</h2>
-      <p>Short videos documenting Launch School and the software-engineering path. Click a thumbnail to play — the player loads only then.</p>
+      <p class="eyebrow">Explore</p>
+      <h2>Where to go next</h2>
+      <p>The rest of the site, one door each — the path I'm on, the work behind it, and how I think.</p>
     </div>
-    {% if site.data.videos and site.data.videos.size > 0 %}
-    <div class="vids">
-      {% for v in site.data.videos limit:3 %}
-      {% include video.html video=v %}
-      {% endfor %}
+    <div class="doors">
+      <a class="door" href="{{ '/journey/' | relative_url }}">
+        <span class="door-num">01</span>
+        <h3>Journey</h3>
+        <p>The Launch School path, stage by stage — mastery over speed.</p>
+        <span class="go">Follow the path <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="door" href="{{ '/projects/' | relative_url }}">
+        <span class="door-num">02</span>
+        <h3>Projects</h3>
+        <p>Real work, reframed from infrastructure toward software.</p>
+        <span class="go">See the work <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="door" href="{{ '/videos/' | relative_url }}">
+        <span class="door-num">03</span>
+        <h3>Videos</h3>
+        <p>Documenting the journey on YouTube, one step at a time.</p>
+        <span class="go">Watch along <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a class="door" href="{{ '/about/' | relative_url }}">
+        <span class="door-num">04</span>
+        <h3>About</h3>
+        <p>Systems to software — who I am and how I work.</p>
+        <span class="go">Read the story <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      {% if site.data.articles and site.data.articles.size > 0 %}
+      <a class="door" href="{{ '/writing/' | relative_url }}">
+        <span class="door-num">05</span>
+        <h3>Writing</h3>
+        <p>Longer essays, thought through — published on Medium.</p>
+        <span class="go">Read the essays <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      {% endif %}
     </div>
-    <div class="sec-foot"><a class="btn ghost" href="{{ '/videos/' | relative_url }}">All videos &rarr;</a></div>
-    {% else %}
-    <p class="text-muted">First videos are coming soon.</p>
-    {% endif %}
   </div>
 </section>
