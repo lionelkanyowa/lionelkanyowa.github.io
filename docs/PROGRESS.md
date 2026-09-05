@@ -5,6 +5,39 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-09-05 — Interlock v1.1 monogram integration
+
+**Done this session.**
+- Replaced the header's rounded, text-based LK tile with the v1.1 Interlock icon cut. Its
+  wider small-size gap preserves the interlock at 24px. The mark remains decorative to
+  assistive technology while the adjacent name and home-link label provide the accessible
+  identity.
+- Set the bare mark to the accessible light orange (`#D9824B`) on the dark site ground and
+  refined the adjacent name to a quieter system-sans weight 500 lockup.
+- Rebuilt the SVG and browser favicon fallbacks with the solid 16px favicon cut in off-white
+  on Lionel's requested `#9A4316` field. The Apple touch icon uses the larger standard cut
+  at the identity system's 60% scale rather than enlarging the favicon cut.
+- Replaced the generic LK tile on the editable default Open Graph artwork with the standard
+  Interlock cut and regenerated the 1200×630 PNG used by LinkedIn and other social previews.
+- Imported only clean path geometry from the supplied identity archive. The oversized
+  metadata-bearing SVG exports and font-dependent lockup files were not added to the site.
+- Verified the Jekyll build, inspected the header at 1440×900 and 375×812, opened the mobile
+  menu, checked for horizontal overflow, confirmed every favicon link, and found no browser
+  warnings or errors.
+
+**Next.**
+- Review the local preview with Lionel. Commit, push, and deploy only after approval.
+
+**Decisions.**
+- Interlock v1.1 is the canonical identity-system version. All future documentation,
+  handoffs, and asset discussions should explicitly reference v1.1.
+- Use the favicon cut at 16px, the widened-gap icon cut from 20–32px, and the standard
+  interlocking cut above 32px.
+- Keep `#9A4316` for filled brand surfaces; use `#D9824B` for an exposed mark on `#14110F`.
+- Keep the name as live HTML text instead of using a font-dependent exported SVG lockup.
+
+---
+
 ## 2026-09-05 — Final pre-push review and cleanup
 
 **Done this session.**

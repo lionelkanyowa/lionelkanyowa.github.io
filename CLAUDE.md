@@ -52,6 +52,11 @@ warm, monochrome with a single accent.
 Monochrome ground with one accent. **The design is not themed after any programming
 language** — no gem/mascot/syntax motifs. See `.claude/me.md`.
 
+The canonical brand identity is **Interlock v1.1**. Always identify it as v1.1 in
+documentation, handoffs, and asset discussions; never use an earlier version number. Its
+three optical cuts are: the solid favicon cut at 16px, the widened-gap icon cut from
+20–32px, and the standard interlocking cut above 32px.
+
 Tokens (define as CSS custom properties; style everything through them, never hardcode):
 
 | Token           | Dark      |

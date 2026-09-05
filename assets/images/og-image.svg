@@ -2,17 +2,17 @@
   <rect width="1200" height="630" fill="#14110F"/>
   <rect x="24" y="24" width="1152" height="582" rx="16" fill="none" stroke="#2C2621" stroke-width="2"/>
 
-  <rect x="88" y="92" width="96" height="96" rx="24" fill="#9A4316"/>
-  <text x="136" y="142" text-anchor="middle" dominant-baseline="central"
-        font-family="Liberation Sans,Arial,sans-serif" font-weight="700" font-size="40"
-        fill="#21120B">LK</text>
+  <g transform="translate(88 92) scale(.96)" fill="#D9824B">
+    <path fill-rule="evenodd" d="M0 0 H17 V83 H74 V100 H0 Z M0 38 L17 21 L17 69 L0 52 Z"/>
+    <path d="M0 45 L45 0 L65 0 L20 45 L58 83 L38 83 Z"/>
+  </g>
 
   <text x="88" y="338" font-family="Liberation Sans,Arial,sans-serif" font-weight="700"
         font-size="88" letter-spacing="-2" fill="#F3EFE9">Lionel Kanyowa</text>
   <text x="88" y="416" font-family="Liberation Sans,Arial,sans-serif" font-size="40"
         fill="#A29A90">Learning software engineering in public.</text>
 
-  <line x1="88" y1="500" x2="160" y2="500" stroke="#9A4316" stroke-width="8" stroke-linecap="round"/>
+  <line x1="88" y1="500" x2="160" y2="500" stroke="#D9824B" stroke-width="8" stroke-linecap="round"/>
   <text x="188" y="509" font-family="Liberation Sans,Arial,sans-serif" font-weight="600"
         font-size="25" letter-spacing="3" fill="#D9824B">LAUNCH SCHOOL · RUBY TRACK</text>
   <text x="1112" y="509" text-anchor="end" font-family="Liberation Sans,Arial,sans-serif"
