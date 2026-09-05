@@ -22,7 +22,7 @@ author:
 
 # Build Settings
 timezone: America/Detroit   # render dates in Michigan time, not UTC
-future: true   # publish study-log entries written/timestamped later the same day
+future: false  # prevent scheduled study-log entries from publishing early
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -40,6 +40,7 @@ plugins:
 
 # Keep internal files out of the published site
 exclude:
+  - AGENTS.md
   - CLAUDE.md
   - README.md
   - docs

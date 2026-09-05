@@ -95,10 +95,9 @@ My active recall questions and answers:
 During my next study session, I'll correct my flashcard questions, store them in Mochi, and
 then begin the Methods chapter.
 
-I also met with Yuliia, who is currently in `RB120`. She was very friendly, and we had an
-enlightening conversation about the current state of the Ruby track. Given how much more
-popular the Python track has become, it was great to hear that students are still working
-through the Ruby track.
+I also met with another student who is farther into the Ruby track. We had an enlightening
+conversation about the current state of the track. Given how much more popular the Python
+track has become, it was great to hear that students are still working through Ruby.
 
-I joked with Yuliia—though I wasn't really joking—that I would popularize the Ruby track
-again and bring some balance to the Python hype. 😄
+I joked—though I wasn't really joking—that I would popularize the Ruby track again and
+bring some balance to the Python hype.

@@ -20,9 +20,9 @@ description: Network and systems administrator expanding into software engineeri
     </div>
 
     <aside class="hero-aside">
-      <img class="hero-avatar" src="{{ '/assets/images/lionel-avatar.jpg' | relative_url }}"
+      <img class="hero-avatar" src="{{ '/assets/images/lionel-about.jpg' | relative_url }}"
            alt="Portrait of Lionel Kanyowa smiling in a cafe"
-           width="640" height="640" loading="eager">
+           width="1067" height="1600" loading="eager">
     </aside>
   </div>
 </section>
@@ -31,23 +31,27 @@ description: Network and systems administrator expanding into software engineeri
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Study log</p>
-      <h2>The running log</h2>
+      <h2>Latest from the study log</h2>
       <p>Short reflections written after study sessions — the most current view of where I am and what I'm working through.</p>
     </div>
-    <div class="log-feature">
+    <div class="home-log-list">
       {% for post in site.posts limit:2 %}
-      <a class="log-card" href="{{ post.url | relative_url }}">
-        <span class="d">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
-        <span class="go">Read entry <span aria-hidden="true">&rarr;</span></span>
+      <a class="home-log-row" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div class="home-row-copy">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
       {% else %}
-      <a class="log-card" href="{{ '/studylog/' | relative_url }}">
-        <span class="d">soon</span>
-        <h3>First entries are on the way.</h3>
-        <p>The log starts as the Ruby track gets underway.</p>
-        <span class="go">Open the log <span aria-hidden="true">&rarr;</span></span>
+      <a class="home-log-row" href="{{ '/studylog/' | relative_url }}">
+        <span class="home-row-date">Soon</span>
+        <div class="home-row-copy">
+          <h3>First entries are on the way.</h3>
+          <p>The log starts as the Ruby track gets underway.</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
       {% endfor %}
     </div>
@@ -59,40 +63,44 @@ description: Network and systems administrator expanding into software engineeri
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Explore</p>
-      <h2>Where to go next</h2>
-      <p>The rest of the site, one door each — the path I'm on, the work behind it, and how I think.</p>
+      <h2>Elsewhere on the site</h2>
     </div>
-    <div class="doors">
-      <a class="door" href="{{ '/journey/' | relative_url }}">
-        <span class="door-num">01</span>
-        <h3>Journey</h3>
-        <p>The Launch School path, stage by stage — mastery over speed.</p>
-        <span class="go">Follow the path <span aria-hidden="true">&rarr;</span></span>
+    <div class="home-links">
+      <a class="home-link" href="{{ '/journey/' | relative_url }}">
+        <div class="home-row-copy">
+          <h3>Journey</h3>
+          <p>The Launch School path, stage by stage — mastery over speed.</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
-      <a class="door" href="{{ '/projects/' | relative_url }}">
-        <span class="door-num">02</span>
-        <h3>Projects</h3>
-        <p>Real work, reframed from infrastructure toward software.</p>
-        <span class="go">See the work <span aria-hidden="true">&rarr;</span></span>
+      <a class="home-link" href="{{ '/projects/' | relative_url }}">
+        <div class="home-row-copy">
+          <h3>Projects</h3>
+          <p>Home-lab, infrastructure, and software-engineering work.</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
-      <a class="door" href="{{ '/videos/' | relative_url }}">
-        <span class="door-num">03</span>
-        <h3>Videos</h3>
-        <p>Documenting the journey on YouTube, one step at a time.</p>
-        <span class="go">Watch along <span aria-hidden="true">&rarr;</span></span>
+      <a class="home-link" href="{{ '/videos/' | relative_url }}">
+        <div class="home-row-copy">
+          <h3>Videos</h3>
+          <p>Videos about what I'm learning and building.</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
-      <a class="door" href="{{ '/about/' | relative_url }}">
-        <span class="door-num">04</span>
-        <h3>About</h3>
-        <p>Systems to software — who I am and how I work.</p>
-        <span class="go">Read the story <span aria-hidden="true">&rarr;</span></span>
+      <a class="home-link" href="{{ '/about/' | relative_url }}">
+        <div class="home-row-copy">
+          <h3>About</h3>
+          <p>My background, what I'm learning, and how I approach the work.</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
       {% if site.data.articles and site.data.articles.size > 0 %}
-      <a class="door" href="{{ '/writing/' | relative_url }}">
-        <span class="door-num">05</span>
-        <h3>Writing</h3>
-        <p>Longer essays, thought through — published on Medium.</p>
-        <span class="go">Read the essays <span aria-hidden="true">&rarr;</span></span>
+      <a class="home-link" href="{{ '/writing/' | relative_url }}">
+        <div class="home-row-copy">
+          <h3>Writing</h3>
+          <p>Longer essays published on Medium.</p>
+        </div>
+        <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
       {% endif %}
     </div>

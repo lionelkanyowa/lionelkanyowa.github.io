@@ -9,9 +9,8 @@ excerpt: "The Variables end-of-chapter questions, a new GitHub repo for my Launc
 Today I worked through the end-of-chapter questions for the Variables chapter. They were a
 good refresher, and none of them were too difficult.
 
-I created a GitHub repository for all of my Launch School work so I can access my files
-while I'm at work. My work laptop runs Windows, so I use WSL for Linux. At home, I use a Mac
-mini.
+I created a GitHub repository for my Launch School work so I can keep the same files across
+machines. I also standardized on a Linux shell for the workflow.
 
 I had been using a JetBrains IDE, but I've now opted to do everything within the terminal.
 To edit my Ruby files, I use an editor called Micro, which supports conventional keyboard

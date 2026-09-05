@@ -8,7 +8,7 @@ description: Longer essays on learning deeply, the systems-to-software path, and
 <section class="about-hero">
   <div class="wrap">
     <p class="eyebrow">Writing</p>
-    <h1 class="about-title">Longer pieces, <em>thought through</em>.</h1>
+    <h1 class="about-title">Longer writing</h1>
     <p class="about-stand">Where the study log is the day-to-day, these are the essays I take time with — learning deeply, the systems-to-software path, and lessons from the home lab. Published on Medium.</p>
   </div>
 </section>
@@ -20,7 +20,7 @@ description: Longer essays on learning deeply, the systems-to-software path, and
       {% for a in site.data.articles %}
       <a class="post-link" href="{{ a.url }}" target="_blank" rel="noopener">
         <span class="date">{{ a.date | date: "%Y · %m" }}</span>
-        <h3>{{ a.title }}</h3>
+        <h2>{{ a.title }}</h2>
         <span class="src">Medium &#8599;</span>
       </a>
       {% endfor %}

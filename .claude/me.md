@@ -19,11 +19,12 @@ something works over collecting credentials.
 ## What the site is
 
 A personal portfolio and public journal of the software-engineering journey. Not a
-résumé dump. Its jobs, in order:
+résumé dump. Its two primary jobs carry equal weight:
 
-1. Show who he is and where he's headed (systems background → software engineering).
-2. Document the learning in the open — a study log, longer writing, and videos.
-3. Give employers, peers, and fellow learners a real sense of how he thinks.
+1. Show future employers and collaborators who he is, how he thinks, and where he is
+   headed (systems background → software engineering).
+2. Document the learning in the open through a weekly on-site study log, longer writing
+   on Medium, and videos. Study-log entries should be easy to share on LinkedIn.
 
 Audience: future collaborators and employers, other Launch School / self-taught
 learners, and his own future self as a record of the work.

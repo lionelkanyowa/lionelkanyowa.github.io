@@ -22,7 +22,9 @@ layout: default
             _config defaults) is excluded so it never renders as a lead image. {% endcomment %}
             {% if page.image and page.image != '/assets/images/og-image.png' %}
             <figure class="post-figure">
-                <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" loading="lazy">
+                <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"
+                    {% if page.image_width and page.image_height %}width="{{ page.image_width }}" height="{{ page.image_height }}"{% endif %}
+                    loading="lazy">
                 {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
             </figure>
             {% endif %}

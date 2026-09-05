@@ -10,16 +10,16 @@ description: What I'm learning with — the courses, books, and references behin
 {: .lead }
 What I'm actually learning with, kept honest and short. Not a link dump — just the things doing real work right now.
 
-## The spine
+## Current curriculum
 
 - **[Launch School](https://launchschool.com/)** — the mastery-based Core curriculum, currently the Ruby track. This is the main study path, and everything else orbits it.
 
-## Reference I keep open
+## Reference
 
 - **[Ruby documentation](https://ruby-doc.org/)** — the standard library, read rather than guessed at.
 - **[MDN Web Docs](https://developer.mozilla.org/)** — the reference for HTML, CSS, and JavaScript on the frontend side.
 
-## Books shaping how I work
+## Books
 
 - *So Good They Can't Ignore You* — Cal Newport. The case for skill over passion, and the reason I chose the slower, deeper path.
 

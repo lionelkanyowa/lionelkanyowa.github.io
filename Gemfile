@@ -5,6 +5,10 @@ source "https://rubygems.org"
 # `github-pages` gem, which caps at Ruby < 4.0 and can't run on this machine.)
 gem "jekyll", "~> 4.4"
 
+# ERB is a bundled gem on modern Ruby and must be explicit when Bundler isolates
+# Jekyll's dependencies (notably on Arch Linux's split Ruby packages).
+gem "erb", "~> 6.0"
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
   gem "jekyll-sitemap", "~> 1.4"

@@ -25,8 +25,9 @@ Lionel — not an order-taker. That means:
 ## What this project is
 
 A complete revamp of Lionel's personal site: away from the old DevOps-engineer framing,
-toward documenting his software-engineering journey through Launch School. Minimalist,
-elegant, monochrome with a single accent.
+toward documenting his software-engineering journey through Launch School while serving
+equally as a credible portfolio for future software-engineering opportunities. Minimalist,
+warm, monochrome with a single accent.
 
 ## Stack and constraints
 
@@ -44,7 +45,7 @@ elegant, monochrome with a single accent.
 - Performance and privacy: lazy/facade embeds for YouTube (load the iframe only on click),
   no third-party trackers.
 - Accessibility: semantic HTML, visible `:focus-visible`, honor `prefers-reduced-motion`,
-  legible contrast in both themes.
+  and maintain legible contrast throughout the dark theme.
 
 ## Design system
 
@@ -53,39 +54,41 @@ language** — no gem/mascot/syntax motifs. See `.claude/me.md`.
 
 Tokens (define as CSS custom properties; style everything through them, never hardcode):
 
-| Token          | Light     | Dark      |
-| -------------- | --------- | --------- |
-| `--ground`     | `#F7F6F3` | `#14110F` |
-| `--surface`    | `#FFFFFF` | `#1C1815` |
-| `--surface-2`  | `#F1EFEA` | `#221D19` |
-| `--ink`        | `#1A1613` | `#F3EFE9` |
-| `--ink-soft`   | `#423C37` | `#D8D2CA` |
-| `--muted`      | `#6C6560` | `#A29A90` |
-| `--hairline`   | `#E5E1DB` | `#2C2621` |
-| `--accent`     | `#0E6E66` | `#45C9BC` |
-| `--accent-ink` | `#FFFFFF` | `#07211E` |
+| Token           | Dark      |
+| --------------- | --------- |
+| `--ground`      | `#14110F` |
+| `--surface`     | `#1C1815` |
+| `--surface-2`   | `#221D19` |
+| `--ink`         | `#F3EFE9` |
+| `--ink-soft`    | `#D8D2CA` |
+| `--muted`       | `#A29A90` |
+| `--hairline`    | `#2C2621` |
+| `--accent`      | `#9A4316` |
+| `--accent-text` | `#D9824B` |
+| `--accent-ink`  | `#FFFFFF` |
 
 - Neutrals are warm (slight red bias) so they read as chosen, not default grey.
-- The accent is a deep teal used **sparingly** — links on hover, the current-stage
-  marker, one primary button, small labels. It is a deliberate complementary color,
-  chosen to be independent of any programming language (not "Ruby red").
+- The accent is a deep burnt orange used **sparingly** — links on hover, the current-stage
+  marker, one primary button, and small labels. It is warm and personal without being tied
+  to a programming language.
 - **Two functional track colors** (`--track-ruby` red, `--track-js` yellow) exist for one
   purpose only: labeling the Ruby (backend) vs JavaScript (frontend) split in the Journey's
   Core Curriculum. They are small markers (a tag + a left border), never used elsewhere and
-  never as a general accent. Teal remains the site's only real accent.
-- **Both themes** via tokens: `@media (prefers-color-scheme: dark)` for OS default, plus
-  `:root[data-theme="dark"]` / `[data-theme="light"]` overrides for the manual toggle.
+  never as a general accent. Burnt orange remains the site's only real accent.
+- The site is intentionally dark-only. Do not add a theme toggle or system/light override
+  unless Lionel explicitly changes that product decision.
 
-Typography (three roles):
+Typography is intentionally ordinary and human:
 
-- **Display / headings** — a serif with character (target: Fraunces or Spectral). Elegance
-  and craft.
-- **Body / UI** — a clean humanist sans (system stack is acceptable; or Inter/IBM Plex Sans).
-- **Labels, metadata, code** — a monospace (target: JetBrains Mono or IBM Plex Mono). Reads
-  as engineering precision, not as any one language.
-
-Load webfonts self-hosted or via `<link>` in `_layouts/default.html`; keep the set small
-(a couple weights each). Set a type scale and stay on it; `text-wrap: balance` on headings.
+- Use the native humanist sans stack for display, body, interface text, labels, and
+  metadata. Hierarchy comes from size, weight, spacing, and content—not a decorative
+  type pairing.
+- Reserve monospace for code, filenames, and literal course codes. Do not use it as the
+  site's visual identity.
+- Avoid the fashionable serif-heading + monospace-label portfolio treatment. It made the
+  site feel generated rather than personal.
+- Do not load webfonts unless there is a specific, reviewed reason. Set a restrained type
+  scale and keep `text-wrap: balance` on headings.
 
 ## Information architecture
 
@@ -93,9 +96,11 @@ Load webfonts self-hosted or via `<link>` in `_layouts/default.html`; keep the s
 - **About** — the systems-to-software story; who he is and how he works.
 - **Journey** — replaces the old DevOps roadmap. Launch School path as mastery-based
   stages (current stage marked). Not a certificate checklist.
-- **Projects** — real work, reframed beyond infrastructure.
+- **Projects** — selected home-lab, infrastructure, and software-engineering work that
+  demonstrates engineering judgment. Include the problem, constraints, decisions,
+  tradeoffs, and lessons; do not turn the page into an inventory of tools or services.
 - **Study Log** — built-in Jekyll blog (`_posts`). Short, frequent reflections written
-  after study sessions. Owned on-site.
+  on a realistic weekly cadence. Owned on-site and shareable on LinkedIn.
 - **Writing** — longer essays published on **Medium**, surfaced here as a linked list from
   `_data/articles.yml`.
 - **Videos** — YouTube, curated in `_data/videos.yml`, rendered as click-to-load facades.
@@ -105,8 +110,8 @@ Keep top-level nav lean (~6 items). Resources can fold under Journey if nav feel
 
 ## Workflow
 
-- Work on a feature branch (currently `claude/website-revamp-ruby-695cb4`); never commit
-  straight to `main`. Commit/push only when Lionel asks.
+- Work on a short-lived feature branch; never commit straight to `main`. Commit/push only
+  when Lionel asks.
 - Commit style: `feat:` / `chore:` / `fix:` prefixes, present tense, one logical change per
   commit.
 - **Log progress** to [`docs/PROGRESS.md`](docs/PROGRESS.md) at the end of a meaningful

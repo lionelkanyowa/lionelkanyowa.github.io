@@ -5,6 +5,100 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-09-05 — Final pre-push review and cleanup
+
+**Done this session.**
+- Replaced the stock Rails screenshot on the first Ruby study-log entry with an original,
+  compressed 1500×1000 study-desk image that matches the post's focus on learning and
+  note-taking. Added intrinsic dimensions and accurate alt text to prevent layout shift.
+- Confirmed Lionel has permission to use Anthony Isensee's portrait, preserved a visible
+  photo credit, and removed embedded EXIF data including camera details and serial number.
+  Removed the unused avatar crop and the old stock image from published assets.
+- Anonymized the student mentioned in the flashcard entry, removed the decorative emoji and
+  generic sign-off, and removed work-device specifics from the terminal-workflow entry.
+- Kept Capstone framed as Lionel's personal destination after Core without publishing
+  admissions, scheduling, or other internal program details.
+- Made the mobile menu keyboard reachable, exposed the current navigation item to assistive
+  technology, corrected skipped heading levels, strengthened focus and code-comment
+  contrast, and expanded footer social links to 40×40-pixel targets.
+- Removed duplicate canonical links, disabled early publication of future-dated posts, and
+  aligned `.ruby-version` with the proven local Ruby 3.4.10 toolchain used for verification.
+- Verified the production build and Jekyll diagnostics, then checked the revised desktop and
+  mobile pages locally. The replacement image loads at its expected dimensions, the mobile
+  menu opens correctly, active navigation is announced, and no reviewed page overflows.
+- Lionel approved the final preview for deployment on September 5.
+
+**Next.**
+- Make the first substantive Projects case study the next content milestone.
+
+**Decisions.**
+- Anthony Isensee gave Lionel permission to publish the portrait; credit remains visible
+  while private camera metadata is removed.
+- Study-log images should support the real subject of a post without using generic stock
+  developer imagery or programming-language motifs.
+- Capstone remains a personal goal and the public endpoint of the Journey roadmap. Keep
+  internal program details private until Lionel is accepted and chooses to share them.
+
+---
+
+## 2026-09-04 — Maintenance foundation and design review
+
+**Done this session.**
+- Added `AGENTS.md` as the vendor-neutral entry point for coding agents. It delegates the
+  full project context to `CLAUDE.md` and `.claude/me.md`, while preserving the core stack,
+  voice, workflow, verification, and privacy constraints.
+- Added `docs/RUNBOOK.md`, covering local setup, safe branching, preview/build/deploy,
+  routine content updates, images, style changes, rollback, troubleshooting, and monthly
+  housekeeping.
+- Reviewed the deployed home page at desktop (1440 px) and mobile (390 px), including
+  responsive layout and overflow checks. The current visual system is clean, distinctive,
+  and consistent with the intended personal/minimal direction; no structural redesign was
+  justified.
+- Replaced the recognizable Fraunces + JetBrains Mono portfolio treatment with the native
+  system sans stack across headings, body, navigation, labels, and metadata. Monospace is
+  now reserved for code-like content. Removed the Google Fonts requests and restored
+  conventional capitalization to the header name.
+- Re-reviewed the typography on the home, About, Journey, and latest Study Log pages at
+  desktop and mobile sizes. Layouts remain within their responsive widths with no new
+  horizontal overflow.
+- Simplified the page-title system: kept the expressive home statement, replaced interior
+  slogans with literal headings, changed the home section labels to "Latest from the study
+  log" and "Elsewhere on the site," and removed the generic About-page code demo plus its
+  now-unused CSS and JavaScript.
+- Refined the home page into a quieter editorial layout: Study Log cards are now dated
+  rows, Explore is a two-column text-link index without numbered cards, and the circular
+  avatar is now a softly rounded portrait using the full vertical photograph.
+- Changed the site from dual-theme teal to a dark-only burnt-orange system. `#9A4316` is
+  the exact brand color for buttons, markers, the LK mark, and every SVG/PNG favicon;
+  `#D9824B` is the accessible orange text companion (at least 5.76:1 on the site's dark
+  surfaces). Removed the toggle, saved-theme script, light tokens, and obsolete theme code.
+  Updated the design guidance and the simplified sans-serif Open Graph card.
+- Recorded Lionel's product decisions in `CLAUDE.md`, `.claude/me.md`, and the runbook:
+  portfolio and learning journal have equal priority; weekly is the realistic Study Log
+  cadence; longer essays remain on Medium; on-site Study Log entries remain shareable on
+  LinkedIn.
+- Added `AGENTS.md` to Jekyll's exclude list so internal project instructions are not
+  published with the site.
+- Installed Bundler 4.0.16 in the user gem directory, exposed `bundle` / `bundler` through
+  the existing user-local bin path, and installed all locked dependencies into the ignored
+  `vendor/bundle` directory.
+- Added `erb ~> 6.0` as an explicit dependency. Arch Linux packages ERB separately from
+  Ruby 3.4, and bundled gems must be declared for `bundle exec`; this keeps the standard
+  Jekyll commands working without relying on an undeclared system package.
+- Verified `JEKYLL_ENV=production bundle exec jekyll build` succeeds. Started the real
+  Jekyll LiveReload preview at `http://127.0.0.1:4000/` for Lionel's review.
+
+**Next.**
+- Review the localhost typography and content changes before deciding whether to commit or
+  deploy them.
+- Keep the visual system stable and prioritize substantive Projects, Study Log, Writing,
+  and Video updates.
+
+**Decisions.**
+- Projects will include selected home-lab, infrastructure, and software-engineering work
+  when it demonstrates engineering judgment: problem, constraints, decisions, tradeoffs,
+  and lessons. Avoid a home-lab inventory or résumé-style technology list.
+
 ## 2026-08-15 — Per-course progress tracking on the Journey roadmap
 
 **Done this session.**

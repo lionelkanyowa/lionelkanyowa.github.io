@@ -4,8 +4,10 @@ title: "Switching to Ruby, and simplifying how I take notes"
 date: 2026-08-09 20:00:00 -0400
 tags: [launch-school, ruby]
 excerpt: "A productive day: the revamped site went live, I switched my Launch School track from Python to Ruby, finished the first Intro to Ruby chapter, and simplified my note-taking down to one app."
-image: /assets/images/studylog/2026-08-09-switching-to-ruby.jpg
-image_alt: "Close-up of a screen showing Ruby code — a controller with show, update, and reset_password methods."
+image: /assets/images/studylog/2026-08-09-study-notes.jpg
+image_alt: "An open notebook and laptop on a quiet wooden desk beside a mug."
+image_width: 1500
+image_height: 1000
 ---
 
 Today was a very productive day. I finally got my revamped personal website up and
@@ -41,5 +43,3 @@ it into a flashcard. That's the entire system.
 
 For my next study session, I'll finish refining my active recall questions and add them to
 my flashcard deck.
-
-Happy coding!
