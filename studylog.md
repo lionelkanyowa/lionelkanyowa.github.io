@@ -7,7 +7,6 @@ description: A weekly record of Launch School study — what clicked, what didn'
 
 <section class="about-hero">
   <div class="wrap">
-    <p class="eyebrow">Study log</p>
     <h1 class="about-title">Weekly study log</h1>
     <p class="about-stand">A record of what I'm studying, now published weekly. The earliest entries capture individual sessions; each new post collects what changed in my understanding and what comes next.</p>
   </div>

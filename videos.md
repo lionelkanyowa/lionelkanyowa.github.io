@@ -7,7 +7,6 @@ description: Short videos documenting Launch School and the software-engineering
 
 <section class="about-hero">
   <div class="wrap">
-    <p class="eyebrow">Videos</p>
     <h1 class="about-title">Videos</h1>
     <p class="about-stand">Short videos documenting Launch School, the home lab, and the road from network and systems administration into software engineering.</p>
   </div>

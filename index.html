@@ -14,15 +14,27 @@ description: Network and systems administrator expanding into software engineeri
         mastery-based study. Infrastructure is where I started; software engineering is
         where I'm growing.
       </p>
+      {% assign now_course = site.data.curriculum.prep | where: "status", "current" | first %}
+      {% unless now_course %}
+        {% for branch in site.data.curriculum.core %}
+          {% assign now_course = branch.courses | where: "status", "current" | first %}
+          {% if now_course %}{% break %}{% endif %}
+        {% endfor %}
+      {% endunless %}
+      {% if now_course %}
+      <p class="now-line"><span class="now-label">Now studying</span> <span class="code">{{ now_course.code }}</span> {{ now_course.title }}</p>
+      {% endif %}
       <div class="cta-row">
         <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey &rarr;</a>
       </div>
     </div>
 
     <aside class="hero-aside">
-      <img class="hero-avatar" src="{{ '/assets/images/lionel-about.jpg' | relative_url }}"
+      <img class="hero-avatar" src="{{ '/assets/images/lionel-about-560.jpg' | relative_url }}"
+           srcset="{{ '/assets/images/lionel-about-560.jpg' | relative_url }} 560w, {{ '/assets/images/lionel-about.jpg' | relative_url }} 1067w"
+           sizes="260px"
            alt="Portrait of Lionel Kanyowa smiling in a cafe"
-           width="1067" height="1600" loading="eager">
+           width="560" height="840" loading="eager">
     </aside>
   </div>
 </section>
@@ -30,7 +42,6 @@ description: Network and systems administrator expanding into software engineeri
 <section class="block">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Study log</p>
       <h2>Latest from the study log</h2>
       <p>Short reflections written after study sessions — the most current view of where I am and what I'm working through.</p>
     </div>
@@ -62,7 +73,6 @@ description: Network and systems administrator expanding into software engineeri
 <section class="block">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Explore</p>
       <h2>Elsewhere on the site</h2>
     </div>
     <div class="home-links">

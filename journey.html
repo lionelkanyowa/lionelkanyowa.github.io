@@ -7,7 +7,6 @@ description: The Launch School path — mastery-based software engineering, from
 
 <section class="about-hero">
   <div class="wrap">
-    <p class="eyebrow">The journey</p>
     <h1 class="about-title">My Launch School journey</h1>
     <p class="about-stand">I chose Launch School because it matches how I've always learned best — taking things apart, understanding how they work, and rebuilding from first principles. Years in infrastructure taught me that shortcuts usually cost more later, and its mastery-based path rewards the same instinct: understand the ideas, don't just recognize the answers. This is the road from my first Ruby program, through Core, to Capstone.</p>
   </div>
@@ -20,7 +19,7 @@ description: The Launch School path — mastery-based software engineering, from
     {% assign prep_done = site.data.curriculum.prep | where: "status", "done" | size %}
     <div class="roadmap">
     <div class="track">
-      <div class="stage{% if prep_done < prep_total %} now{% endif %}">
+      <div class="stage{% if prep_done < prep_total %} now{% else %} done{% endif %}">
         <span class="st-label">{% if prep_done < prep_total %}Now · In Progress{% else %}Complete{% endif %}</span>
         <h2>Prep Work</h2>
         <p>Getting oriented and setting the groundwork before the graded curriculum begins.</p>
@@ -28,9 +27,7 @@ description: The Launch School path — mastery-based software engineering, from
           {% for c in site.data.curriculum.prep %}
           <li class="course {{ c.status }}">
             <span class="c-mark" aria-hidden="true"></span>
-            <span class="code">{{ c.code }}</span>{{ c.title }}
-            {% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}
-            {% if c.status == 'current' %}<span class="c-tag">in progress</span>{% endif %}
+            <span class="code">{{ c.code }}</span><span class="c-title">{{ c.title }}{% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}{% if c.status == 'current' %} <span class="c-tag">in progress</span>{% endif %}</span>
           </li>
           {% endfor %}
         </ul>
@@ -59,9 +56,7 @@ description: The Launch School path — mastery-based software engineering, from
               {% for c in branch.courses %}
               <li class="course {{ c.status }}">
                 <span class="c-mark" aria-hidden="true"></span>
-                <span class="code">{{ c.code }}</span>{{ c.title }}
-                {% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}
-                {% if c.status == 'current' %}<span class="c-tag">in progress</span>{% endif %}
+                <span class="code">{{ c.code }}</span><span class="c-title">{{ c.title }}{% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}{% if c.status == 'current' %} <span class="c-tag">in progress</span>{% endif %}</span>
               </li>
               {% endfor %}
             </ul>

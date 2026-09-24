@@ -7,7 +7,6 @@ description: Selected home-lab, infrastructure, and software-engineering project
 
 <section class="about-hero">
   <div class="wrap">
-    <p class="eyebrow">Projects</p>
     <h1 class="about-title">What I'm building</h1>
     <p class="about-stand">Home-lab, infrastructure, and software-engineering work. Each project will focus on the problem, the decisions, and what I learned.</p>
   </div>
