@@ -16,10 +16,12 @@ description: The Launch School path — mastery-based software engineering, from
 <section class="block">
   <div class="wrap">
     <p class="eyebrow roadmap-label">The roadmap</p>
+    {% assign prep_total = site.data.curriculum.prep | size %}
+    {% assign prep_done = site.data.curriculum.prep | where: "status", "done" | size %}
     <div class="roadmap">
     <div class="track">
-      <div class="stage now">
-        <span class="st-label">Now · In Progress</span>
+      <div class="stage{% if prep_done < prep_total %} now{% endif %}">
+        <span class="st-label">{% if prep_done < prep_total %}Now · In Progress{% else %}Complete{% endif %}</span>
         <h2>Prep Work</h2>
         <p>Getting oriented and setting the groundwork before the graded curriculum begins.</p>
         <ul class="course-list prep">
@@ -33,8 +35,8 @@ description: The Launch School path — mastery-based software engineering, from
           {% endfor %}
         </ul>
       </div>
-      <div class="stage">
-        <span class="st-label">Next</span>
+      <div class="stage{% if prep_done == prep_total %} now{% endif %}">
+        <span class="st-label">{% if prep_done == prep_total %}Now · In Progress{% else %}Next{% endif %}</span>
         <h2>Core Curriculum</h2>
         <p>One track, in order — the backend built in Ruby first, then the frontend in JavaScript. You can't move on to the frontend until the backend is complete, and each course is gated by an assessment.</p>
         <div class="core-split">
@@ -68,7 +70,7 @@ description: The Launch School path — mastery-based software engineering, from
         </div>
       </div>
       <div class="stage">
-        <span class="st-label">Then</span>
+        <span class="st-label">{% if prep_done == prep_total %}Next{% else %}Then{% endif %}</span>
         <h2>Capstone</h2>
         <p>An opportunity to work alongside a small engineering team on a production-quality project, applying software engineering principles, system design, and everything learned throughout Core. It's where my background in infrastructure and my growth as a software engineer come together.</p>
       </div>
