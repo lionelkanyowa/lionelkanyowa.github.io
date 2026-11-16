@@ -14,6 +14,16 @@
 # `done_when` items: set `done: true` when an item is actually finished.
 # Track courses take an optional `status` (done / current); leave it off rather
 # than guess.
+#
+# `agentic` (phases 2–4 only): the agentic-tooling stage that runs with that phase.
+# A stage starts only after the phase's certifications are passed, and every
+# project in it is a goal until its `done` flag is set.
+
+# The specialty on top of the infrastructure phases. The end goal: an experienced
+# infrastructure engineer whose specialty is running and securing AI agents.
+specialty:
+  title: "Agentic tooling"
+  summary: "Running and securing AI agents like any other production system."
 
 phases:
   - id: linux-docker-lfcs
@@ -67,6 +77,14 @@ phases:
         done: false
       - text: "Pass Terraform Associate"
         done: false
+    agentic:
+      stage: 1
+      title: "Claude Code and MCP in pipelines"
+      projects:
+        - text: "Claude Code in CI on a least-privilege setup"
+          done: false
+        - text: "An MCP server deployed to the lab cluster from Git"
+          done: false
 
   - id: azure
     step: 3
@@ -92,6 +110,14 @@ phases:
         done: false
       - text: "Pass SC-500"
         done: false
+    agentic:
+      stage: 2
+      title: "Securing agents and MCP"
+      projects:
+        - text: "An MCP server behind Entra ID sign-in"
+          done: false
+        - text: "A threat model against the OWASP Top 10 for Agentic Applications"
+          done: false
 
   - id: platform-sre
     step: 4
@@ -107,6 +133,12 @@ phases:
     done_when:
       - text: "Pass CNPE"
         done: false
+    agentic:
+      stage: 3
+      title: "Evals, observability and an ops agent"
+      projects:
+        - text: "A home-lab ops agent that proposes fixes from alerts, waits for approval on every change, is traced with OpenTelemetry, and is scored by an eval suite"
+          done: false
 
 # Finished work that came before the current path. Shown as short, past-tense
 # entries at the start of the timeline.

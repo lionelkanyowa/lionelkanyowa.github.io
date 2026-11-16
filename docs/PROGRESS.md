@@ -47,6 +47,13 @@ Work is on branch `feat/infrastructure-path`, to be opened as PR 1 of 2.
   quick-reference row now point at `_data/journey.yml`).
 - Verified: production build clean; no `[CONFIRM]` or Liquid errors in output;
   screenshots of Home, Journey (1440 and 390), and Study Log checked.
+- Added the agentic-tooling specialty (Lionel's addition the same day): `specialty` plus an
+  `agentic` stage on Phases 2–4 in `_data/journey.yml` (stage 1 Claude Code and MCP in
+  pipelines; stage 2 securing agents and MCP; stage 3 evals, observability and an ops
+  agent), each starting only after that phase's certs and shown as goals. End goal added
+  to the Home and Journey intros; Claude Academy (formerly Anthropic Academy) and the OWASP
+  Top 10 for Agentic Applications added to Resources; `_includes/and-list.html` joins
+  cert lists in plain English.
 - Left `.codex/` untouched (untracked; Codex copies of content-writer, frontend-designer,
   and progress-logger as .toml; they still carry the old framing).
 

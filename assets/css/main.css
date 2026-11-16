@@ -250,6 +250,12 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 .cert-status.earned { color: var(--ground); background: var(--ink-soft); border-color: var(--ink-soft); }
 .cert-note { flex-basis: 100%; font-size: 0.8rem; color: var(--muted); }
 
+/* journey: the agentic-tooling stage that runs with a phase */
+.agentic { margin-top: 1.1rem; border-left: 2px solid var(--rule); padding-left: 0.95rem; max-width: 62ch; }
+.agentic-label { margin: 0; font-family: var(--label); font-size: var(--label-size); font-weight: 650; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.agentic h3 { margin: 0.2rem 0 0.25rem; font-size: 1rem; font-weight: 600; }
+.stage .agentic p.agentic-gate { margin: 0 0 0.55rem; font-size: 0.88rem; color: var(--muted); }
+
 /* archived study-log entries: a neutral label, never the accent */
 .tag-archived { display: inline-block; font-family: var(--label); font-size: var(--label-size); font-weight: 600; letter-spacing: 0.02em; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0.02rem 0.45rem; line-height: 1.35; white-space: nowrap; }
 .entry h2 .tag-archived { margin-left: 0.5rem; vertical-align: 0.18em; }

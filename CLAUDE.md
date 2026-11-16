@@ -30,7 +30,9 @@ Azure, then platform engineering and SRE — through KodeKloud's DevOps Engineer
 step by step in his home lab. It serves equally as a learning-in-public record and a
 credible portfolio for DevOps, SRE, platform, and cloud infrastructure roles. (He studied at
 Launch School from 2022 to 2026 and left to focus on infrastructure; that is past history on
-the site, not the current direction.) Minimalist, warm, monochrome with a single accent.
+the site, not the current direction.) The end goal is an experienced infrastructure engineer
+with a specialty on top: running and securing AI agents ("agentic tooling"), worked as three
+stages inside Phases 2–4. Minimalist, warm, monochrome with a single accent.
 
 ## Stack and constraints
 
@@ -103,8 +105,10 @@ Typography is intentionally ordinary and human:
 - **Journey** — the four-phase path in `_data/journey.yml` (Linux, Docker and LFCS → the
   DevOps Engineer path with CKA and Terraform Associate → Azure → platform and SRE depth),
   plus a short Done entry for Launch School. Each phase has a track, certifications, and a
-  "done when" list. A certification is a **goal** until it's passed; never present a goal
-  as earned. Edit the data file, not the template.
+  "done when" list. Phases 2–4 also carry an agentic-tooling stage that starts only after
+  that phase's certifications are passed (Phase 1 has none). A certification or project is
+  a **goal** until it's done; never present a goal as earned. Edit the data file, not the
+  template.
 - **Projects** — selected home-lab and infrastructure work that
   demonstrates engineering judgment. Include the problem, constraints, decisions,
   tradeoffs, and lessons; do not turn the page into an inventory of tools or services.
@@ -115,7 +119,8 @@ Typography is intentionally ordinary and human:
 - **Writing** — longer essays published on **Medium**, surfaced here as a linked list from
   `_data/articles.yml`.
 - **Videos** — YouTube, curated in `_data/videos.yml`, rendered as click-to-load facades.
-- **Resources** — the current path (KodeKloud, the LFCS exam) plus Launch School's free
+- **Resources** — the current path (KodeKloud, the LFCS exam), agentic tooling (Claude
+  Academy, the OWASP Top 10 for Agentic Applications), plus Launch School's free
   Intro to Ruby and Intro to SQL books, kept as reference.
 
 Keep top-level nav lean (~6 items). Resources can fold under Journey if nav feels heavy.

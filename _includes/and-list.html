@@ -1,0 +1,9 @@
+{%- comment -%}
+  Joins an array as plain English: "A", "A and B", "A, B, and C".
+  Usage: {% include and-list.html items=array %}
+{%- endcomment -%}
+{%- assign _items = include.items -%}
+{%- if _items.size <= 1 -%}{{ _items | first }}
+{%- elsif _items.size == 2 -%}{{ _items | join: " and " }}
+{%- else -%}{%- assign _last = _items | last -%}{{ _items | pop | join: ", " }}, and {{ _last }}
+{%- endif -%}

@@ -14,7 +14,10 @@ technology.
 
 Since November 2026 he is going deeper into Linux, containers, Kubernetes, infrastructure
 as code, and Azure through KodeKloud's DevOps Engineer path, in four phases, building each
-step in his home lab. Target roles: DevOps, SRE, platform, and cloud infrastructure. He
+step in his home lab. End goal: an experienced infrastructure engineer with a specialty on
+top — running and securing AI agents (agentic tooling), worked as three stages inside
+Phases 2–4, each starting after that phase's certs. Target roles: DevOps, SRE, platform,
+and cloud infrastructure. He
 studied programming foundations at Launch School from 2022 to 2026 (Python, then Ruby) and
 left to focus on infrastructure; that is past history, not the current direction. He is
 deliberate, principle-first, and values understanding *why* something works over

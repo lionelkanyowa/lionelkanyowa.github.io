@@ -2,7 +2,7 @@
 layout: page
 title: Resources
 permalink: /resources/
-description: What I'm learning with — the courses, exams, books, and references behind the infrastructure path.
+description: What I'm learning with — the courses, exams, books, and references behind the infrastructure path and the agentic-tooling specialty.
 ---
 
 # Resources
@@ -14,6 +14,11 @@ What I'm actually learning with, kept honest and short. Not a link dump — just
 
 - **[KodeKloud DevOps Engineer path](https://learn.kodekloud.com/learning-paths/devops-engineer)** — the main study track, worked through in four phases. Everything else orbits it.
 - **[LFCS exam](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)** — the Linux Foundation Certified System Administrator exam, the Phase 1 certification goal.
+
+## Agentic tooling
+
+- **[Claude Academy](https://academy.claude.com/)** — Anthropic's free courses (formerly Anthropic Academy), including Claude Code and MCP. Groundwork for the agentic stages of the path.
+- **[OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** — the OWASP GenAI Security Project's list of the top security risks in AI agents. The baseline for my agent threat model.
 
 ## Reference
 

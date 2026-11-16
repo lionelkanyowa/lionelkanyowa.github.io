@@ -12,6 +12,7 @@ description: The path from Linux and containers to Kubernetes, infrastructure as
   <div class="wrap">
     <h1 class="about-title">The path</h1>
     <p class="about-stand">Infrastructure and systems are my core craft. This is how I'm going deeper: KodeKloud's DevOps Engineer path in four phases, each with a certification and a clear "done when." I build every step in my home lab. Certifications I haven't passed are listed as goals, not credentials.</p>
+    <p class="about-stand">The end goal is to be an experienced infrastructure engineer with a specialty on top: running and securing AI agents. That specialty runs with Phases 2 to 4 as three agentic stages, and each stage starts only after its phase's certifications are passed.</p>
   </div>
 </section>
 
@@ -92,6 +93,23 @@ description: The path from Linux and containers to Kubernetes, infrastructure as
           </div>
           {% endif %}
         </dl>
+
+        {% if phase.agentic %}
+        {% assign cert_codes = phase.certs | map: "code" %}
+        <div class="agentic">
+          <p class="agentic-label">Agentic stage {{ phase.agentic.stage }} · Goal</p>
+          <h3>{{ phase.agentic.title }}</h3>
+          <p class="agentic-gate">Starts after {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
+          <ul class="course-list">
+            {% for proj in phase.agentic.projects %}
+            <li class="course {% if proj.done %}done{% else %}upcoming{% endif %}">
+              <span class="c-mark" aria-hidden="true"></span>
+              <span class="c-title">{{ proj.text }}<span class="sr-only">{% if proj.done %} — done{% else %} — not yet{% endif %}</span></span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
       </li>
       {% endfor %}
     </ol>
