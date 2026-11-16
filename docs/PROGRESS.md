@@ -7,6 +7,23 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ## 2026-11-15 — Status lights redesign, rev2 (PR 2)
 
+**Incident (caught by Lionel before merge).** /journey/ on the local preview rendered as
+unstyled markup (numbered list, no status lights). Cause: the new HTML was being styled by a
+cached copy of the old `main.css`. The stylesheet URL never changed between versions, and
+production serves it with `max-age=600`, so returning visitors would have hit the same thing
+after merge. Reproduced exactly by serving the new HTML with the old CSS. Contributing: the
+preview ran from the working tree I was rebasing in, so it also briefly served merge-conflict
+states. My earlier "side by side" check used fresh browser profiles, which can't see a cached
+stylesheet. Fixed in PR 1 by versioning asset URLs per build (`?v={{ site.time }}`), proven
+with a returning-visitor test under `max-age=600`. Verified every page at 1440 and 390 from a
+fresh build with a DevTools-protocol harness (stylesheet loaded, Overpass loaded, computed
+styles) and saved comparisons to `docs/design/rev2/compare/` (untracked).
+Follow-up decisions from Lionel: Next light grey (amber only for Now); Home Later is agentic
+text only, with Azure and platform under Next; Elsewhere links in the footer (Writing link
+added when articles exist); favicons recolored to amber with a dark mark; duplicate
+design-tool exports deleted. Markdown pages and posts now align to the same left grid and
+58px title as the rest of the site; the 404 lede class was fixed.
+
 **Done this session.**
 - Branch `feat/status-lights`, stacked on `feat/infrastructure-path` (PR 1). Applied the
   approved rev2 "status lights" design from `docs/design/rev2/` (mockups and
@@ -26,7 +43,7 @@ next, and any open decisions. Appended via the `progress-logger` agent.
   menu, so the menu JS is removed from `site.js`. Footer per rev2.
 - Status lights component (`.light` / `.dot` / `.route`): Now is amber with a slow
   `lk-pulse` (off under `prefers-reduced-motion`), Done is green with a check, Next and
-  Later are a grey ring; Next uses an amber ring. Lionel made the rendered mockups the design reference, so they override the spec text that said grey.
+  Later are a grey ring, per DESIGN-SPEC; Lionel confirmed amber is only for Now.
 - Home: rev2 hero with portrait credit; Now / Next / Later from `_data/journey.yml` (new
   `short_title` field; Later joins phases 3–4 as "Azure, then platform engineering";
   uncompleted certs listed as goals); How I work; Home lab with an Internet → OPNsense
