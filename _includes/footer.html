@@ -5,6 +5,9 @@
             <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
             {% endfor %}
             <a href="{{ '/resources/' | relative_url }}">Resources</a>
+            {% if site.data.articles and site.data.articles.size > 0 %}
+            <a href="{{ '/writing/' | relative_url }}">Writing</a>
+            {% endif %}
         </nav>
 
         <div class="social" aria-label="Social links">
