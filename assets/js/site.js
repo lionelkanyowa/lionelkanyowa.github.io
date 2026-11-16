@@ -1,14 +1,6 @@
-// Site interactions: mobile navigation and privacy-friendly video facades.
+// Site interactions: privacy-friendly video facades.
 (function () {
     'use strict';
-
-    // Close the mobile menu after choosing a page.
-    var navTrigger = document.getElementById('nav-trigger');
-    if (navTrigger) {
-        document.querySelectorAll('.nav-menu .page-link').forEach(function (link) {
-            link.addEventListener('click', function () { navTrigger.checked = false; });
-        });
-    }
 
     // Load a YouTube iframe only after the visitor chooses a video.
     document.querySelectorAll('.vid[data-yt]').forEach(function (vid) {

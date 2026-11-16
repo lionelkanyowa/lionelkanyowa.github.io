@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#14110F">
+    <meta name="theme-color" content="#0F1113">
 
     {% seo %}
 
+    <link rel="preload" href="{{ '/assets/fonts/overpass-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/overpass-mono-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     {% comment %} ?v= changes on every build, so a browser can never pair new HTML with a cached
     old stylesheet (production serves assets with max-age=600). {% endcomment %}
     {% assign asset_version = site.time | date: '%s' %}
@@ -17,10 +19,10 @@
         href="{{ '/feed.xml' | relative_url }}">
 
     <!-- Favicon (LK monogram) -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}?v={{ asset_version }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicons/favicon-32x32.png' | relative_url }}?v={{ asset_version }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicons/favicon-16x16.png' | relative_url }}?v={{ asset_version }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}?v={{ asset_version }}">
 
 </head>
 

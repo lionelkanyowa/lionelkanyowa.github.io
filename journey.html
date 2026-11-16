@@ -6,110 +6,103 @@ description: The path from Linux and containers to Kubernetes, infrastructure as
 ---
 
 {% assign journey = site.data.journey %}
-{% assign status_labels = "done:Done|now:Now · In progress|next:Next|later:Later" | split: "|" %}
+{% assign status_labels = "done:Done|now:Now|next:Next|later:Later" | split: "|" %}
 
-<section class="about-hero">
+<section class="page-hero">
   <div class="wrap">
-    <h1 class="about-title">The path</h1>
-    <p class="about-stand">Infrastructure and systems are my core craft. This is how I'm going deeper: KodeKloud's DevOps Engineer path in four phases, each with a certification and a clear "done when." I build every step in my home lab. Certifications I haven't passed are listed as goals, not credentials.</p>
-    <p class="about-stand">The end goal is to be an experienced infrastructure engineer with a specialty on top: running and securing AI agents. That specialty runs with Phases 2 to 4 as three agentic stages, and each stage starts only after its phase's certifications are passed.</p>
+    <h1 class="page-title">The path</h1>
+    <p class="lede">Infrastructure and systems are my core craft. This is how I'm going deeper: KodeKloud's DevOps Engineer path in four phases, each with a certification and a clear "done when." I build every step in my home lab. Certifications I haven't passed are listed as goals, not credentials.</p>
+    <p class="lede">The end goal is to be an experienced infrastructure engineer with a specialty on top: running and securing AI agents. That specialty runs with Phases 2 to 4 as three agentic stages, and each stage starts only after its phase's certifications are passed.</p>
   </div>
 </section>
 
-<section class="block">
+<section class="journey" aria-label="The path, phase by phase">
   <div class="wrap">
-    <p class="eyebrow roadmap-label">The roadmap</p>
-    <div class="roadmap">
-    <ol class="track">
+    <ol class="route">
       {% for phase in journey.phases %}
       {% assign label = phase.status %}
       {% for pair in status_labels %}
         {% assign kv = pair | split: ":" %}
         {% if kv[0] == phase.status %}{% assign label = kv[1] %}{% endif %}
       {% endfor %}
-      <li class="stage {{ phase.status }}">
-        <span class="st-label">{{ label }}{% if phase.window %} · {{ phase.window }}{% endif %}</span>
-        <h2><span class="phase-step">Phase {{ phase.step }}</span> {{ phase.title }}</h2>
-        <p>{{ phase.summary }}</p>
+      {% assign light = "" %}
+      {% if phase.status == "now" or phase.status == "done" %}{% assign light = phase.status %}{% endif %}
+      {% assign dw_total = phase.done_when | size %}
+      {% assign dw_done = phase.done_when | where: "done", true | size %}
+      <li class="route-step {{ phase.status }}">
+        <div class="route-rail" aria-hidden="true"><span class="light-slot"><span class="light {{ light }}"></span></span><span class="route-line"></span></div>
+        <div class="route-body">
+          <p class="route-label">{{ label }} · Phase {{ phase.step }}</p>
+          <h2 class="route-title">{{ phase.title }}</h2>
+          <p>{{ phase.summary }}</p>
+          <p class="phase-meta">{% if dw_total > 0 %}Progress {{ dw_done }}/{{ dw_total }}{% endif %}{% if phase.window %}<span class="sep"> ·</span> {{ phase.window }}{% endif %}{% if phase.track.provider %}<span class="sep"> ·</span> Track: {{ phase.track.provider }}{% endif %}</p>
 
-        <dl class="phase-facts">
-          {% if phase.track %}
-          <div>
-            <dt>Track</dt>
-            <dd>
-              {{ phase.track.provider }}
-              {% if phase.track.courses %}
-              <ul class="course-list">
-                {% for c in phase.track.courses %}
-                <li class="course{% if c.status %} {{ c.status }}{% endif %}">
-                  {% if c.status %}<span class="c-mark" aria-hidden="true"></span>{% endif %}
-                  <span class="c-title">{{ c.title }}{% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}{% if c.status == 'current' %} <span class="c-tag">in progress</span>{% endif %}</span>
-                </li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </dd>
+          {% if phase.track.courses %}
+          <div class="phase-group">
+            <h3>Courses</h3>
+            <ul class="rows">
+              {% for c in phase.track.courses %}
+              <li>
+                <span class="what">{{ c.title }}</span>
+                {% if c.status == "done" %}<span class="state done"><span class="dot done" aria-hidden="true"></span>Done</span>
+                {% elsif c.status == "current" %}<span class="state now"><span class="dot now" aria-hidden="true"></span>Current</span>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
           </div>
           {% endif %}
 
           {% if phase.certs %}
-          <div>
-            <dt>{% if phase.certs.size > 1 %}Certifications{% else %}Certification{% endif %}</dt>
-            <dd>
-              <ul class="cert-list">
-                {% for cert in phase.certs %}
-                <li>
-                  <abbr class="cert-code" title="{{ cert.name }}">{{ cert.code }}</abbr>
-                  <span class="cert-status {{ cert.status }}">{% if cert.status == 'earned' %}Earned{% else %}Goal{% endif %}</span>
-                  {% if cert.note %}<span class="cert-note">{{ cert.note }}</span>{% endif %}
-                </li>
-                {% endfor %}
-              </ul>
-            </dd>
+          <div class="phase-group">
+            <h3>{% if phase.certs.size > 1 %}Certifications{% else %}Certification{% endif %}</h3>
+            <ul class="rows">
+              {% for cert in phase.certs %}
+              <li>
+                <span class="code">{{ cert.code }}</span>
+                <span class="what">{{ cert.name }}{% if cert.note %}<small>{{ cert.note }}</small>{% endif %}</span>
+                {% if cert.status == "earned" %}<span class="state done"><span class="dot done" aria-hidden="true"></span>Earned</span>
+                {% else %}<span class="state"><span class="dot" aria-hidden="true"></span>Goal</span>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          {% if phase.agentic %}
+          {% assign cert_codes = phase.certs | map: "code" %}
+          <div class="phase-group agentic">
+            <h3>Agentic stage {{ phase.agentic.stage }}</h3>
+            <p class="agentic-title">{{ phase.agentic.title }}</p>
+            <p class="agentic-gate">Starts after {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
+            <ul class="rows">
+              {% for proj in phase.agentic.projects %}
+              <li>
+                <span class="what">{{ proj.text }}</span>
+                {% if proj.done %}<span class="state done"><span class="dot done" aria-hidden="true"></span>Done</span>
+                {% else %}<span class="state"><span class="dot" aria-hidden="true"></span>Goal</span>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
           </div>
           {% endif %}
 
           {% if phase.done_when %}
-          <div>
-            <dt>Done when</dt>
-            <dd>
-              <ul class="course-list">
-                {% for d in phase.done_when %}
-                <li class="course {% if d.done %}done{% else %}upcoming{% endif %}">
-                  <span class="c-mark" aria-hidden="true"></span>
-                  <span class="c-title">{{ d.text }}<span class="sr-only">{% if d.done %} — done{% else %} — not yet{% endif %}</span></span>
-                </li>
-                {% endfor %}
-              </ul>
-            </dd>
+          <div class="phase-group">
+            <h3>Done when</h3>
+            <ul class="rows">
+              {% for d in phase.done_when %}
+              <li>
+                <span class="what">{{ d.text }}</span>
+                {% if d.done %}<span class="state done"><span class="dot done" aria-hidden="true"></span>Done</span>
+                {% else %}<span class="state"><span class="dot" aria-hidden="true"></span>Not yet</span>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
           </div>
           {% endif %}
-        </dl>
-
-        {% if phase.agentic %}
-        {% assign cert_codes = phase.certs | map: "code" %}
-        <div class="agentic">
-          <p class="agentic-label">Agentic stage {{ phase.agentic.stage }} · Goal</p>
-          <h3>{{ phase.agentic.title }}</h3>
-          <p class="agentic-gate">Starts after {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
-          <ul class="course-list">
-            {% for proj in phase.agentic.projects %}
-            <li class="course {% if proj.done %}done{% else %}upcoming{% endif %}">
-              <span class="c-mark" aria-hidden="true"></span>
-              <span class="c-title">{{ proj.text }}<span class="sr-only">{% if proj.done %} — done{% else %} — not yet{% endif %}</span></span>
-            </li>
-            {% endfor %}
-          </ul>
         </div>
-        {% endif %}
       </li>
       {% endfor %}
     </ol>
-    </div>
-
-    <div class="sec-foot">
-      <a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Follow along in the study log &rarr;</a>
-      <a class="btn ghost" href="{{ '/resources/' | relative_url }}">What I'm learning with</a>
-    </div>
   </div>
 </section>

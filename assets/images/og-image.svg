@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#14110F"/>
-  <rect x="24" y="24" width="1152" height="582" rx="16" fill="none" stroke="#2C2621" stroke-width="2"/>
+  <rect width="1200" height="630" fill="#0F1113"/>
+  <rect x="24" y="24" width="1152" height="582" rx="16" fill="none" stroke="#2A2F34" stroke-width="2"/>
 
-  <g transform="translate(88 92) scale(.96)" fill="#D9824B">
+  <g transform="translate(88 92) scale(.96)" fill="#E6E8EA">
     <path fill-rule="evenodd" d="M0 0 H17 V83 H74 V100 H0 Z M0 38 L17 21 L17 69 L0 52 Z"/>
     <path d="M0 45 L45 0 L65 0 L20 45 L58 83 L38 83 Z"/>
   </g>
 
-  <text x="88" y="338" font-family="Liberation Sans,Arial,sans-serif" font-weight="700"
-        font-size="88" letter-spacing="-2" fill="#F3EFE9">Lionel Kanyowa</text>
-  <text x="88" y="416" font-family="Liberation Sans,Arial,sans-serif" font-size="40"
-        fill="#A29A90">Infrastructure and systems, built in a home lab.</text>
+  <text x="88" y="338" font-family="Overpass,Liberation Sans,Arial,sans-serif" font-weight="700"
+        font-size="88" letter-spacing="-2" fill="#E6E8EA">Lionel Kanyowa</text>
+  <text x="88" y="416" font-family="Overpass,Liberation Sans,Arial,sans-serif" font-size="40"
+        fill="#9AA1A8">Infrastructure and systems, built in a home lab.</text>
 
-  <line x1="88" y1="500" x2="160" y2="500" stroke="#D9824B" stroke-width="8" stroke-linecap="round"/>
-  <text x="188" y="509" font-family="Liberation Sans,Arial,sans-serif" font-weight="600"
-        font-size="25" letter-spacing="3" fill="#D9824B">INFRASTRUCTURE · LEARNING IN PUBLIC</text>
-  <text x="1112" y="509" text-anchor="end" font-family="Liberation Sans,Arial,sans-serif"
-        font-size="25" letter-spacing="2" fill="#6A625A">lionelkanyowa.com</text>
+  <line x1="88" y1="500" x2="160" y2="500" stroke="#F2A93B" stroke-width="8" stroke-linecap="round"/>
+  <text x="188" y="509" font-family="Overpass,Liberation Sans,Arial,sans-serif" font-weight="600"
+        font-size="25" letter-spacing="3" fill="#F2A93B">INFRASTRUCTURE · LEARNING IN PUBLIC</text>
+  <text x="1112" y="509" text-anchor="end" font-family="Overpass,Liberation Sans,Arial,sans-serif"
+        font-size="25" letter-spacing="2" fill="#9AA1A8">lionelkanyowa.com</text>
 </svg>

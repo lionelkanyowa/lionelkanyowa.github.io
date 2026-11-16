@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="LK">
-  <rect width="32" height="32" fill="#9A4316"/>
-  <g transform="translate(3.96 2) scale(.28)" fill="#F3EFE9">
+  <rect width="32" height="32" fill="#F2A93B"/>
+  <g transform="translate(3.96 2) scale(.28)" fill="#0F1113">
     <path d="M0 0 H21 V79 H86 V100 H0 Z"/>
     <path d="M1 45 L46 0 L70 0 L25 45 L59 79 L35 79 Z"/>
   </g>
