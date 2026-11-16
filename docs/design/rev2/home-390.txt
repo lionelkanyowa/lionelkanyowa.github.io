@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home · 390 · Revision 2 | Lionel Kanyowa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face { font-family: "Overpass"; src: url("/_blob/a0cd4b7bb7717d2f7bad564012ecd0e6") format("truetype"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Overpass"; src: url("/_blob/7311ffe37c4d534c92ab413d80b068d7") format("truetype"); font-weight: 100 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Overpass Mono"; src: url("/_blob/c8f3a02a7c2c6fa65daa3d63b593e421") format("truetype"); font-weight: 300 700; font-style: normal; font-display: swap; }
+body{margin:0;background:#0F1113}
+a{color:#F2A93B}a:hover{color:#E6E8EA}
+@keyframes lk-pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(242, 169, 59, 0.30); } 50% { box-shadow: 0 0 0 7px rgba(242, 169, 59, 0.10); } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+</helmet>
+<div style="background: #0F1113; color: #E6E8EA; font-family: 'Overpass', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; width: 390px">
+<header style="border-bottom: 1px solid #2A2F34">
+<div style="box-sizing: border-box; max-width: 1208px; margin: 0 auto; padding-inline: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 24px; min-height: 72px; padding-block: 8px 4px">
+<a style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: #E6E8EA; text-decoration: none; font-size: 17px; font-weight: 600; letter-spacing: 0.01em" href="rev2-home-1440.dc.html" aria-label="Lionel Kanyowa, home">
+<svg style="display: block; flex: none; fill: #E6E8EA" width="21" height="24" viewBox="0 0 86 100" aria-hidden="true"><path d="M0 0 H21 V79 H86 V100 H0 Z"></path><path d="M1 45 L46 0 L70 0 L25 45 L59 79 L35 79 Z"></path></svg>
+<span>Lionel Kanyowa</span>
+</a>
+<nav style="display: flex; flex-wrap: wrap; margin-left: -10px; margin-right: -10px; gap: 0" aria-label="Primary">
+<a style="display: inline-flex; align-items: center; min-height: 44px; color: #9AA1A8; text-decoration: none; font-weight: 500; padding: 0 10px; font-size: 14px" href="#">About</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; color: #9AA1A8; text-decoration: none; font-weight: 500; padding: 0 10px; font-size: 14px" href="rev2-journey-1440.dc.html">Journey</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; color: #9AA1A8; text-decoration: none; font-weight: 500; padding: 0 10px; font-size: 14px" href="#">Projects</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; color: #9AA1A8; text-decoration: none; font-weight: 500; padding: 0 10px; font-size: 14px" href="#">Study Log</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; color: #9AA1A8; text-decoration: none; font-weight: 500; padding: 0 10px; font-size: 14px" href="#">Videos</a>
+</nav>
+</div>
+</div>
+</header>
+<main>
+<section style="padding-block: 48px 72px">
+<div style="box-sizing: border-box; max-width: 1208px; margin: 0 auto; padding-inline: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px">
+<div style="flex: 999 1 520px; min-width: 0">
+<p style="margin: 0 0 24px; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; line-height: 1.5; color: #9AA1A8; margin-bottom: 18px; font-size: 13px">Network and systems administration · learning in public</p>
+<h1 style="margin: 0; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; font-size: 37px; line-height: 1.1">I work on systems, and I'm learning what happens behind the scenes.</h1>
+<p style="margin: 14px 0 0; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.5; color: #9AA1A8">[CONFIRM headline]</p>
+<p style="margin: 28px 0 0; max-width: 62ch; line-height: 1.6; text-wrap: pretty; margin-top: 22px; font-size: 18px">I'm Lionel, a network and systems administrator. Infrastructure is where I started, and it is still the work I want to get better at. Right now I'm building solid backend fundamentals so I can design, deploy, and run reliable systems with a clear picture of how the software underneath them works.</p>
+<p style="margin: 18px 0 0; max-width: 62ch; line-height: 1.6; text-wrap: pretty; margin-top: 16px; font-size: 18px">I'm working toward backend, infrastructure and platform, DevOps and SRE, AI infrastructure, and forward-deployed engineering roles.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px">
+<a style="box-sizing: border-box; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 8px; font-size: 16px; font-weight: 700; text-decoration: none; background: #F2A93B; color: #0F1113" href="rev2-journey-1440.dc.html">See the journey <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div>
+</div>
+<figure style="flex: 1 1 300px; margin: 0; flex-basis: 100%; max-width: none">
+<img style="display: block; width: 100%; height: auto; object-fit: cover; border-radius: 12px; border: 1px solid #2A2F34; background: #171A1D; box-sizing: border-box; aspect-ratio: 4 / 3; object-position: 50% 22%" src="/_blob/188916d18f00fde3559175fa48d6dc8c" width="560" height="840" alt="Portrait of Lionel Kanyowa smiling in a cafe">
+<figcaption style="margin-top: 10px; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.5; color: #9AA1A8">Portrait by Anthony Isensee</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section style="padding-bottom: 72px" aria-label="Now, next and later">
+<div style="box-sizing: border-box; max-width: 1208px; margin: 0 auto; padding-inline: 20px">
+<ol style="list-style: none; margin: 0; padding: 0; max-width: 732px">
+<li style="display: flex; gap: 14px">
+<div style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; background: #F2A93B; box-shadow: 0 0 0 4px rgba(242, 169, 59, 0.24); animation: lk-pulse 2.6s ease-in-out infinite" aria-hidden="true"></span></span><span style="flex: 1; width: 0; margin-block: 8px; border-left: 2px dashed #9AA1A8"></span></div>
+<div style="flex: 1; min-width: 0; padding-bottom: 40px">
+<p style="display: flex; align-items: center; min-height: 28px; margin: 0; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1; font-weight: 600; letter-spacing: 0.02em; color: #F2A93B">Now</p>
+<h2 style="margin: 8px 0 0; line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; font-size: 20px">Launch School backend Core</h2>
+<p style="margin: 12px 0 0; font-size: 18px; line-height: 1.65; text-wrap: pretty">Currently <span style="font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 0.92em">RB101</span> Programming Foundations with Ruby: Basics. Language-agnostic fundamentals: programming, object-oriented design, networking, databases.</p>
+</div>
+</li>
+<li style="display: flex; gap: 14px">
+<div style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="box-sizing: border-box; flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; border: 2px solid #F2A93B" aria-hidden="true"></span></span><span style="flex: 1; width: 0; margin-block: 8px; border-left: 2px dashed #9AA1A8"></span></div>
+<div style="flex: 1; min-width: 0; padding-bottom: 40px">
+<p style="display: flex; align-items: center; min-height: 28px; margin: 0; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1; font-weight: 600; letter-spacing: 0.02em; color: #E6E8EA">Next</p>
+<h2 style="margin: 8px 0 0; line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; font-size: 20px">A hands-on infrastructure track</h2>
+<ol style="margin: 12px 0 0; padding: 0 0 0 1.3em; font-size: 18px; line-height: 1.65">
+<li style="margin: 0; padding-left: 0.3em; text-wrap: pretty">Launch School's Introduction to the Command Line.</li>
+<li style="margin: 0; padding-left: 0.3em; text-wrap: pretty">Sysxplore's Linux courses and the book <em>First Steps with Linux</em>.</li>
+<li style="margin: 0; padding-left: 0.3em; text-wrap: pretty">Then Kubernetes and infrastructure as code. Goals, not yet earned: KodeKloud, LFCS, CKA, Terraform.</li>
+</ol>
+</div>
+</li>
+<li style="display: flex; gap: 14px">
+<div style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="box-sizing: border-box; flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; border: 2px solid #9AA1A8" aria-hidden="true"></span></span></div>
+<div style="flex: 1; min-width: 0">
+<p style="display: flex; align-items: center; min-height: 28px; margin: 0; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1; font-weight: 600; letter-spacing: 0.02em; color: #9AA1A8">Later</p>
+<h2 style="margin: 8px 0 0; line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; font-size: 20px">Agentic tooling</h2>
+<p style="margin: 12px 0 0; font-size: 18px; line-height: 1.65; text-wrap: pretty">Learned and written up as I go.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+
+<section style="padding-bottom: 72px">
+<div style="box-sizing: border-box; max-width: 1208px; margin: 0 auto; padding-inline: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 72px">
+<div style="flex: 1 1 380px; min-width: 0; max-width: 560px">
+<h2 style="margin: 0; line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; font-size: 24px">How I work</h2>
+<p style="margin: 12px 0 0; font-size: 18px; line-height: 1.65; text-wrap: pretty">I learn by taking things apart and staying with a topic until I can explain why it works. I use AI and agentic tools to design and build, and I want enough backend knowledge to stay in control of what they produce.</p>
+<p style="margin: 14px 0 0; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.5; color: #9AA1A8">[CONFIRM wording]</p>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; max-width: 560px">
+<h2 style="margin: 0; line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; font-size: 24px">Home lab</h2>
+<p style="margin: 12px 0 0; font-size: 18px; line-height: 1.65; text-wrap: pretty">A private network behind an OPNsense firewall, with self-hosted open-source services on a Proxmox cluster. Write-ups will cover the problem, the decisions, and what I learned.</p>
+<a style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 6px; color: #F2A93B; font-size: 18px; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px" href="#">See the home lab →</a>
+<ol style="list-style: none; margin: 32px 0 0; padding: 0" aria-label="Home lab network, from the internet inward">
+<li style="display: flex; align-items: flex-start; gap: 16px"><span style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="box-sizing: border-box; flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; border: 2px solid #9AA1A8" aria-hidden="true"></span></span><span style="flex: none; height: 20px; width: 0; margin-block: 4px; border-left: 2px solid #9AA1A8"></span></span><span style="display: flex; align-items: center; min-height: 28px; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.3; color: #E6E8EA">Internet</span></li>
+<li style="display: flex; align-items: flex-start; gap: 16px"><span style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="box-sizing: border-box; flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; border: 2px solid #9AA1A8" aria-hidden="true"></span></span><span style="flex: none; height: 20px; width: 0; margin-block: 4px; border-left: 2px solid #9AA1A8"></span></span><span style="display: flex; align-items: center; min-height: 28px; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.3; color: #E6E8EA">OPNsense firewall</span></li>
+<li style="display: flex; align-items: flex-start; gap: 16px"><span style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="box-sizing: border-box; flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; border: 2px solid #9AA1A8" aria-hidden="true"></span></span><span style="flex: none; height: 20px; width: 0; margin-block: 4px; border-left: 2px solid #9AA1A8"></span></span><span style="display: flex; align-items: center; min-height: 28px; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.3; color: #E6E8EA">Proxmox cluster</span></li>
+<li style="display: flex; align-items: flex-start; gap: 16px"><span style="flex: none; width: 24px; display: flex; flex-direction: column; align-items: center" aria-hidden="true"><span style="flex: none; display: grid; place-items: center; width: 24px; height: 28px"><span style="box-sizing: border-box; flex: none; width: 12px; height: 12px; margin: 0 4px; border-radius: 50%; border: 2px solid #9AA1A8" aria-hidden="true"></span></span></span><span style="display: flex; align-items: center; min-height: 28px; font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.3; color: #E6E8EA">Self-hosted services</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer style="border-top: 1px solid #2A2F34; padding-block: 24px">
+<div style="box-sizing: border-box; max-width: 1208px; margin: 0 auto; padding-inline: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px">
+<nav style="display: flex; flex-wrap: wrap; gap: 0 4px; margin-left: -10px" aria-label="Footer">
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9AA1A8; text-decoration: none; font-size: 14px" href="#">About</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9AA1A8; text-decoration: none; font-size: 14px" href="rev2-journey-1440.dc.html">Journey</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9AA1A8; text-decoration: none; font-size: 14px" href="#">Projects</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9AA1A8; text-decoration: none; font-size: 14px" href="#">Study Log</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9AA1A8; text-decoration: none; font-size: 14px" href="#">Videos</a>
+<a style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9AA1A8; text-decoration: none; font-size: 14px" href="#">Resources</a>
+</nav>
+<div style="display: flex; flex-wrap: wrap; margin-left: -12px; margin-right: 0">
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="https://github.com/lionelkanyowa" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg></a>
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="https://linkedin.com/in/lionel-kanyowa" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"></path></svg></a>
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="https://x.com/layoiscoding" aria-label="X"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="https://www.instagram.com/layoiscoding/" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a>
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="https://www.youtube.com/@lionelkanyowa" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg></a>
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="https://medium.com/@lionelkanyowa" aria-label="Medium"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"></path></svg></a>
+<a style="display: inline-grid; place-items: center; width: 44px; height: 44px; color: #9AA1A8" href="mailto:lionelkanyowa@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 390, "height": 3112}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
