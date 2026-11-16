@@ -54,6 +54,8 @@ Work is on branch `feat/infrastructure-path`, to be opened as PR 1 of 2.
   to the Home and Journey intros; Claude Academy (formerly Anthropic Academy) and the OWASP
   Top 10 for Agentic Applications added to Resources; `_includes/and-list.html` joins
   cert lists in plain English.
+- Per Lionel, removed the Launch School "Done · 2022–2026" entry (and the `past` list) from
+  the Journey path. Launch School remains only in About and on the archived study-log posts.
 - Left `.codex/` untouched (untracked; Codex copies of content-writer, frontend-designer,
   and progress-logger as .toml; they still carry the old framing).
 

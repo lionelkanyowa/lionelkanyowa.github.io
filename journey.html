@@ -21,14 +21,6 @@ description: The path from Linux and containers to Kubernetes, infrastructure as
     <p class="eyebrow roadmap-label">The roadmap</p>
     <div class="roadmap">
     <ol class="track">
-      {% for item in journey.past %}
-      <li class="stage {{ item.status }}">
-        <span class="st-label">Done · {{ item.years }}</span>
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.summary }}</p>
-      </li>
-      {% endfor %}
-
       {% for phase in journey.phases %}
       {% assign label = phase.status %}
       {% for pair in status_labels %}

@@ -139,12 +139,3 @@ phases:
       projects:
         - text: "A home-lab ops agent that proposes fixes from alerts, waits for approval on every change, is traced with OpenTelemetry, and is scored by an eval suite"
           done: false
-
-# Finished work that came before the current path. Shown as short, past-tense
-# entries at the start of the timeline.
-past:
-  - id: launch-school
-    title: "Launch School"
-    years: "2022–2026"
-    status: done
-    summary: "Programming foundations in Python, then Ruby. I left in November 2026 to focus on infrastructure."

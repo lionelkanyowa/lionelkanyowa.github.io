@@ -103,8 +103,9 @@ Typography is intentionally ordinary and human:
 - **About** — systems first: who he is, how he works, and the Launch School years as
   past history.
 - **Journey** — the four-phase path in `_data/journey.yml` (Linux, Docker and LFCS → the
-  DevOps Engineer path with CKA and Terraform Associate → Azure → platform and SRE depth),
-  plus a short Done entry for Launch School. Each phase has a track, certifications, and a
+  DevOps Engineer path with CKA and Terraform Associate → Azure → platform and SRE depth).
+  Launch School is not on the path (About covers it as history). Each phase has a track,
+  certifications, and a
   "done when" list. Phases 2–4 also carry an agentic-tooling stage that starts only after
   that phase's certifications are passed (Phase 1 has none). A certification or project is
   a **goal** until it's done; never present a goal as earned. Edit the data file, not the
