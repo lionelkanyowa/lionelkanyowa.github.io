@@ -26,7 +26,7 @@ description: Network and systems administrator going deeper into Linux, containe
         agents. I also help small businesses run their technology.
       </p>
       <div class="cta-row">
-        <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey &rarr;</a>
+        <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey {% include arrow.html %}</a>
       </div>
     </div>
 
@@ -73,31 +73,27 @@ description: Network and systems administrator going deeper into Linux, containe
           {% assign cert_codes = next_phase.certs | map: "code" %}
           <p class="goals">Then agentic stage {{ next_phase.agentic.stage }}: {{ next_phase.agentic.title }}, once {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
           {% endif %}
+          {% if later_phases.size > 0 %}
+          {% assign later_titles = later_phases | map: "short_title" %}
+          {% assign later_goals = "" | split: "" %}
+          {% for p in later_phases %}
+            {% assign g = p.certs | where: "status", "goal" | map: "code" %}
+            {% assign later_goals = later_goals | concat: g %}
+          {% endfor %}
+          <p class="goals">After that: {{ later_titles | join: ", then " }}. Goals, not yet earned: {{ later_goals | join: ", " }}.</p>
+          {% endif %}
         </div>
       </li>
       {% endif %}
 
-      {% if later_phases.size > 0 %}
-      {% assign later_titles = later_phases | map: "short_title" %}
-      {% assign later_goals = "" | split: "" %}
-      {% for p in later_phases %}
-        {% assign g = p.certs | where: "status", "goal" | map: "code" %}
-        {% assign later_goals = later_goals | concat: g %}
-      {% endfor %}
-      {% assign later_steps = later_phases | map: "step" %}
       {% assign specialty = site.data.journey.specialty %}
+      {% if specialty %}
       <li class="route-step later">
         <div class="route-rail" aria-hidden="true"><span class="light-slot"><span class="light"></span></span><span class="route-line"></span></div>
         <div class="route-body">
           <p class="route-label">Later</p>
-          {% if specialty %}
           <h2 class="route-title">{{ specialty.title }}</h2>
           <p>{{ specialty.summary }}</p>
-          <p class="goals">Runs with Phases {% include and-list.html items=later_steps %}: {{ later_titles | join: ", then " }}.{% if later_goals.size > 0 %} Goals, not yet earned: {{ later_goals | join: ", " }}.{% endif %}</p>
-          {% else %}
-          <h2 class="route-title">{{ later_titles | join: ", then " }}</h2>
-          {% if later_goals.size > 0 %}<p class="goals">Goals, not yet earned: {{ later_goals | join: ", " }}</p>{% endif %}
-          {% endif %}
         </div>
       </li>
       {% endif %}
