@@ -1,28 +1,27 @@
 ---
 layout: default
 title: Home
-description: Network and systems administrator expanding into software engineering through Launch School. A study log, longer writing, and videos from the journey.
+description: Network and systems administrator going deeper into Linux, containers, Kubernetes, infrastructure as code, and Azure, building each step in a home lab. A study log, longer writing, and videos.
 ---
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Launch School · Ruby track</p>
-      <h1 class="hero-title">I'm learning to build software, <em>in the open</em>.</h1>
+      <p class="eyebrow">Infrastructure and systems · learning in public</p>
+      {% comment %}[CONFIRM] headline: Lionel to approve the wording before merge.{% endcomment %}
+      <h1 class="hero-title">Infrastructure is my craft. I'm taking it <em>deeper</em>.</h1>
       <p class="hero-lede">
-        I'm Lionel, a network and systems administrator expanding into software engineering through
-        mastery-based study. Infrastructure is where I started; software engineering is
-        where I'm growing.
+        I'm Lionel, a network and systems administrator. Infrastructure is my core craft: hybrid
+        identity, endpoint management, and networking. Now I'm going deeper into Linux, containers,
+        Kubernetes, infrastructure as code, and Azure, and building each step in my home lab.
       </p>
-      {% assign now_course = site.data.curriculum.prep | where: "status", "current" | first %}
-      {% unless now_course %}
-        {% for branch in site.data.curriculum.core %}
-          {% assign now_course = branch.courses | where: "status", "current" | first %}
-          {% if now_course %}{% break %}{% endif %}
-        {% endfor %}
-      {% endunless %}
-      {% if now_course %}
-      <p class="now-line"><span class="now-label">Now studying</span> <span class="code">{{ now_course.code }}</span> {{ now_course.title }}</p>
+      <p class="hero-lede">
+        I'm working toward DevOps, SRE, platform, and cloud infrastructure roles. I also help small
+        businesses run their technology.
+      </p>
+      {% assign now_phase = site.data.journey.phases | where: "status", "now" | first %}
+      {% if now_phase %}
+      <p class="now-line"><span class="now-label">Now</span> Phase {{ now_phase.step }}: {{ now_phase.title }}{% if now_phase.track.provider %}, via {{ now_phase.track.provider }}{% endif %}</p>
       {% endif %}
       <div class="cta-row">
         <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey &rarr;</a>
@@ -43,10 +42,14 @@ description: Network and systems administrator expanding into software engineeri
   <div class="wrap">
     <div class="sec-head">
       <h2>Latest from the study log</h2>
-      <p>Short reflections written after study sessions — the most current view of where I am and what I'm working through.</p>
+      <p>Short entries on what I'm studying and building — the most current view of where I am and what I'm working through.</p>
     </div>
     <div class="home-log-list">
-      {% for post in site.posts limit:2 %}
+      {% comment %} Archived entries (tagged `archived`) stay in the log but never appear here. {% endcomment %}
+      {% assign shown = 0 %}
+      {% for post in site.posts %}
+      {% if post.tags contains "archived" %}{% continue %}{% endif %}
+      {% assign shown = shown | plus: 1 %}
       <a class="home-log-row" href="{{ post.url | relative_url }}">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
         <div class="home-row-copy">
@@ -55,16 +58,18 @@ description: Network and systems administrator expanding into software engineeri
         </div>
         <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
-      {% else %}
+      {% if shown == 2 %}{% break %}{% endif %}
+      {% endfor %}
+      {% if shown == 0 %}
       <a class="home-log-row" href="{{ '/studylog/' | relative_url }}">
         <span class="home-row-date">Soon</span>
         <div class="home-row-copy">
-          <h3>First entries are on the way.</h3>
-          <p>The log starts as the Ruby track gets underway.</p>
+          <h3>New entries start with Phase 1.</h3>
+          <p>Linux, Docker and LFCS, built in the home lab. Earlier entries from my Launch School study are archived in the log.</p>
         </div>
         <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
-      {% endfor %}
+      {% endif %}
     </div>
     <div class="sec-foot"><a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the full log &rarr;</a></div>
   </div>
@@ -79,14 +84,14 @@ description: Network and systems administrator expanding into software engineeri
       <a class="home-link" href="{{ '/journey/' | relative_url }}">
         <div class="home-row-copy">
           <h3>Journey</h3>
-          <p>The Launch School path, stage by stage — mastery over speed.</p>
+          <p>Four phases: Linux and containers, Kubernetes and infrastructure as code, Azure, then platform and SRE.</p>
         </div>
         <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>
       <a class="home-link" href="{{ '/projects/' | relative_url }}">
         <div class="home-row-copy">
           <h3>Projects</h3>
-          <p>Home-lab, infrastructure, and software-engineering work.</p>
+          <p>Home-lab and infrastructure work: the problem, the decisions, and what I learned.</p>
         </div>
         <span class="row-arrow" aria-hidden="true">&rarr;</span>
       </a>

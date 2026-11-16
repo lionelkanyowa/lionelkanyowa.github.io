@@ -2,74 +2,99 @@
 layout: default
 title: Journey
 permalink: /journey/
-description: The Launch School path — mastery-based software engineering, from Ruby foundations through Core to Capstone.
+description: The path from Linux and containers to Kubernetes, infrastructure as code, Azure, and platform engineering, in four phases with a certification goal for each.
 ---
+
+{% assign journey = site.data.journey %}
+{% assign status_labels = "done:Done|now:Now · In progress|next:Next|later:Later" | split: "|" %}
 
 <section class="about-hero">
   <div class="wrap">
-    <h1 class="about-title">My Launch School journey</h1>
-    <p class="about-stand">I chose Launch School because it matches how I've always learned best — taking things apart, understanding how they work, and rebuilding from first principles. Years in infrastructure taught me that shortcuts usually cost more later, and its mastery-based path rewards the same instinct: understand the ideas, don't just recognize the answers. This is the road from my first Ruby program, through Core, to Capstone.</p>
+    <h1 class="about-title">The path</h1>
+    <p class="about-stand">Infrastructure and systems are my core craft. This is how I'm going deeper: KodeKloud's DevOps Engineer path in four phases, each with a certification and a clear "done when." I build every step in my home lab. Certifications I haven't passed are listed as goals, not credentials.</p>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
     <p class="eyebrow roadmap-label">The roadmap</p>
-    {% assign prep_total = site.data.curriculum.prep | size %}
-    {% assign prep_done = site.data.curriculum.prep | where: "status", "done" | size %}
     <div class="roadmap">
-    <div class="track">
-      <div class="stage{% if prep_done < prep_total %} now{% else %} done{% endif %}">
-        <span class="st-label">{% if prep_done < prep_total %}Now · In Progress{% else %}Complete{% endif %}</span>
-        <h2>Prep Work</h2>
-        <p>Getting oriented and setting the groundwork before the graded curriculum begins.</p>
-        <ul class="course-list prep">
-          {% for c in site.data.curriculum.prep %}
-          <li class="course {{ c.status }}">
-            <span class="c-mark" aria-hidden="true"></span>
-            <span class="code">{{ c.code }}</span><span class="c-title">{{ c.title }}{% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}{% if c.status == 'current' %} <span class="c-tag">in progress</span>{% endif %}</span>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="stage{% if prep_done == prep_total %} now{% endif %}">
-        <span class="st-label">{% if prep_done == prep_total %}Now · In Progress{% else %}Next{% endif %}</span>
-        <h2>Core Curriculum</h2>
-        <p>One track, in order — the backend built in Ruby first, then the frontend in JavaScript. You can't move on to the frontend until the backend is complete, and each course is gated by an assessment.</p>
-        <div class="core-split">
-          {% for branch in site.data.curriculum.core %}
-          {% assign total = branch.courses | size %}
-          {% assign done = branch.courses | where: "status", "done" | size %}
-          {% assign current = branch.courses | where: "status", "current" | size %}
-          <div class="core-branch {% if branch.id == 'backend' %}ruby{% else %}js{% endif %}">
-            <div class="branch-head">
-              <span class="branch-tag">{{ branch.step }} · {{ branch.label }}</span>
-              {% if done == total %}
-              <span class="branch-status complete">Complete</span>
-              {% elsif done > 0 or current > 0 %}
-              <span class="branch-status active">In progress · {{ done }}/{{ total }}</span>
-              {% else %}
-              <span class="branch-status">Not started</span>
+    <ol class="track">
+      {% for item in journey.past %}
+      <li class="stage {{ item.status }}">
+        <span class="st-label">Done · {{ item.years }}</span>
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.summary }}</p>
+      </li>
+      {% endfor %}
+
+      {% for phase in journey.phases %}
+      {% assign label = phase.status %}
+      {% for pair in status_labels %}
+        {% assign kv = pair | split: ":" %}
+        {% if kv[0] == phase.status %}{% assign label = kv[1] %}{% endif %}
+      {% endfor %}
+      <li class="stage {{ phase.status }}">
+        <span class="st-label">{{ label }}{% if phase.window %} · {{ phase.window }}{% endif %}</span>
+        <h2><span class="phase-step">Phase {{ phase.step }}</span> {{ phase.title }}</h2>
+        <p>{{ phase.summary }}</p>
+
+        <dl class="phase-facts">
+          {% if phase.track %}
+          <div>
+            <dt>Track</dt>
+            <dd>
+              {{ phase.track.provider }}
+              {% if phase.track.courses %}
+              <ul class="course-list">
+                {% for c in phase.track.courses %}
+                <li class="course{% if c.status %} {{ c.status }}{% endif %}">
+                  {% if c.status %}<span class="c-mark" aria-hidden="true"></span>{% endif %}
+                  <span class="c-title">{{ c.title }}{% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}{% if c.status == 'current' %} <span class="c-tag">in progress</span>{% endif %}</span>
+                </li>
+                {% endfor %}
+              </ul>
               {% endif %}
-            </div>
-            <ul class="course-list">
-              {% for c in branch.courses %}
-              <li class="course {{ c.status }}">
-                <span class="c-mark" aria-hidden="true"></span>
-                <span class="code">{{ c.code }}</span><span class="c-title">{{ c.title }}{% if c.status == 'done' %}<span class="sr-only"> — done</span>{% endif %}{% if c.status == 'current' %} <span class="c-tag">in progress</span>{% endif %}</span>
-              </li>
-              {% endfor %}
-            </ul>
+            </dd>
           </div>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="stage">
-        <span class="st-label">{% if prep_done == prep_total %}Next{% else %}Then{% endif %}</span>
-        <h2>Capstone</h2>
-        <p>An opportunity to work alongside a small engineering team on a production-quality project, applying software engineering principles, system design, and everything learned throughout Core. It's where my background in infrastructure and my growth as a software engineer come together.</p>
-      </div>
-    </div>
+          {% endif %}
+
+          {% if phase.certs %}
+          <div>
+            <dt>{% if phase.certs.size > 1 %}Certifications{% else %}Certification{% endif %}</dt>
+            <dd>
+              <ul class="cert-list">
+                {% for cert in phase.certs %}
+                <li>
+                  <abbr class="cert-code" title="{{ cert.name }}">{{ cert.code }}</abbr>
+                  <span class="cert-status {{ cert.status }}">{% if cert.status == 'earned' %}Earned{% else %}Goal{% endif %}</span>
+                  {% if cert.note %}<span class="cert-note">{{ cert.note }}</span>{% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </div>
+          {% endif %}
+
+          {% if phase.done_when %}
+          <div>
+            <dt>Done when</dt>
+            <dd>
+              <ul class="course-list">
+                {% for d in phase.done_when %}
+                <li class="course {% if d.done %}done{% else %}upcoming{% endif %}">
+                  <span class="c-mark" aria-hidden="true"></span>
+                  <span class="c-title">{{ d.text }}<span class="sr-only">{% if d.done %} — done{% else %} — not yet{% endif %}</span></span>
+                </li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </div>
+          {% endif %}
+        </dl>
+      </li>
+      {% endfor %}
+    </ol>
     </div>
 
     <div class="sec-foot">

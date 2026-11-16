@@ -1,0 +1,118 @@
+# The path, in order. /journey/ and the home page both read this file, so it is
+# the only thing to edit as the work moves forward.
+#
+# Phase `status`: one of
+#   done   — finished; every "done when" item is true
+#   now    — the phase I'm working in (exactly one)
+#   next   — the phase after this one
+#   later  — further out
+#
+# Cert `status`: one of
+#   goal   — not passed yet. Shown as a goal, never as a credential.
+#   earned — passed. Only set this after the result is in.
+#
+# `done_when` items: set `done: true` when an item is actually finished.
+# Track courses take an optional `status` (done / current); leave it off rather
+# than guess.
+
+phases:
+  - id: linux-docker-lfcs
+    step: 1
+    title: "Linux, Docker and LFCS"
+    status: now
+    window: "Through mid-February 2027"
+    summary: "The base layer: Linux administration, shell scripting, and containers, with the LFCS exam as the checkpoint."
+    track:
+      provider: "KodeKloud"
+      courses:
+        - title: "Linux for Beginners"
+        - title: "Shell Scripts for Beginners"
+        - title: "LFCS course"
+        - title: "Docker for Absolute Beginners"
+    certs:
+      - code: "LFCS"
+        name: "Linux Foundation Certified System Administrator"
+        status: goal
+        note: "Exam planned for early 2027"
+    done_when:
+      - text: "Finish the four Phase 1 courses"
+        done: false
+      - text: "Pass the LFCS exam"
+        done: false
+      - text: "Ship automated, tested home-lab backups"
+        done: false
+      - text: "Run one real service in Docker Compose"
+        done: false
+
+  - id: devops-path
+    step: 2
+    title: "The DevOps Engineer path, with CKA and Terraform Associate"
+    status: next
+    summary: "The rest of the DevOps Engineer path: Kubernetes and infrastructure as code."
+    track:
+      provider: "KodeKloud"
+      courses:
+        - title: "The rest of the DevOps Engineer path"
+    certs:
+      - code: "CKA"
+        name: "Certified Kubernetes Administrator"
+        status: goal
+      - code: "Terraform Associate"
+        name: "HashiCorp Certified: Terraform Associate"
+        status: goal
+    done_when:
+      - text: "Finish the rest of the DevOps Engineer path"
+        done: false
+      - text: "Pass CKA"
+        done: false
+      - text: "Pass Terraform Associate"
+        done: false
+
+  - id: azure
+    step: 3
+    title: "Azure"
+    status: later
+    summary: "Administering, designing, and securing workloads on Azure."
+    track:
+      provider: "KodeKloud"
+    certs:
+      - code: "AZ-104"
+        name: "Azure Administrator Associate"
+        status: goal
+      - code: "AZ-305"
+        name: "Azure Solutions Architect Expert"
+        status: goal
+      - code: "SC-500"
+        name: "Cloud and AI Security Engineer Associate"
+        status: goal
+    done_when:
+      - text: "Pass AZ-104"
+        done: false
+      - text: "Pass AZ-305"
+        done: false
+      - text: "Pass SC-500"
+        done: false
+
+  - id: platform-sre
+    step: 4
+    title: "Platform and SRE depth"
+    status: later
+    summary: "Platform engineering and site reliability, built on everything before it."
+    track:
+      provider: "KodeKloud"
+    certs:
+      - code: "CNPE"
+        name: "Certified Cloud Native Platform Engineer"
+        status: goal
+    done_when:
+      - text: "Pass CNPE"
+        done: false
+
+# Finished work that came before the current path. Shown as short, past-tense
+# entries at the start of the timeline.
+past:
+  - id: launch-school
+    title: "Launch School"
+    years: "2022–2026"
+    status: done
+    summary: "Programming foundations in Python, then Ruby. I left in November 2026 to focus on infrastructure."
