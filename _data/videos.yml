@@ -3,8 +3,8 @@
 # Add one entry per video:
 #
 # - id: dQw4w9WgXcQ            # the YouTube video ID (the v= part of the URL)
-#   title: What mastery-based learning actually feels like
-#   meta: Launch School · month 1
+#   title: Running my first service in Docker Compose
+#   meta: Phase 1 · home lab
 #   duration: "11:42"          # optional, shown on the thumbnail
 #
 # Leave the list empty ([]) until the first video is up.

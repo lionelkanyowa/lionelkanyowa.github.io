@@ -2,7 +2,7 @@
 layout: post
 title: "Starting the Variables chapter, and switching notes to Notion"
 date: 2026-08-12 20:00:00 -0400
-tags: [launch-school, ruby]
+tags: [launch-school, ruby, archived]
 excerpt: "Working through the Variables chapter — variable scope, blocks, and Ruby's method definitions — and moving my Q&A notes to Notion so I can write Markdown directly."
 ---
 

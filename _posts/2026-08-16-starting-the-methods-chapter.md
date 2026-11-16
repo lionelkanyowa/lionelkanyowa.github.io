@@ -2,7 +2,7 @@
 layout: post
 title: "Wrapping up Variables, and starting Methods"
 date: 2026-08-16 18:00:00 -0400
-tags: [launch-school, ruby]
+tags: [launch-school, ruby, archived]
 excerpt: "Correcting my Variables flashcards into Mochi, and starting the Methods chapter — defining methods, mutating arguments, method chaining, the return keyword, and more."
 ---
 

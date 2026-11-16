@@ -2,7 +2,7 @@
 layout: post
 title: "End-of-chapter questions, and moving to a terminal workflow"
 date: 2026-08-13 20:00:00 -0400
-tags: [launch-school, ruby, tools]
+tags: [launch-school, ruby, tools, archived]
 excerpt: "The Variables end-of-chapter questions, a new GitHub repo for my Launch School work, and a switch to a terminal-only workflow with the Micro editor."
 ---
 

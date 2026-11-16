@@ -1,6 +1,6 @@
 # Site Configuration
 title: Lionel Kanyowa
-description: "Network and systems administrator expanding into software engineering. Learning in public through Launch School — a study log, longer writing, and videos."
+description: "Network and systems administrator going deeper into Linux, containers, Kubernetes, infrastructure as code, and Azure. Learning in public: a study log, longer writing, and videos."
 url: "https://lionelkanyowa.com"
 
 # Social / SEO (jekyll-seo-tag)
@@ -21,6 +21,7 @@ author:
   location: "Michigan"
 
 # Build Settings
+strict_front_matter: true   # a malformed front-matter block fails the build instead of dropping the layout
 timezone: America/Detroit   # render dates in Michigan time, not UTC
 future: false  # prevent scheduled study-log entries from publishing early
 markdown: kramdown

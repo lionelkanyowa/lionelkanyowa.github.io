@@ -10,11 +10,11 @@
   <text x="88" y="338" font-family="Liberation Sans,Arial,sans-serif" font-weight="700"
         font-size="88" letter-spacing="-2" fill="#F3EFE9">Lionel Kanyowa</text>
   <text x="88" y="416" font-family="Liberation Sans,Arial,sans-serif" font-size="40"
-        fill="#A29A90">Learning software engineering in public.</text>
+        fill="#A29A90">Infrastructure and systems, built in a home lab.</text>
 
   <line x1="88" y1="500" x2="160" y2="500" stroke="#D9824B" stroke-width="8" stroke-linecap="round"/>
   <text x="188" y="509" font-family="Liberation Sans,Arial,sans-serif" font-weight="600"
-        font-size="25" letter-spacing="3" fill="#D9824B">LAUNCH SCHOOL · RUBY TRACK</text>
+        font-size="25" letter-spacing="3" fill="#D9824B">INFRASTRUCTURE · LEARNING IN PUBLIC</text>
   <text x="1112" y="509" text-anchor="end" font-family="Liberation Sans,Arial,sans-serif"
         font-size="25" letter-spacing="2" fill="#6A625A">lionelkanyowa.com</text>
 </svg>

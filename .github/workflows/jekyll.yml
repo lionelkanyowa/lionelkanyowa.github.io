@@ -3,6 +3,9 @@ name: Build and deploy Jekyll site
 on:
   push:
     branches: [main]
+  # Build every pull request (any base branch, so stacked PRs get a check too).
+  # Pull requests only build and check; they never deploy.
+  pull_request:
   workflow_dispatch:
 
 # Allow the workflow to publish to GitHub Pages.
@@ -11,10 +14,11 @@ permissions:
   pages: write
   id-token: write
 
-# One deployment at a time; don't cancel an in-progress run.
+# Deploys run one at a time and are never cancelled. A pull request's
+# checks get their own group, and a newer push to the PR replaces an older run.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -31,6 +35,7 @@ jobs:
           bundler-cache: true
 
       - name: Configure Pages
+        if: github.event_name != 'pull_request'
         id: pages
         uses: actions/configure-pages@v5
 
@@ -39,10 +44,21 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # Copy awaiting Lionel's confirmation is marked [CONFIRM] in source
+      # comments and PR descriptions. It must never reach the published site.
+      - name: Check for unconfirmed copy
+        run: |
+          if grep -rIl -F '[CONFIRM]' _site; then
+            echo "::error::[CONFIRM] marker found in the built site (files listed above)."
+            exit 1
+          fi
+
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:

@@ -2,7 +2,7 @@
 layout: post
 title: "Sharpening my flashcard workflow with LSBot"
 date: 2026-08-14 20:00:00 -0400
-tags: [launch-school, ruby]
+tags: [launch-school, ruby, archived]
 excerpt: "Finishing the Variables chapter and refining my flashcard questions and answers with LSBot (prompts included), plus a good conversation with a fellow Ruby student about the track."
 ---
 
