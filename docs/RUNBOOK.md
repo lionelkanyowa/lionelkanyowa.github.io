@@ -196,8 +196,8 @@ Do not enlarge the solid favicon cut into visible logo sizes.
 
 In the site header (design rev2, "status lights") the mark is drawn in the ink color
 `#E6E8EA` on the `#0F1113` ground, keeping the v1.1 geometry. The social card uses the
-rev2 tokens. The favicons still use the earlier orange field (`#9A4316`) and have not been
-recolored for rev2 yet.
+rev2 tokens. The favicons use the amber `#F2A93B` field with the mark in `#0F1113`
+(9.5:1); never put off-white on amber (1.6:1).
 
 After editing `favicon.svg`, regenerate its PNG fallbacks from the repository root:
 
