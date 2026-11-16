@@ -11,7 +11,7 @@ The site is a Jekyll 4 static site hosted on GitHub Pages and deployed by GitHub
 | Production-style check | `JEKYLL_ENV=production bundle exec jekyll build` |
 | Site settings and navigation | `_config.yml` |
 | Study-log posts | `_posts/YYYY-MM-DD-title.md` |
-| Journey/course status | `_data/curriculum.yml` |
+| Journey phases and status | `_data/journey.yml` |
 | Videos | `_data/videos.yml` |
 | Medium articles | `_data/articles.yml` |
 | Page copy | Root `.html` and `.md` files |
@@ -113,14 +113,16 @@ mobile layout, previous/next links, and the LinkedIn share URL.
 
 ## Update Journey progress
 
-Edit `_data/curriculum.yml`. Each course has one status:
+Edit `_data/journey.yml`. The Journey page and the home page's "Now" line both read it,
+so do not edit progress labels in `journey.html` or `index.html`.
 
-- `done` — completed
-- `current` — in progress
-- `upcoming` — not started
-
-Keep only the truthful current course marked `current`. The Journey page calculates
-branch progress from this file, so do not edit progress labels in `journey.html`.
+- Each phase has one `status`: `done`, `now`, `next`, or `later`. Keep exactly one
+  phase at `now`.
+- Each certification has one `status`: `goal` or `earned`. Change it to `earned` only
+  after the result is in.
+- Set `done: true` on a "done when" item only when it is actually finished.
+- Track courses take an optional `status` (`done` or `current`). Leave it off rather
+  than guess.
 
 ## Add a YouTube video
 

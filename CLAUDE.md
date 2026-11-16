@@ -24,10 +24,13 @@ Lionel — not an order-taker. That means:
 
 ## What this project is
 
-A complete revamp of Lionel's personal site: away from the old DevOps-engineer framing,
-toward documenting his software-engineering journey through Launch School while serving
-equally as a credible portfolio for future software-engineering opportunities. Minimalist,
-warm, monochrome with a single accent.
+Lionel's personal site. Infrastructure and systems are his core craft. Since November 2026
+the site documents him going deeper — Linux, containers, Kubernetes, infrastructure as code,
+Azure, then platform engineering and SRE — through KodeKloud's DevOps Engineer path, built
+step by step in his home lab. It serves equally as a learning-in-public record and a
+credible portfolio for DevOps, SRE, platform, and cloud infrastructure roles. (He studied at
+Launch School from 2022 to 2026 and left to focus on infrastructure; that is past history on
+the site, not the current direction.) Minimalist, warm, monochrome with a single accent.
 
 ## Stack and constraints
 
@@ -76,10 +79,6 @@ Tokens (define as CSS custom properties; style everything through them, never ha
 - The accent is a deep burnt orange used **sparingly** — links on hover, the current-stage
   marker, one primary button, and small labels. It is warm and personal without being tied
   to a programming language.
-- **Two functional track colors** (`--track-ruby` red, `--track-js` yellow) exist for one
-  purpose only: labeling the Ruby (backend) vs JavaScript (frontend) split in the Journey's
-  Core Curriculum. They are small markers (a tag + a left border), never used elsewhere and
-  never as a general accent. Burnt orange remains the site's only real accent.
 - The site is intentionally dark-only. Do not add a theme toggle or system/light override
   unless Lionel explicitly changes that product decision.
 
@@ -97,19 +96,27 @@ Typography is intentionally ordinary and human:
 
 ## Information architecture
 
-- **Home** — thesis hero, where he's building toward, latest study-log / writing / videos.
-- **About** — the systems-to-software story; who he is and how he works.
-- **Journey** — replaces the old DevOps roadmap. Launch School path as mastery-based
-  stages (current stage marked). Not a certificate checklist.
-- **Projects** — selected home-lab, infrastructure, and software-engineering work that
+- **Home** — thesis hero, the current phase (from `_data/journey.yml`), latest
+  non-archived study-log entries, links to the rest of the site.
+- **About** — systems first: who he is, how he works, and the Launch School years as
+  past history.
+- **Journey** — the four-phase path in `_data/journey.yml` (Linux, Docker and LFCS → the
+  DevOps Engineer path with CKA and Terraform Associate → Azure → platform and SRE depth),
+  plus a short Done entry for Launch School. Each phase has a track, certifications, and a
+  "done when" list. A certification is a **goal** until it's passed; never present a goal
+  as earned. Edit the data file, not the template.
+- **Projects** — selected home-lab and infrastructure work that
   demonstrates engineering judgment. Include the problem, constraints, decisions,
   tradeoffs, and lessons; do not turn the page into an inventory of tools or services.
 - **Study Log** — built-in Jekyll blog (`_posts`). Short, frequent reflections written
-  on a realistic weekly cadence. Owned on-site and shareable on LinkedIn.
+  on a realistic cadence. Owned on-site and shareable on LinkedIn. Entries from the
+  Launch School period are kept, tagged `archived`, labeled on the site, and left out of
+  Home's "Latest".
 - **Writing** — longer essays published on **Medium**, surfaced here as a linked list from
   `_data/articles.yml`.
 - **Videos** — YouTube, curated in `_data/videos.yml`, rendered as click-to-load facades.
-- **Resources** — kept; refocused on software-engineering / CS fundamentals.
+- **Resources** — the current path (KodeKloud, the LFCS exam) plus Launch School's free
+  Intro to Ruby and Intro to SQL books, kept as reference.
 
 Keep top-level nav lean (~6 items). Resources can fold under Journey if nav feels heavy.
 

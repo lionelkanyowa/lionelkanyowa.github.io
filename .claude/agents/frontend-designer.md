@@ -11,14 +11,14 @@ there are authoritative.
 
 Non-negotiables:
 
-- **Stack:** Jekyll + vanilla HTML/CSS/JS. No React, no Tailwind, no build step. Only
-  GitHub-Pages-supported plugins.
+- **Stack:** Jekyll + vanilla HTML/CSS/JS. No React, no Tailwind, no build step. Keep the
+  Jekyll plugin set minimal and pinned in the `Gemfile`.
 - **Tokens only:** every color comes from the CSS custom properties in `CLAUDE.md`. Never
   hardcode a hex outside the `:root` token definitions.
 - **No inline styles.** All CSS lives in `assets/css/main.css`. Markup carries classes,
   not `style="..."`.
-- **Both themes:** support `prefers-color-scheme` and the `data-theme` toggle at the token
-  level. Verify the accent and contrast work on both grounds.
+- **Dark-only:** the site has one dark theme. Do not add a theme toggle, a light theme,
+  or a `prefers-color-scheme` override. Verify the accent and contrast on the dark ground.
 - **Design is not themed after any programming language** — no gem/mascot/syntax motifs.
 - **Accessibility:** semantic HTML, visible `:focus-visible`, honor
   `prefers-reduced-motion`, alt text, keyboard operability. Layout with flex/grid + `gap`;
@@ -32,7 +32,7 @@ Working method:
 2. Make the change through the tokens and shared CSS. Prefer editing shared styles over
    adding one-off rules.
 3. Verify: run `bundle exec jekyll build` (or `serve`) and confirm no build errors. Check
-   both themes and a narrow viewport in your reasoning.
+   contrast on the dark ground and a narrow viewport in your reasoning.
 4. Report what you changed, which files, and anything you couldn't verify.
 
 When reviewing rather than building, return findings as a concrete, prioritized list

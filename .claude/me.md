@@ -6,27 +6,33 @@ subset — the full personal `me.md` stays private and is not a source for site 
 
 ## The person behind the site
 
-Lionel Kanyowa — a network/systems administrator at a nonprofit in Michigan, moving
-into software engineering. Infrastructure-first background (identity, endpoints,
-networking, a real home lab he runs because he enjoys it), B.S. Informatics, largely
-self-taught in what he uses day to day.
+Lionel Kanyowa — a network/systems administrator at a nonprofit in Michigan.
+Infrastructure and systems are his core craft (hybrid identity, endpoint management,
+networking, a real home lab he runs because he enjoys it). B.S. Informatics, largely
+self-taught in what he uses day to day. He also helps small businesses run their
+technology.
 
-He is now studying software engineering through Launch School's Core curriculum
-(currently the Ruby track), mastery-based rather than speed-based. The site documents
-that journey. He is deliberate, principle-first, and values understanding *why*
-something works over collecting credentials.
+Since November 2026 he is going deeper into Linux, containers, Kubernetes, infrastructure
+as code, and Azure through KodeKloud's DevOps Engineer path, in four phases, building each
+step in his home lab. Target roles: DevOps, SRE, platform, and cloud infrastructure. He
+studied programming foundations at Launch School from 2022 to 2026 (Python, then Ruby) and
+left to focus on infrastructure; that is past history, not the current direction. He is
+deliberate, principle-first, and values understanding *why* something works over
+collecting credentials. Certifications on the site are goals until passed.
+
+The site's current path lives in `_data/journey.yml`; treat it as the source of truth.
 
 ## What the site is
 
-A personal portfolio and public journal of the software-engineering journey. Not a
+A personal portfolio and public journal of going deeper in infrastructure. Not a
 résumé dump. Its two primary jobs carry equal weight:
 
 1. Show future employers and collaborators who he is, how he thinks, and where he is
-   headed (systems background → software engineering).
+   headed (systems administration → DevOps, SRE, platform, and cloud infrastructure).
 2. Document the learning in the open through a weekly on-site study log, longer writing
    on Medium, and videos. Study-log entries should be easy to share on LinkedIn.
 
-Audience: future collaborators and employers, other Launch School / self-taught
+Audience: future collaborators and employers, other self-taught infrastructure
 learners, and his own future self as a record of the work.
 
 ## Voice and tone
@@ -55,9 +61,9 @@ Some of what makes him him is private. On the public site:
 
 ## The language question (important for design)
 
-The site is built with Jekyll (Ruby) and its frontend is HTML/CSS/JavaScript. Launch
-School's current track is Ruby. **None of this should make the visual design "about" a
-programming language.** No language mascots, gem motifs, or syntax-highlight-as-brand.
+The site is built with Jekyll (Ruby) and its frontend is HTML/CSS/JavaScript. **None of
+this, and none of the tools on his path, should make the visual design "about" a
+programming language or a vendor.** No language mascots, gem motifs, or syntax-highlight-as-brand.
 The design is about the person and the journey. Languages are tools mentioned as facts,
 not identity.
 
