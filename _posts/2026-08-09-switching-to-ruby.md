@@ -2,7 +2,7 @@
 layout: post
 title: "Switching to Ruby, and simplifying how I take notes"
 date: 2026-08-09 20:00:00 -0400
-tags: [launch-school, ruby]
+tags: [launch-school, ruby, archived]
 excerpt: "A productive day: the revamped site went live, I switched my Launch School track from Python to Ruby, finished the first Intro to Ruby chapter, and simplified my note-taking down to one app."
 image: /assets/images/studylog/2026-08-09-study-notes.jpg
 image_alt: "An open notebook and laptop on a quiet wooden desk beside a mug."

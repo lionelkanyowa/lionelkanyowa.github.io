@@ -2,7 +2,7 @@
 layout: post
 title: "Why I'm keeping this study log in public"
 date: 2026-08-08 09:00:00 -0400
-tags: [meta, launch-school]
+tags: [meta, launch-school, archived]
 excerpt: "A short note on why the day-to-day of learning goes here, in the open, instead of in a private notebook."
 ---
 

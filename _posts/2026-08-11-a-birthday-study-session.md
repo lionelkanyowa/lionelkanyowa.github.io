@@ -2,7 +2,7 @@
 layout: post
 title: "A birthday study session, and finishing the chapter"
 date: 2026-08-11 15:00:00 -0400
-tags: [launch-school, ruby]
+tags: [launch-school, ruby, archived]
 excerpt: "A relaxed birthday spent partly at Launch School — finishing the chapter with end-of-chapter questions, an active recall session, and a positive review from LSBot."
 ---
 

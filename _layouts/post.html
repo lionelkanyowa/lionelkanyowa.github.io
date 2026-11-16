@@ -11,11 +11,17 @@ layout: default
                 <h1 class="post-title">{{ page.title | escape }}</h1>
                 <div class="post-meta">
                     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-                    {% if page.tags and page.tags.size > 0 %}
-                    <span>{{ page.tags | join: " · " }}</span>
+                    {% assign topic_tags = page.tags | where_exp: "t", "t != 'archived'" %}
+                    {% if topic_tags.size > 0 %}
+                    <span>{{ topic_tags | join: " · " }}</span>
                     {% endif %}
+                    {% if page.tags contains "archived" %}<span class="tag-archived">Archived</span>{% endif %}
                 </div>
             </header>
+
+            {% if page.tags contains "archived" %}
+            <p class="archived-note">Archived: written during my Launch School study, which I left in November 2026 to focus on infrastructure.</p>
+            {% endif %}
 
             {% comment %} Optional lead image. Set `image:` in the post front matter to show it
             here AND use it as the LinkedIn/social card. The default site og-image (inherited via
