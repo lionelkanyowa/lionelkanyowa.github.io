@@ -2,13 +2,13 @@
 layout: default
 title: Videos
 permalink: /videos/
-description: Short videos documenting Launch School and the software-engineering journey.
+description: Short videos on what I'm learning and building: Linux, containers, infrastructure, and the home lab.
 ---
 
 <section class="about-hero">
   <div class="wrap">
     <h1 class="about-title">Videos</h1>
-    <p class="about-stand">Short videos documenting Launch School, the home lab, and the road from network and systems administration into software engineering.</p>
+    <p class="about-stand">Short videos on what I'm learning and building: Linux, containers, infrastructure, and the home lab.</p>
   </div>
 </section>
 

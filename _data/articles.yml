@@ -1,7 +1,7 @@
 # Medium articles, newest first. These render on /writing/ and on the home page.
 # Add one entry per article:
 #
-# - title: Why I left the Python track for Ruby
+# - title: What I learned restoring my first home-lab backup
 #   url: https://medium.com/@lionelkanyowa/some-slug
 #   date: 2026-08-01
 #

@@ -2,13 +2,13 @@
 layout: default
 title: Writing
 permalink: /writing/
-description: Longer essays on learning deeply, the systems-to-software path, and lessons from the home lab. Published on Medium.
+description: Longer essays on infrastructure, learning deeply, and lessons from the home lab. Published on Medium.
 ---
 
 <section class="about-hero">
   <div class="wrap">
     <h1 class="about-title">Longer writing</h1>
-    <p class="about-stand">Where the study log is the day-to-day, these are the essays I take time with — learning deeply, the systems-to-software path, and lessons from the home lab. Published on Medium.</p>
+    <p class="about-stand">Where the study log is the day-to-day, these are the essays I take time with — infrastructure, learning deeply, and lessons from the home lab. Published on Medium.</p>
   </div>
 </section>
 

@@ -2,7 +2,7 @@
 layout: page
 title: Resources
 permalink: /resources/
-description: What I'm learning with — the courses, books, and references behind the software-engineering journey.
+description: What I'm learning with — the courses, exams, books, and references behind the infrastructure path.
 ---
 
 # Resources
@@ -10,14 +10,15 @@ description: What I'm learning with — the courses, books, and references behin
 {: .lead }
 What I'm actually learning with, kept honest and short. Not a link dump — just the things doing real work right now.
 
-## Current curriculum
+## Current path
 
-- **[Launch School](https://launchschool.com/)** — the mastery-based Core curriculum, currently the Ruby track. This is the main study path, and everything else orbits it.
+- **[KodeKloud DevOps Engineer path](https://learn.kodekloud.com/learning-paths/devops-engineer)** — the main study track, worked through in four phases. Everything else orbits it.
+- **[LFCS exam](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)** — the Linux Foundation Certified System Administrator exam, the Phase 1 certification goal.
 
 ## Reference
 
-- **[Ruby documentation](https://ruby-doc.org/)** — the standard library, read rather than guessed at.
-- **[MDN Web Docs](https://developer.mozilla.org/)** — the reference for HTML, CSS, and JavaScript on the frontend side.
+- **[Introduction to Programming with Ruby](https://launchschool.com/books/ruby)** — Launch School's free book. Kept from my Launch School years as a reference for programming fundamentals.
+- **[Introduction to SQL](https://launchschool.com/books/sql)** — Launch School's free book on SQL and relational databases, also kept as a reference.
 
 ## Books
 
