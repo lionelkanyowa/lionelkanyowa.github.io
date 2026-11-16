@@ -5,6 +5,62 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-11-15 — Status lights redesign, rev2 (PR 2)
+
+**Done this session.**
+- Branch `feat/status-lights`, stacked on `feat/infrastructure-path` (PR 1). Applied the
+  approved rev2 "status lights" design from `docs/design/rev2/` (mockups and
+  `DESIGN-SPEC.md`, now committed as the reference; their Launch School-era copy was not
+  used).
+- Tokens: ground `#0F1113`, surface `#171A1D`, hairline `#2A2F34` (decorative only), ink
+  `#E6E8EA`, muted `#9AA1A8` (also `--rule` for meaningful lines and rings), accent amber
+  `#F2A93B`, accent-ink `#0F1113`, done green `#6FBF8E`. All text pairs pass WCAG AA
+  (lowest: muted on surface, 6.7:1). Removed the old warm-neutral tokens, `--surface-2`,
+  `--ink-soft`, and `--accent-text`.
+- Type: Overpass (all text) and Overpass Mono (eyebrows, labels, status tags, dates,
+  code), self-hosted as Latin-subset variable woff2 in `assets/fonts/` from
+  `@fontsource-variable` 5.3.0, SIL OFL 1.1 license included, two files preloaded. No font
+  CDN. Reason recorded in `CLAUDE.md` (approved rev2 redesign).
+- Header 72px with an ink-colored Interlock v1.1 mark (kept the v1.1 geometry; the
+  mockup's mark dropped the interlock cut). Nav wraps on phones instead of the checkbox
+  menu, so the menu JS is removed from `site.js`. Footer per rev2.
+- Status lights component (`.light` / `.dot` / `.route`): Now is amber with a slow
+  `lk-pulse` (off under `prefers-reduced-motion`), Done is green with a check, Next and
+  Later are a grey ring (followed DESIGN-SPEC; the mockups drew Next with an amber ring).
+- Home: rev2 hero with portrait credit; Now / Next / Later from `_data/journey.yml` (new
+  `short_title` field; Later joins phases 3–4 as "Azure, then platform engineering";
+  uncompleted certs listed as goals); How I work; Home lab with an Internet → OPNsense
+  firewall → Proxmox cluster → Self-hosted services diagram; then Latest from the study
+  log (archived excluded). Dropped the "Elsewhere on the site" link grid (not in the
+  mockup).
+- Journey: route of phase cards with status lights, "Progress n/m" computed from
+  `done_when`, window and track, course rows, cert rows (Goal/Earned), done-when rows (Not
+  yet/Done). Verified done, current, and earned states with temporary data, then restored.
+- Overpass draws the middle dot off-center, so separators in sans text use a mono `.sep`
+  span.
+- Social card (`og-image.svg` and `.png`) recolored to rev2. Favicons not recolored (still
+  the `#9A4316` orange field).
+- Docs: `CLAUDE.md` design-system section rewritten for rev2 (token table with contrast,
+  status lights, typography); `docs/RUNBOOK.md` brand-mark color note updated.
+- Fixed on PR 1: the Videos page description had an unquoted colon that broke its YAML
+  front matter and dropped the layout. Quoted it and set `strict_front_matter: true`, so
+  bad front matter now fails the build and the PR check.
+- Verified: production build clean; no `[CONFIRM]` in output; no CDN or font-service
+  references; no inline styles; no orphaned CSS classes. Home and Journey checked at 1440
+  and 390, inner pages at 1280.
+
+**Next.**
+- Lionel reviews and merges PR 1, then PR 2. PR 2 is stacked; its base retargets to `main`
+  after PR 1 merges.
+- Decide favicon colors for rev2.
+
+**Open decisions.**
+- Next-phase ring: grey (spec, as built) or amber (mockups).
+- Whether to restore an "Elsewhere on the site" section on Home.
+- Favicon colors for rev2 (needs a brand decision).
+
+---
+
 ## 2026-11-15 — New path: infrastructure first (PR 1, content and data)
 
 **Context.** On Nov 15, 2026 Lionel left Launch School and refocused on infrastructure.
