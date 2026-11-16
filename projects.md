@@ -20,12 +20,12 @@ description: Selected home-lab and infrastructure projects, each written up as t
     </div>
     <div class="principles">
       <div class="principle">
-        <span class="status-label">Planned · Phase 1</span>
+        <span class="status-label"><span class="dot" aria-hidden="true"></span>Planned · Phase 1</span>
         <h3>Automated, tested home-lab backups</h3>
         <p>Backups for the home lab that run on their own and are tested, so I know they restore.</p>
       </div>
       <div class="principle">
-        <span class="status-label">Planned · Phase 1</span>
+        <span class="status-label"><span class="dot" aria-hidden="true"></span>Planned · Phase 1</span>
         <h3>One real service in Docker Compose</h3>
         <p>A service the home lab actually relies on, run with Docker Compose.</p>
       </div>

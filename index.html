@@ -4,38 +4,127 @@ title: Home
 description: Network and systems administrator going deeper into Linux, containers, Kubernetes, infrastructure as code, and Azure, building each step in a home lab. A study log, longer writing, and videos.
 ---
 
+{% assign phases = site.data.journey.phases %}
+{% assign now_phase = phases | where: "status", "now" | first %}
+{% assign next_phase = phases | where: "status", "next" | first %}
+{% assign later_phases = phases | where: "status", "later" %}
+
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  <div class="wrap hero-layout">
+    <div class="hero-copy">
       <p class="eyebrow">Infrastructure and systems · learning in public</p>
       {% comment %}[CONFIRM] headline: Lionel to approve the wording before merge.{% endcomment %}
-      <h1 class="hero-title">Infrastructure is my craft. I'm taking it <em>deeper</em>.</h1>
-      <p class="hero-lede">
+      <h1 class="page-title hero-title">Infrastructure is my craft. I'm taking it deeper.</h1>
+      <p class="lede">
         I'm Lionel, a network and systems administrator. Infrastructure is my core craft: hybrid
         identity, endpoint management, and networking. Now I'm going deeper into Linux, containers,
         Kubernetes, infrastructure as code, and Azure, and building each step in my home lab.
       </p>
-      <p class="hero-lede">
+      <p class="lede">
         I'm working toward DevOps, SRE, platform, and cloud infrastructure roles. The end goal is to
         be an experienced infrastructure engineer with a specialty on top: running and securing AI
         agents. I also help small businesses run their technology.
       </p>
-      {% assign now_phase = site.data.journey.phases | where: "status", "now" | first %}
-      {% if now_phase %}
-      <p class="now-line"><span class="now-label">Now</span> Phase {{ now_phase.step }}: {{ now_phase.title }}{% if now_phase.track.provider %}, via {{ now_phase.track.provider }}{% endif %}</p>
-      {% endif %}
       <div class="cta-row">
         <a class="btn primary" href="{{ '/journey/' | relative_url }}">Follow the journey &rarr;</a>
       </div>
     </div>
 
-    <aside class="hero-aside">
-      <img class="hero-avatar" src="{{ '/assets/images/lionel-about-560.jpg' | relative_url }}"
+    <figure class="hero-portrait">
+      <img src="{{ '/assets/images/lionel-about-560.jpg' | relative_url }}"
            srcset="{{ '/assets/images/lionel-about-560.jpg' | relative_url }} 560w, {{ '/assets/images/lionel-about.jpg' | relative_url }} 1067w"
-           sizes="260px"
+           sizes="(max-width: 640px) 100vw, 320px"
            alt="Portrait of Lionel Kanyowa smiling in a cafe"
            width="560" height="840" loading="eager">
-    </aside>
+      <figcaption class="mono-note">Portrait by Anthony Isensee</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="block nnl" aria-label="Now, next and later">
+  <div class="wrap">
+    <ol class="route">
+      {% if now_phase %}
+      {% assign goals = now_phase.certs | where: "status", "goal" | map: "code" %}
+      <li class="route-step now">
+        <div class="route-rail" aria-hidden="true"><span class="light-slot"><span class="light now"></span></span><span class="route-line"></span></div>
+        <div class="route-body">
+          <p class="route-label">Now</p>
+          <h2 class="route-title">{{ now_phase.short_title }}</h2>
+          <p>Phase {{ now_phase.step }}{% if now_phase.track.provider %}, via {{ now_phase.track.provider }}{% endif %}. {{ now_phase.summary }}</p>
+          {% if goals.size > 0 %}
+          {% assign first_goal = now_phase.certs | where: "status", "goal" | first %}
+          <p class="goals">{% if goals.size == 1 %}Goal{% else %}Goals{% endif %}, not yet earned: {{ goals | join: ", " }}{% if goals.size == 1 and first_goal.note %}<span class="sep"> ·</span> {{ first_goal.note | downcase }}{% endif %}</p>
+          {% endif %}
+        </div>
+      </li>
+      {% endif %}
+
+      {% if next_phase %}
+      {% assign goals = next_phase.certs | where: "status", "goal" | map: "code" %}
+      <li class="route-step next">
+        <div class="route-rail" aria-hidden="true"><span class="light-slot"><span class="light"></span></span><span class="route-line"></span></div>
+        <div class="route-body">
+          <p class="route-label">Next</p>
+          <h2 class="route-title">{{ next_phase.short_title }}</h2>
+          <p>{{ next_phase.summary }}</p>
+          {% if goals.size > 0 %}<p class="goals">Goals, not yet earned: {{ goals | join: ", " }}</p>{% endif %}
+          {% if next_phase.agentic %}
+          {% assign cert_codes = next_phase.certs | map: "code" %}
+          <p class="goals">Then agentic stage {{ next_phase.agentic.stage }}, {{ next_phase.agentic.title | downcase }}, once {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
+          {% endif %}
+        </div>
+      </li>
+      {% endif %}
+
+      {% if later_phases.size > 0 %}
+      {% assign later_titles = later_phases | map: "short_title" %}
+      {% assign later_goals = "" | split: "" %}
+      {% for p in later_phases %}
+        {% assign g = p.certs | where: "status", "goal" | map: "code" %}
+        {% assign later_goals = later_goals | concat: g %}
+      {% endfor %}
+      {% assign later_steps = later_phases | map: "step" %}
+      {% assign specialty = site.data.journey.specialty %}
+      <li class="route-step later">
+        <div class="route-rail" aria-hidden="true"><span class="light-slot"><span class="light"></span></span><span class="route-line"></span></div>
+        <div class="route-body">
+          <p class="route-label">Later</p>
+          {% if specialty %}
+          <h2 class="route-title">{{ specialty.title }}</h2>
+          <p>{{ specialty.summary }}</p>
+          <p class="goals">Runs with Phases {% include and-list.html items=later_steps %}: {{ later_titles | join: ", then " }}.{% if later_goals.size > 0 %} Goals, not yet earned: {{ later_goals | join: ", " }}.{% endif %}</p>
+          {% else %}
+          <h2 class="route-title">{{ later_titles | join: ", then " }}</h2>
+          {% if later_goals.size > 0 %}<p class="goals">Goals, not yet earned: {{ later_goals | join: ", " }}</p>{% endif %}
+          {% endif %}
+        </div>
+      </li>
+      {% endif %}
+    </ol>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap two-up">
+    <div>
+      <h2 class="section-title">How I work</h2>
+      <p>I learn by building it in my home lab, breaking it, and writing up the fix. I stay with a topic until I can explain why it works, not just that it works.</p>
+    </div>
+    <div>
+      <h2 class="section-title">Home lab</h2>
+      <p>A private network behind an OPNsense firewall, with self-hosted open-source services on a Proxmox cluster. Write-ups will cover the problem, the decisions, and what I learned.</p>
+      <a class="text-link" href="{{ '/projects/' | relative_url }}">See the home lab &rarr;</a>
+      <ol class="lab-diagram" aria-label="Home lab network, from the internet inward">
+        {% assign nodes = "Internet|OPNsense firewall|Proxmox cluster|Self-hosted services" | split: "|" %}
+        {% for node in nodes %}
+        <li>
+          <span class="route-rail" aria-hidden="true"><span class="light-slot"><span class="light"></span></span><span class="route-line"></span></span>
+          <span class="node">{{ node }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -43,7 +132,7 @@ description: Network and systems administrator going deeper into Linux, containe
   <div class="wrap">
     <div class="sec-head">
       <h2>Latest from the study log</h2>
-      <p>Short entries on what I'm studying and building — the most current view of where I am and what I'm working through.</p>
+      <p>Short entries on what I'm studying and building — the most current view of where I am.</p>
     </div>
     <div class="home-log-list">
       {% comment %} Archived entries (tagged `archived`) stay in the log but never appear here. {% endcomment %}
@@ -73,52 +162,5 @@ description: Network and systems administrator going deeper into Linux, containe
       {% endif %}
     </div>
     <div class="sec-foot"><a class="btn ghost" href="{{ '/studylog/' | relative_url }}">Read the full log &rarr;</a></div>
-  </div>
-</section>
-
-<section class="block">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Elsewhere on the site</h2>
-    </div>
-    <div class="home-links">
-      <a class="home-link" href="{{ '/journey/' | relative_url }}">
-        <div class="home-row-copy">
-          <h3>Journey</h3>
-          <p>Four phases: Linux and containers, Kubernetes and infrastructure as code, Azure, then platform and SRE.</p>
-        </div>
-        <span class="row-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-      <a class="home-link" href="{{ '/projects/' | relative_url }}">
-        <div class="home-row-copy">
-          <h3>Projects</h3>
-          <p>Home-lab and infrastructure work: the problem, the decisions, and what I learned.</p>
-        </div>
-        <span class="row-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-      <a class="home-link" href="{{ '/videos/' | relative_url }}">
-        <div class="home-row-copy">
-          <h3>Videos</h3>
-          <p>Videos about what I'm learning and building.</p>
-        </div>
-        <span class="row-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-      <a class="home-link" href="{{ '/about/' | relative_url }}">
-        <div class="home-row-copy">
-          <h3>About</h3>
-          <p>My background, what I'm learning, and how I approach the work.</p>
-        </div>
-        <span class="row-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-      {% if site.data.articles and site.data.articles.size > 0 %}
-      <a class="home-link" href="{{ '/writing/' | relative_url }}">
-        <div class="home-row-copy">
-          <h3>Writing</h3>
-          <p>Longer essays published on Medium.</p>
-        </div>
-        <span class="row-arrow" aria-hidden="true">&rarr;</span>
-      </a>
-      {% endif %}
-    </div>
   </div>
 </section>

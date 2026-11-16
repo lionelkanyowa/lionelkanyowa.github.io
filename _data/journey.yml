@@ -12,6 +12,8 @@
 #   earned — passed. Only set this after the result is in.
 #
 # `done_when` items: set `done: true` when an item is actually finished.
+# `short_title` is the phrase used on the home page's Now / Next / Later blocks
+# (Later joins its phases: "Azure, then platform engineering").
 # Track courses take an optional `status` (done / current); leave it off rather
 # than guess.
 #
@@ -29,6 +31,7 @@ phases:
   - id: linux-docker-lfcs
     step: 1
     title: "Linux, Docker and LFCS"
+    short_title: "Linux, Docker and LFCS"
     status: now
     window: "Through mid-February 2027"
     summary: "The base layer: Linux administration, shell scripting, and containers, with the LFCS exam as the checkpoint."
@@ -57,6 +60,7 @@ phases:
   - id: devops-path
     step: 2
     title: "The DevOps Engineer path, with CKA and Terraform Associate"
+    short_title: "CKA and Terraform Associate"
     status: next
     summary: "The rest of the DevOps Engineer path: Kubernetes and infrastructure as code."
     track:
@@ -89,6 +93,7 @@ phases:
   - id: azure
     step: 3
     title: "Azure"
+    short_title: "Azure"
     status: later
     summary: "Administering, designing, and securing workloads on Azure."
     track:
@@ -122,6 +127,7 @@ phases:
   - id: platform-sre
     step: 4
     title: "Platform and SRE depth"
+    short_title: "platform engineering"
     status: later
     summary: "Platform engineering and site reliability, built on everything before it."
     track:

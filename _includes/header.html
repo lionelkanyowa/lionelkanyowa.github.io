@@ -6,26 +6,14 @@
                     <path fill-rule="evenodd" d="M0 0 H21 V79 H86 V100 H0 Z M0 34 L21 13 L21 77 L0 56 Z" />
                     <path d="M1 45 L46 0 L70 0 L25 45 L59 79 L35 79 Z" />
                 </svg>
-                <span class="brand-name">{{ site.author.name }}</span>
+                <span>{{ site.author.name }}</span>
             </a>
 
-            <nav class="site-nav" aria-label="Primary">
-                <input type="checkbox" id="nav-trigger" class="nav-trigger" aria-controls="primary-menu" />
-                <label for="nav-trigger" class="nav-toggle">
-                    <span class="sr-only">Menu</span>
-                    <svg viewBox="0 0 18 15" width="18px" height="15px" aria-hidden="true">
-                        <path d="m18,1.484c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z" />
-                        <path d="m18,7.516c0,0.82-0.665,1.484-1.484,1.484h-15.032c-0.819,0-1.484-0.665-1.484-1.484s0.665-1.484,1.484-1.484h15.032c0.819,0,1.484,0.665,1.484,1.484z" />
-                        <path d="m18,13.516c0,0.82-0.665,1.485-1.484,1.485h-15.032c-0.819,0-1.484-0.665-1.484-1.485s0.665-1.485,1.485-1.485h15.031c0.819,0,1.484,0.665,1.484,1.485z" />
-                    </svg>
-                </label>
-
-                <div class="nav-menu" id="primary-menu">
-                    {% for item in site.navigation %}
-                    <a class="page-link{% if page.url contains item.url %} active{% endif %}"
-                        href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
-                    {% endfor %}
-                </div>
+            <nav class="nav-menu" aria-label="Primary">
+                {% for item in site.navigation %}
+                <a class="page-link{% if page.url contains item.url %} active{% endif %}"
+                    href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+                {% endfor %}
             </nav>
         </div>
     </div>
