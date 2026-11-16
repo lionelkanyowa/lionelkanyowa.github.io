@@ -2,7 +2,7 @@
 layout: default
 title: Videos
 permalink: /videos/
-description: Short videos on what I'm learning and building: Linux, containers, infrastructure, and the home lab.
+description: "Short videos on what I'm learning and building: Linux, containers, infrastructure, and the home lab."
 ---
 
 <section class="about-hero">

@@ -21,6 +21,7 @@ author:
   location: "Michigan"
 
 # Build Settings
+strict_front_matter: true   # a malformed front-matter block fails the build instead of dropping the layout
 timezone: America/Detroit   # render dates in Michigan time, not UTC
 future: false  # prevent scheduled study-log entries from publishing early
 markdown: kramdown
