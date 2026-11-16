@@ -5,6 +5,92 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 
 ---
 
+## 2026-11-15 — New path: infrastructure first (PR 1, content and data)
+
+**Context.** On Nov 15, 2026 Lionel left Launch School and refocused on infrastructure.
+The main track is now KodeKloud's DevOps Engineer path in four phases: (1) Linux, Docker
+and LFCS, now through mid-Feb 2027, with the LFCS exam planned for early 2027; (2) the
+rest of the DevOps Engineer path with CKA and Terraform Associate; (3) Azure: AZ-104,
+AZ-305, SC-500; (4) platform and SRE depth with CNPE. Target roles: DevOps, SRE,
+platform, cloud infrastructure; he also helps small businesses run their technology.
+Work is on branch `feat/infrastructure-path`, to be opened as PR 1 of 2.
+
+**Done this session.**
+- CI: `.github/workflows/jekyll.yml` now builds every pull request (any base branch)
+  without configuring or deploying Pages. Added a step that fails the build if a
+  `[CONFIRM]` marker reaches `_site`. Deploy still happens only on push to main.
+- Replaced `_data/curriculum.yml` with `_data/journey.yml`: four phases (step, title,
+  status done/now/next/later, track, certs with status goal/earned, done_when items with
+  done flags) plus a `past` entry for Launch School (2022–2026, Python then Ruby, left
+  Nov 2026). `journey.html` and the Home "Now" line both read it. Fixed the old bug where
+  the Core stage could never be marked done: stage classes now come straight from each
+  entry's status.
+- Rewrote copy: site and page descriptions, Home hero (eyebrow "Infrastructure and
+  systems · learning in public", new headline and intro), Home Elsewhere links, About
+  (new title "Systems first", Launch School in past tense, current path paragraph),
+  Journey intro, Projects (Phase 1 placeholders: automated, tested home-lab backups; one
+  real service in Docker Compose; "Small-business technology" area replaces "Software
+  engineering"), Resources (KodeKloud DevOps Engineer path, LFCS exam page, Launch
+  School's free Intro to Ruby and Intro to SQL books kept as reference; dropped Ruby docs
+  and MDN), Study Log (heading no longer claims weekly), Videos, Writing, data-file
+  example comments.
+- Study log: all 7 existing posts tagged `archived`. List and post pages show a neutral
+  "Archived" label, and post pages show a one-line archived note. Home "Latest" excludes
+  archived posts and shows an empty state until a new post exists.
+- Social card: `og-image.svg` text updated and `og-image.png` regenerated.
+- CSS: removed `--track-ruby`/`--track-js` tokens and the core-split/branch styles,
+  removed dead `.colophon`. Added phase-detail, cert-status, archived-label, and project
+  status-label styles.
+- Docs: `CLAUDE.md` (project description, IA, removed track-colors rule), `.claude/me.md`
+  (new path, audience, Launch School as past), `.claude/agents/frontend-designer.md`
+  (dark-only, no theme toggle; plugin note), `docs/RUNBOOK.md` (Journey section and
+  quick-reference row now point at `_data/journey.yml`).
+- Verified: production build clean; no `[CONFIRM]` or Liquid errors in output;
+  screenshots of Home, Journey (1440 and 390), and Study Log checked.
+- Left `.codex/` untouched (untracked; Codex copies of content-writer, frontend-designer,
+  and progress-logger as .toml; they still carry the old framing).
+
+**Next.**
+- PR 2: the "status lights" redesign from `docs/design/rev2` (Overpass/Overpass Mono
+  self-hosted, amber accent #F2A93B with WCAG AA checks, Now/Next/Later + How I work +
+  home-lab on Home, phase cards with per-phase progress on Journey, phone layout per
+  home-390, pulse off under reduced motion).
+- Lionel to confirm the items marked [CONFIRM] in the PR body: Home headline, About
+  title, derived "done when" lists, KodeKloud as track for phases 3–4, project
+  placeholder wording.
+
+**Open decisions.**
+- Whether to update or delete the untracked `.codex/` agent copies.
+- Stale merged branches can be cleaned up.
+
+---
+
+## 2026-09-24 — Journey status update and design audit fixes
+
+**Done this session.** (Committed earlier but not logged.)
+- Commit fc5c4d6: marked RB100 complete and RB101 in progress in the now-removed
+  `_data/curriculum.yml`. Prep Work complete, so the current-stage marker moved to Core
+  Curriculum.
+- Commit a2c9e21, "apply design audit fixes":
+  - New `--rule` token (3:1 contrast) for the Journey timeline and upcoming rings.
+  - Completed courses/stages use a neutral fill; orange is reserved for the current
+    course/stage.
+  - Accent restraint: neutral eyebrow dash, Projects card borders, blockquote rule.
+  - One label size token (`--label-size`, 0.75rem).
+  - Dropped eyebrows that repeated page headings.
+  - Home "Now studying" line derived from the data file.
+  - 560px portrait with srcset (309 KB -> 58 KB).
+  - Posts use the `--measure` reading width; headings balanced.
+  - Removed hardcoded shadows; row hover slides content.
+  - 44px mobile nav toggle.
+  - Fixed prose link color overriding back-link/share/post-nav.
+  - Mobile wrapping for in-progress tags and branch headers.
+
+**Next.**
+- Superseded by the 2026-11-15 entry above.
+
+---
+
 ## 2026-09-05 — Interlock v1.1 monogram integration
 
 **Done this session.**
@@ -441,7 +527,7 @@ parties live-editing the same file. Git history is now the safety net.
 **Open decisions.**
 - Whether faith/Sabbath stays off the site entirely (removed from About + footer for now).
 - Final webfonts (targeting Fraunces + JetBrains Mono) and whether to self-host.
-- Resources page content still needs refocusing away from DevOps.
+- Resources page content still needs refocusing away from DevOps. — Closed 2026-11-15: Resources now covers the infrastructure path (KodeKloud, LFCS) plus Launch School's Intro to Ruby and Intro to SQL books as reference.
 
 ---
 
