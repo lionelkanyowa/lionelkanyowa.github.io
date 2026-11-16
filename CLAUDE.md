@@ -54,47 +54,51 @@ stages inside Phases 2–4. Minimalist, warm, monochrome with a single accent.
 
 ## Design system
 
-Monochrome ground with one accent. **The design is not themed after any programming
-language** — no gem/mascot/syntax motifs. See `.claude/me.md`.
+**"Status lights" — design revision 2** (approved; mockups and spec in `docs/design/rev2/`).
+A cool dark ground, one amber accent, and a green "done" signal. **The design is not themed
+after any programming language** — no gem/mascot/syntax motifs. See `.claude/me.md`.
 
 The canonical brand identity is **Interlock v1.1**. Always identify it as v1.1 in
 documentation, handoffs, and asset discussions; never use an earlier version number. Its
 three optical cuts are: the solid favicon cut at 16px, the widened-gap icon cut from
-20–32px, and the standard interlocking cut above 32px.
+20–32px, and the standard interlocking cut above 32px. In the header the mark is drawn in
+`--ink` (per rev2), keeping the v1.1 geometry.
 
-Tokens (define as CSS custom properties; style everything through them, never hardcode):
+Tokens (define as CSS custom properties; style everything through them, never hardcode).
+Contrast is WCAG 2.x against `--ground` / `--surface`:
 
-| Token           | Dark      |
-| --------------- | --------- |
-| `--ground`      | `#14110F` |
-| `--surface`     | `#1C1815` |
-| `--surface-2`   | `#221D19` |
-| `--ink`         | `#F3EFE9` |
-| `--ink-soft`    | `#D8D2CA` |
-| `--muted`       | `#A29A90` |
-| `--hairline`    | `#2C2621` |
-| `--accent`      | `#9A4316` |
-| `--accent-text` | `#D9824B` |
-| `--accent-ink`  | `#FFFFFF` |
+| Token          | Value     | Use                                   | Contrast        |
+| -------------- | --------- | ------------------------------------- | --------------- |
+| `--ground`     | `#0F1113` | page background                       |                 |
+| `--surface`    | `#171A1D` | raised surfaces (code, thumbnails)    |                 |
+| `--hairline`   | `#2A2F34` | decorative dividers only              | not for meaning |
+| `--ink`        | `#E6E8EA` | text                                  | 15.4 / 14.2     |
+| `--muted`      | `#9AA1A8` | secondary text                        | 7.2 / 6.7       |
+| `--rule`       | `--muted` | lines and rings that carry meaning    | 7.2 / 6.7       |
+| `--accent`     | `#F2A93B` | amber: links, Now light, primary CTA  | 9.5 / 8.8       |
+| `--accent-ink` | `#0F1113` | text on amber                         | 9.5             |
+| `--done`       | `#6FBF8E` | done/green status only                | 8.6 / 7.9       |
 
-- Neutrals are warm (slight red bias) so they read as chosen, not default grey.
-- The accent is a deep burnt orange used **sparingly** — links on hover, the current-stage
-  marker, one primary button, and small labels. It is warm and personal without being tied
-  to a programming language.
+- The accent is used **sparingly**: links (hover goes to `--ink`), the Now status light and
+  label, the one primary button, focus rings. Never put `--ink` text on amber (1.6:1).
+- `--done` green is a status signal, never decoration or a second accent.
+- **Status lights** are the site's signature: Now = amber dot with a slow pulse
+  (`lk-pulse`, switched off under `prefers-reduced-motion`), Done = green with a check,
+  Next/Later = grey outline ring. Use the `.light` / `.dot` / `.route` components.
 - The site is intentionally dark-only. Do not add a theme toggle or system/light override
   unless Lionel explicitly changes that product decision.
 
-Typography is intentionally ordinary and human:
+Typography:
 
-- Use the native humanist sans stack for display, body, interface text, labels, and
-  metadata. Hierarchy comes from size, weight, spacing, and content—not a decorative
-  type pairing.
-- Reserve monospace for code, filenames, and literal course codes. Do not use it as the
-  site's visual identity.
-- Avoid the fashionable serif-heading + monospace-label portfolio treatment. It made the
-  site feel generated rather than personal.
-- Do not load webfonts unless there is a specific, reviewed reason. Set a restrained type
-  scale and keep `text-wrap: balance` on headings.
+- **Overpass** (100–900, normal and italic) for all text; **Overpass Mono** (300–700) for
+  eyebrows, labels, status tags, dates, and code. Reason for the webfonts: they are part of
+  the approved rev2 redesign. Both are **self-hosted** woff2 files in `assets/fonts/`
+  (Latin subset, SIL Open Font License 1.1, license in `assets/fonts/OFL.txt`). Never load
+  fonts from a CDN.
+- Scale: h1 58px/1.08 weight 800, -0.02em (37px on phones); section headings 28px; card
+  and step titles 22px; body 18px; small 14–15px; mono labels 13–14px.
+- Overpass draws the middle dot off-center; in sans text wrap " ·" in `<span class="sep">`.
+- Keep `text-wrap: balance` on headings.
 
 ## Information architecture
 

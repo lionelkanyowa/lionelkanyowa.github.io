@@ -194,9 +194,10 @@ asset names, and handoffs. The small-size mark is drawn directly in
 16px, the widened-gap icon cut from 20–32px, and the standard interlocking cut above 32px.
 Do not enlarge the solid favicon cut into visible logo sizes.
 
-On the dark `#14110F` site ground, an exposed mark must use the lighter orange `#D9824B`.
-Reserve `#9A4316` for filled surfaces such as buttons and the favicon background. The
-favicon uses an off-white mark so it stays legible against that field.
+In the site header (design rev2, "status lights") the mark is drawn in the ink color
+`#E6E8EA` on the `#0F1113` ground, keeping the v1.1 geometry. The social card uses the
+rev2 tokens. The favicons still use the earlier orange field (`#9A4316`) and have not been
+recolored for rev2 yet.
 
 After editing `favicon.svg`, regenerate its PNG fallbacks from the repository root:
 
