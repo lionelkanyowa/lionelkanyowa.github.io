@@ -84,7 +84,7 @@ Contrast is WCAG 2.x against `--ground` / `--surface`:
 - `--done` green is a status signal, never decoration or a second accent.
 - **Status lights** are the site's signature: Now = amber dot with a slow pulse
   (`lk-pulse`, switched off under `prefers-reduced-motion`), Done = green with a check,
-  Next/Later = grey outline ring. Use the `.light` / `.dot` / `.route` components.
+  Next = amber outline ring, Later = grey outline ring (as drawn in the rev2 mockups). Use the `.light` / `.dot` / `.route` components.
 - The site is intentionally dark-only. Do not add a theme toggle or system/light override
   unless Lionel explicitly changes that product decision.
 

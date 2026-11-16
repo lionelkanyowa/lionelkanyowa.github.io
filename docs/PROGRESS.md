@@ -26,7 +26,7 @@ next, and any open decisions. Appended via the `progress-logger` agent.
   menu, so the menu JS is removed from `site.js`. Footer per rev2.
 - Status lights component (`.light` / `.dot` / `.route`): Now is amber with a slow
   `lk-pulse` (off under `prefers-reduced-motion`), Done is green with a check, Next and
-  Later are a grey ring (followed DESIGN-SPEC; the mockups drew Next with an amber ring).
+  Later are a grey ring; Next uses an amber ring. Lionel made the rendered mockups the design reference, so they override the spec text that said grey.
 - Home: rev2 hero with portrait credit; Now / Next / Later from `_data/journey.yml` (new
   `short_title` field; Later joins phases 3–4 as "Azure, then platform engineering";
   uncompleted certs listed as goals); How I work; Home lab with an Internet → OPNsense
@@ -55,7 +55,6 @@ next, and any open decisions. Appended via the `progress-logger` agent.
 - Decide favicon colors for rev2.
 
 **Open decisions.**
-- Next-phase ring: grey (spec, as built) or amber (mockups).
 - Whether to restore an "Elsewhere on the site" section on Home.
 - Favicon colors for rev2 (needs a brand decision).
 

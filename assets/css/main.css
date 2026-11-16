@@ -127,6 +127,7 @@ code, kbd, pre, samp { font-family: var(--mono); }
   color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; transition: color .15s;
 }
 .page-link:hover, .page-link.active { color: var(--ink); }
+.page-link.active { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
 @media (max-width: 640px) {
   .header-content { padding-block: 8px 4px; }
   .nav-menu { gap: 0; margin-inline: -10px; }
@@ -163,7 +164,7 @@ code, kbd, pre, samp { font-family: var(--mono); }
 }
 
 /* ---- status lights ------------------------------------------------------ */
-/* Now = amber with a slow pulse · Done = green with a check · Next/Later = grey ring */
+/* Now = amber with a slow pulse · Done = green with a check · Next = amber ring · Later = grey ring */
 @keyframes lk-pulse {
   0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent); }
   50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 10%, transparent); }
@@ -177,6 +178,7 @@ code, kbd, pre, samp { font-family: var(--mono); }
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 24%, transparent);
   animation: lk-pulse 2.6s ease-in-out infinite;
 }
+.route-step.next .light { border-color: var(--accent); }
 .light.done { width: 18px; height: 18px; background: var(--done); border: 0; }
 .light.done::after {
   content: ""; position: absolute; left: 6px; top: 3px; width: 5px; height: 9px;

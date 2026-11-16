@@ -71,7 +71,7 @@ description: Network and systems administrator going deeper into Linux, containe
           {% if goals.size > 0 %}<p class="goals">Goals, not yet earned: {{ goals | join: ", " }}</p>{% endif %}
           {% if next_phase.agentic %}
           {% assign cert_codes = next_phase.certs | map: "code" %}
-          <p class="goals">Then agentic stage {{ next_phase.agentic.stage }}, {{ next_phase.agentic.title | downcase }}, once {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
+          <p class="goals">Then agentic stage {{ next_phase.agentic.stage }}: {{ next_phase.agentic.title }}, once {% include and-list.html items=cert_codes %} {% if cert_codes.size > 1 %}are{% else %}is{% endif %} passed.</p>
           {% endif %}
         </div>
       </li>
